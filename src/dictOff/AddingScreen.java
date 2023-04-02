@@ -15,8 +15,7 @@ import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
 public class AddingScreen {
-    Scene scene;
-    public void displayAddingScreen(Stage stage) throws InstantiationException, IllegalAccessException {
+    public static Scene displayAddingScreen(Stage stage) throws InstantiationException, IllegalAccessException {
         // To be able to use grid pane and hBoxForFlags layouts together
         BorderPane borderPane = new BorderPane();
 
@@ -95,9 +94,10 @@ public class AddingScreen {
         borderPane.setBottom(total);
 
         borderPane.setStyle("-fx-background-color:gainsboro");
-        scene = new Scene(borderPane, 700,500);
+        Scene scene = new Scene(borderPane, 700,500);
         stage.setTitle("DictOff");
         stage.setScene(scene);
         stage.show();
+        return scene;
     }
 }

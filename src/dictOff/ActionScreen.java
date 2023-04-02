@@ -17,9 +17,9 @@ import javafx.stage.Stage;
 
 public class ActionScreen {
     private static Scene scene;
-    static Stage window;
-    public void displayActionScreen(Stage primaryStage) {
-        window = primaryStage;
+
+    public static Scene displayActionScreen(Stage primaryStage) {
+
         Label label = new Label("What action would you like to perform?");
         label.setStyle("-fx-font-weight: bold;");
         label.setFont(Font.font("Times New Roman", FontWeight.BOLD, 24));
@@ -29,18 +29,41 @@ public class ActionScreen {
         btnTranslation.setPrefHeight(70);
         btnTranslation.setStyle("-fx-background-radius: 10 10 10 10; -fx-border-color: gray; -fx-border-width: 2;-fx-border-radius: 10 10 10 10");
         btnTranslation.setFont(Font.font("Times New Roman", FontWeight.BOLD, 10));
+        btnTranslation.setOnAction(e -> {
+            try {
+                TranslationScreen.displayTranslationScreen(primaryStage);
+            } catch (Exception ex) {
+                ex.printStackTrace();
+            }
+        });
 
         Button btnSynonyms = new Button("FIND SYNONYMS");
         btnSynonyms.setPrefHeight(70);
         btnSynonyms.setPrefWidth(140);
         btnSynonyms.setStyle("-fx-background-radius: 10 10 10 10; -fx-border-color: gray; -fx-border-width: 2;-fx-border-radius: 10 10 10 10");
         btnSynonyms.setFont(Font.font("Times New Roman", FontWeight.BOLD, 10));
+        btnSynonyms.setOnAction(e -> {
+            try {
+                SynonymScreen.displaySynonymScreen(primaryStage);
+            } catch (Exception ex) {
+                ex.printStackTrace();
+            }
+        });
 
         Button btnAddTranslation = new Button("ADD A TRANSLATION");
         btnAddTranslation.setPrefWidth(140);
         btnAddTranslation.setPrefHeight(70);
         btnAddTranslation.setFont(Font.font("Times New Roman", FontWeight.BOLD, 10));
         btnAddTranslation.setStyle("-fx-background-radius: 10 10 10 10; -fx-border-color: gray; -fx-border-width: 2;-fx-border-radius: 10 10 10 10");
+        btnAddTranslation.setOnAction(e -> {
+            try {
+                AddingScreen.displayAddingScreen(primaryStage);
+            } catch (InstantiationException ex) {
+                ex.printStackTrace();
+            } catch (IllegalAccessException ex) {
+                ex.printStackTrace();
+            }
+        });
 
         Button button = new Button();
         Image image = new Image("questionMark.png");
@@ -59,10 +82,10 @@ public class ActionScreen {
         stackPane.setAlignment(Pos.CENTER);
         scene = new Scene(stackPane,700, 500);
 
-        window.setScene(scene);
-        window.setTitle("DictOff");
-        window.show();
-
+        primaryStage.setScene(scene);
+        primaryStage.setTitle("DictOff");
+        primaryStage.show();
+        return scene;
 
     }
 

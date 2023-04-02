@@ -16,14 +16,12 @@ import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
 public class SynonymScreen {
-    Button helpButton;
-    Button backButton;
-    Stage window;
-    Button translateButton;
 
-    public void displaySynonymScreen(Stage stage) throws Exception {
-        window = stage;
-        window.setTitle("DictOff");
+
+   private static Button translateButton;
+
+    public static Scene displaySynonymScreen(Stage stage) throws Exception {
+        stage.setTitle("DictOff");
 
         //Instruction text
         Text text = new Text(" Type a word to find its synonyms:"); //in order to centre the text
@@ -94,7 +92,8 @@ public class SynonymScreen {
 
         //Setting scene into the Stage
         Scene scene = new Scene(layout, 700, 500);
-        window.setScene(scene);
-        window.show();
+        stage.setScene(scene);
+        stage.show();
+        return scene;
     }
 }

@@ -13,11 +13,10 @@ import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
 public class TranslationScreen {
-    Button helpButton;
-    Button backButton;
-    Stage window;
-    Button translateButton;
-    public void displayTranslationScreen(Stage stage) throws Exception {
+
+    static Stage window;
+    static Button translateButton;
+    public static Scene displayTranslationScreen(Stage stage) throws Exception {
         window = stage;
         window.setTitle("DictOff");
 
@@ -87,5 +86,6 @@ public class TranslationScreen {
         Scene scene = new Scene(layout, 700, 500);
         window.setScene(scene);
         window.show();
+        return scene;
     }
 }

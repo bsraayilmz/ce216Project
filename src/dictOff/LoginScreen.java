@@ -29,6 +29,9 @@ public class LoginScreen{
         startButton.setPrefHeight(60);
         startButton.setFont(Font.font("Arial",20));
         startButton.setStyle("-fx-background-color: grey;");
+        startButton.setOnAction(e -> {
+            ActionScreen.displayActionScreen(primaryStage);
+        });
 
 
         VBox vbox = new VBox(10, welcomeLabel, teamLabel, startButton);
