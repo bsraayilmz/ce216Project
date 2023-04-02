@@ -6,7 +6,7 @@ import javafx.scene.layout.Background;
 import javafx.scene.layout.HBox;
 import javafx.scene.paint.Color;
 
-public class flagsClass {
+public class flagsClass extends Exception{
     public HBox flags(HBox hBox){
         /*We designed our dictionary as the dictOff.flags of the languages that user can translate at the top.
         This image includes the set of the dictOff.flags.  */

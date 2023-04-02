@@ -1,6 +1,7 @@
 package dictOff;
 
 import javafx.geometry.Insets;
+import javafx.geometry.Pos;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.ChoiceBox;
@@ -72,8 +73,14 @@ public class AddingScreen {
         //to use in the flags method from the dictOff.flagsClass- horizontally
         HBox hBoxForFlags = new HBox();
         //to use in the quesBack method from the dictOff.quesBackClass - horizontally
-        HBox hBoxForQuesBackButtons = new HBox();
+        HBox backButton = new HBox(backClass.class.newInstance().quesBack());
+        backButton.setAlignment(Pos.BOTTOM_LEFT);
 
+        HBox quesButton = new HBox(questionMarkClass.class.newInstance().questionMark());
+        quesButton.setAlignment(Pos.BOTTOM_RIGHT);
+
+        HBox total = new HBox(backButton,quesButton);
+        total.setSpacing(572);
         //to make it visible on the screen
         layoutAddTrans.getChildren().addAll(enterTheMeaning,enterTheWord, enterWordSpace,
                 enterMeaningSpace, choosingLanguage1, addToTheList,choosingLanguage2);
@@ -85,7 +92,7 @@ public class AddingScreen {
         borderPane.setTop(flagsClass.class.newInstance().flags(hBoxForFlags));
         /*hBoxForQuesBackButtons must be at the bottom of the screen - from the class dictOff.quesBackClass with quesBack method, because we
         use question mark (help button) and back mark(to go back button) images more than one time.*/
-        borderPane.setBottom(quesBackClass.class.newInstance().quesBack(hBoxForQuesBackButtons));
+        borderPane.setBottom(total);
 
         borderPane.setStyle("-fx-background-color:gainsboro");
         scene = new Scene(borderPane, 700,500);

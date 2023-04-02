@@ -4,15 +4,17 @@ import javafx.geometry.Pos;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
-import javafx.scene.layout.BorderPane;
-import javafx.scene.layout.StackPane;
-import javafx.scene.layout.VBox;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
+import javafx.scene.layout.*;
+import javafx.scene.paint.Color;
 import javafx.scene.text.Font;
 import javafx.stage.Stage;
 
 
 public class LoginScreen {
-    public void displayLoginScreen(Stage primaryStage){
+    Button returnButton;
+    public void displayLoginScreen(Stage primaryStage) throws InstantiationException, IllegalAccessException {
         primaryStage.setTitle("DictOff");
         Label welcomeLabel = new Label("Welcome to Dictoff");
         welcomeLabel.setFont(Font.font("Arial", 36));
@@ -34,6 +36,12 @@ public class LoginScreen {
 
         BorderPane borderPane = new BorderPane(stackPane);
         BorderPane.setAlignment(stackPane, Pos.CENTER);
+
+
+        HBox box = new HBox(questionMarkClass.class.newInstance().questionMark());
+
+        borderPane.setBottom(box);
+        borderPane.setStyle("-fx-background-color:gainsboro");
 
         Scene scene = new Scene(borderPane, 700, 500);
         primaryStage.setScene(scene);
