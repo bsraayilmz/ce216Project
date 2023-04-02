@@ -10,7 +10,8 @@ import javafx.scene.layout.VBox;
 import javafx.scene.text.Font;
 import javafx.stage.Stage;
 
-public class LoginScreen{
+
+public class LoginScreen {
     public void displayLoginScreen(Stage primaryStage){
         primaryStage.setTitle("DictOff");
         Label welcomeLabel = new Label("Welcome to Dictoff");
