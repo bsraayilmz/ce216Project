@@ -10,8 +10,8 @@ public class Main extends Application {
 
     @Override
     public void start(Stage stage) throws Exception {
-        SynonymScreen translationScreen = new SynonymScreen();
-        translationScreen.displaySynonymScreen(stage);
+        LoginScreen loginScreen = new LoginScreen();
+        loginScreen.displayLoginScreen(stage);
 
     }
 

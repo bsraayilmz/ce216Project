@@ -15,9 +15,11 @@ import javafx.scene.text.FontWeight;
 import javafx.stage.Stage;
 
 
-public class ActionScreen  {
-
+public class ActionScreen {
+    private static Scene scene;
+    static Stage window;
     public void displayActionScreen(Stage primaryStage) {
+        window = primaryStage;
         Label label = new Label("What action would you like to perform?");
         label.setStyle("-fx-font-weight: bold;");
         label.setFont(Font.font("Times New Roman", FontWeight.BOLD, 24));
@@ -55,11 +57,13 @@ public class ActionScreen  {
         StackPane stackPane = new StackPane(vbox);
         stackPane.setBackground(new Background(new BackgroundFill(Color.GAINSBORO, null, null)));
         stackPane.setAlignment(Pos.CENTER);
-        Scene scene = new Scene(stackPane,500, 700);
-        primaryStage.setScene(scene);
-        primaryStage.setTitle("DictOff");
-        primaryStage.show();
-    }
+        scene = new Scene(stackPane,700, 500);
 
+        window.setScene(scene);
+        window.setTitle("DictOff");
+        window.show();
+
+
+    }
 
 }

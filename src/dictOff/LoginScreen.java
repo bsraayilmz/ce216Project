@@ -12,9 +12,11 @@ import javafx.scene.text.Font;
 import javafx.stage.Stage;
 
 
-public class LoginScreen {
-    Button returnButton;
+public class LoginScreen{
+    static Stage window;
     public void displayLoginScreen(Stage primaryStage) throws InstantiationException, IllegalAccessException {
+
+        window = primaryStage;
         primaryStage.setTitle("DictOff");
         Label welcomeLabel = new Label("Welcome to Dictoff");
         welcomeLabel.setFont(Font.font("Arial", 36));
@@ -27,7 +29,7 @@ public class LoginScreen {
         startButton.setPrefHeight(60);
         startButton.setFont(Font.font("Arial",20));
         startButton.setStyle("-fx-background-color: grey;");
-        startButton.setOnAction(e -> {});
+
 
         VBox vbox = new VBox(10, welcomeLabel, teamLabel, startButton);
         vbox.setAlignment(Pos.CENTER);
@@ -44,7 +46,10 @@ public class LoginScreen {
         borderPane.setStyle("-fx-background-color:gainsboro");
 
         Scene scene = new Scene(borderPane, 700, 500);
-        primaryStage.setScene(scene);
-        primaryStage.show();
+        window.setScene(scene);
+        window.show();
+
     }
+
+
 }
