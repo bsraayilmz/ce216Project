@@ -10,7 +10,8 @@ public class Main extends Application {
 
     @Override
     public void start(Stage stage) throws Exception {
-
+        AddingScreen translationScreen = new AddingScreen();
+        translationScreen.displayAddingScreen(stage);
 
     }
 
