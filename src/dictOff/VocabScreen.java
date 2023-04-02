@@ -21,7 +21,7 @@ public class VocabScreen {
         window=stage;
         window.setTitle("");
         VBox vBox1= new VBox();
-        Text text = new Text("TRANSLATIONS OF 'assonance'");
+        Text text = new Text("TRANSLATIONS OF");
         Text text1 = new Text("(Source Language: ENG)");
         text.setFont(Font.font("Times New Roman", FontPosture.REGULAR,45));
         text1.setFont(Font.font("Times New Roman", FontPosture.REGULAR,45));

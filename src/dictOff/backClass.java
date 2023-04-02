@@ -22,6 +22,15 @@ public class backClass {
         returnButton.setGraphic(returnView);//to add button property to the sign of return (to go back prev page)
         returnButton.setBorder(Border.stroke(Color.GAINSBORO));
         returnButton.setBackground(Background.fill(Color.GAINSBORO));
+        returnButton.setOnAction(e -> {
+            try {
+                ActionScreen.displayActionScreen(ActionScreen.stage);
+            } catch (InstantiationException ex) {
+                ex.printStackTrace();
+            } catch (IllegalAccessException ex) {
+                ex.printStackTrace();
+            }
+        });
 
         //to set the size of the question mark image
         returnView.setFitHeight(50);

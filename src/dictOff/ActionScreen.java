@@ -17,9 +17,9 @@ import javafx.stage.Stage;
 
 public class ActionScreen {
     private static Scene scene;
-
-    public static Scene displayActionScreen(Stage primaryStage) {
-
+    static Stage stage;
+    public static Scene displayActionScreen(Stage primaryStage) throws InstantiationException, IllegalAccessException {
+        stage = primaryStage;
         Label label = new Label("What action would you like to perform?");
         label.setStyle("-fx-font-weight: bold;");
         label.setFont(Font.font("Times New Roman", FontWeight.BOLD, 24));
@@ -58,23 +58,15 @@ public class ActionScreen {
         btnAddTranslation.setOnAction(e -> {
             try {
                 AddingScreen.displayAddingScreen(primaryStage);
-            } catch (InstantiationException ex) {
-                ex.printStackTrace();
-            } catch (IllegalAccessException ex) {
+            } catch (InstantiationException | IllegalAccessException ex) {
                 ex.printStackTrace();
             }
         });
+        HBox box = new HBox(questionMarkClass.class.newInstance().questionMark());
+        box.setAlignment(Pos.BOTTOM_RIGHT);
 
-        Button button = new Button();
-        Image image = new Image("questionMark.png");
-        ImageView imageView = new ImageView(image);
-        imageView.setFitWidth(40);
-        imageView.setFitHeight(40);
-        button.setGraphic(imageView);
-        HBox hbox = new HBox();
-        hbox.getChildren().add(button);
-        hbox.setAlignment(Pos.CENTER_RIGHT);
-        VBox vbox = new VBox(20, label, btnTranslation, btnSynonyms, btnAddTranslation,hbox);
+        VBox vbox = new VBox(45, label, btnTranslation, btnSynonyms, btnAddTranslation, box);
+
         vbox.setAlignment(Pos.CENTER);
 
         StackPane stackPane = new StackPane(vbox);

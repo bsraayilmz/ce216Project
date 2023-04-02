@@ -4,10 +4,7 @@ import javafx.geometry.Pos;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
-import javafx.scene.image.Image;
-import javafx.scene.image.ImageView;
 import javafx.scene.layout.*;
-import javafx.scene.paint.Color;
 import javafx.scene.text.Font;
 import javafx.stage.Stage;
 
@@ -30,7 +27,11 @@ public class LoginScreen{
         startButton.setFont(Font.font("Arial",20));
         startButton.setStyle("-fx-background-color: grey;");
         startButton.setOnAction(e -> {
-            ActionScreen.displayActionScreen(primaryStage);
+            try {
+                ActionScreen.displayActionScreen(primaryStage);
+            } catch (InstantiationException | IllegalAccessException ex) {
+                ex.printStackTrace();
+            }
         });
 
 
@@ -44,7 +45,7 @@ public class LoginScreen{
 
 
         HBox box = new HBox(questionMarkClass.class.newInstance().questionMark());
-
+        box.setAlignment(Pos.BOTTOM_RIGHT);
         borderPane.setBottom(box);
         borderPane.setStyle("-fx-background-color:gainsboro");
 
