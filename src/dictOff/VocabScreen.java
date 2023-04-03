@@ -75,15 +75,26 @@ public class VocabScreen {
 
         stack.setStyle("-fx-background-color: #DCDCDC");
 
-        HBox backButton = new HBox(backClass.class.newInstance().quesBack());
-        backButton.setAlignment(Pos.BOTTOM_LEFT);
+        backClass backButton = new backClass();
+        HBox backBox = new HBox(backButton.quesBack());
+        backButton.returnButton.setOnAction(e -> {
+            stage.close();
+            try {
+                ActionScreen.displayActionScreen(stage);
+            } catch (InstantiationException | IllegalAccessException ex) {
+                throw new RuntimeException(ex);
+            }
+        });
+        backBox.setAlignment(Pos.BOTTOM_LEFT);
+
+
 
 
         HBox quesButton = new HBox(questionMarkClass.class.newInstance().questionMark());
         quesButton.setAlignment(Pos.BOTTOM_RIGHT);
 
 
-        HBox total = new HBox(backButton,quesButton);
+        HBox total = new HBox(backBox,quesButton);
         total.setSpacing(572);
 
         BorderPane layout = new BorderPane();
