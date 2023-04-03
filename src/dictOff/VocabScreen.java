@@ -3,11 +3,14 @@ package dictOff;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 import javafx.scene.Scene;
+import javafx.scene.layout.BorderPane;
+import javafx.scene.layout.HBox;
 import javafx.scene.layout.StackPane;
 import javafx.scene.layout.VBox;
 import javafx.scene.text.Font;
 import javafx.scene.text.FontPosture;
 import javafx.scene.text.Text;
+import javafx.stage.Modality;
 import javafx.stage.Stage;
 
 import java.io.BufferedReader;
@@ -18,8 +21,11 @@ import java.util.ArrayList;
 public class VocabScreen {
 
     public static Scene displayVocabScreen(Stage stage, String word) throws Exception {
+        StackPane stack = new StackPane();
 
-        stage.setTitle("");
+        stage.setTitle("DictOff");
+
+
         VBox vBox1= new VBox();
         Text text = new Text("TRANSLATIONS OF " + word);
         Text text1 = new Text("(Source Language: ENG)");
@@ -34,15 +40,13 @@ public class VocabScreen {
         Text ita = new Text("ita");
         ita.setFont(Font.font("Times New Roman", FontPosture.REGULAR,15));
         vBox.setMaxHeight(200);
-        vBox.setMaxWidth(900);
+        vBox.setMaxWidth(500);
         vBox.setAlignment(Pos.TOP_LEFT);
         vBox.getChildren().add(ita);
         Text vocbIta = new Text();
-        add("data/eng-ita.dict",word,vBox,vocbIta);
-        System.out.println(readFile("data/eng-ita.dict",word));
+        scanningFile.add("data/eng-ita.dict",word,vBox,vocbIta);
+        System.out.println(scanningFile.readFile("data/eng-ita.dict",word));
 
-
-        //System.out.println(readFile("data/eng-tur.dict"));
 
         VBox vBox2= new  VBox();
 
@@ -50,70 +54,47 @@ public class VocabScreen {
         Text tur = new Text("TUR");
         tur.setFont(Font.font("Times New Roman", FontPosture.REGULAR,15));
         vBox2.getChildren().add(tur);
-        add("data/eng-tur.dict",word,vBox2,vocbTur);
+        scanningFile.add("data/eng-tur.dict",word,vBox2,vocbTur);
 
 
 
         vBox2.setMaxHeight(200);
-        vBox2.setMaxWidth(900);
+        vBox2.setMaxWidth(500);
         vBox2.setPadding(new Insets(10));
         vBox2.setAlignment(Pos.TOP_LEFT);
 
 
 
         VBox vBoxMain = new VBox();
-        vBoxMain.setMaxWidth(900);
+        vBoxMain.setMaxWidth(500);
         vBoxMain.setMaxHeight(700);
-        vBoxMain.setStyle("-fx-background-color: white; -fx-background-radius: 10; -fx-border-radius: 10; -fx-border-width: 1;");
+        vBoxMain.setStyle("-fx-background-color: gainsboro; -fx-background-radius: 10; -fx-border-radius: 10; -fx-border-width: 1;");
         vBoxMain.setAlignment(Pos.TOP_CENTER);
         vBoxMain.getChildren().addAll(vBox1,vBox,vBox2);
         vBoxMain.setSpacing(70);
-        StackPane stack = new StackPane(vBoxMain);
-        stack.setStyle("-fx-background-color: #D9D9D9");
+
+        stack.setStyle("-fx-background-color: #DCDCDC");
+
+        HBox backButton = new HBox(backClass.class.newInstance().quesBack());
+        backButton.setAlignment(Pos.BOTTOM_LEFT);
 
 
+        HBox quesButton = new HBox(questionMarkClass.class.newInstance().questionMark());
+        quesButton.setAlignment(Pos.BOTTOM_RIGHT);
 
-        Scene scene = new Scene(stack,1200,800);
+
+        HBox total = new HBox(backButton,quesButton);
+        total.setSpacing(572);
+
+        BorderPane layout = new BorderPane();
+        layout.setBottom(total);
+        layout.setStyle("-fx-background-color: gainsboro");
+
+        stack = new StackPane(vBoxMain);
+        layout.setCenter(stack);
+        Scene scene = new Scene(layout,700,500);
         stage.setScene(scene);
         stage.show();
         return scene;
-    }
-
-    public static ArrayList<String> readFile(String fileName, String word){
-        ArrayList<String> arrayList = new ArrayList<>();
-        try (BufferedReader br = new BufferedReader(new FileReader(fileName))) {
-            String line;
-            while ((line = br.readLine()) != null) {
-                String[] arr = line.split(" /");
-
-                if(arr[0].equals(word)){
-                    String s = br.readLine();
-
-                    while (isNumeric(Character.toString(s.charAt(0)))){
-                        arrayList.add(s);
-                        s = br.readLine();
-                    }
-                }
-            }
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-        return arrayList;
-    }
-    public static void add(String s,String word, VBox vBox, Text vocbText){
-        for(int i=0; i<readFile(s,word).size();i++){
-            vocbText = new Text(readFile(s,word).get(i));
-            vocbText.setFont(Font.font("Times New Roman", FontPosture.REGULAR,15));
-            vBox.getChildren().add(vocbText);
-        }
-
-    }
-    public static boolean isNumeric(String str) {
-        try {
-            Double.parseDouble(str);
-            return true;
-        } catch(NumberFormatException e){
-            return false;
-        }
     }
 }

@@ -16,7 +16,6 @@ import javafx.stage.Stage;
 
 
 public class ActionScreen {
-    private static Scene scene;
     static Stage stage;
     public static Scene displayActionScreen(Stage primaryStage) throws InstantiationException, IllegalAccessException {
         stage = primaryStage;
@@ -72,7 +71,7 @@ public class ActionScreen {
         StackPane stackPane = new StackPane(vbox);
         stackPane.setBackground(new Background(new BackgroundFill(Color.GAINSBORO, null, null)));
         stackPane.setAlignment(Pos.CENTER);
-        scene = new Scene(stackPane,700, 500);
+        Scene scene = new Scene(stackPane, 700, 500);
 
         primaryStage.setScene(scene);
         primaryStage.setTitle("DictOff");

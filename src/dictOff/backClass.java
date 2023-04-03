@@ -8,12 +8,12 @@ import javafx.scene.layout.Background;
 import javafx.scene.layout.Border;
 import javafx.scene.layout.HBox;
 import javafx.scene.paint.Color;
+import javafx.stage.Stage;
 
 public class backClass {
     Button returnButton;
 
     public HBox quesBack() {
-
         //to go back prev page
         Image returnImage = new Image("return.png");
         ImageView returnView = new ImageView(returnImage);
@@ -25,9 +25,8 @@ public class backClass {
         returnButton.setOnAction(e -> {
             try {
                 ActionScreen.displayActionScreen(ActionScreen.stage);
-            } catch (InstantiationException ex) {
-                ex.printStackTrace();
-            } catch (IllegalAccessException ex) {
+
+            } catch (InstantiationException | IllegalAccessException ex) {
                 ex.printStackTrace();
             }
         });

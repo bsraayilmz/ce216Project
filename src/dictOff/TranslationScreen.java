@@ -12,11 +12,13 @@ import javafx.scene.text.FontWeight;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
+import static dictOff.VerifyScreen.displayVerifyScreen;
+
 public class TranslationScreen {
 
     static Stage window;
     static Button translateButton;
-    public static Scene displayTranslationScreen(Stage stage) throws Exception {
+    public static void displayTranslationScreen(Stage stage) throws Exception {
         window = stage;
         window.setTitle("DictOff");
 
@@ -36,7 +38,7 @@ public class TranslationScreen {
         translateButton.setBackground(new Background(new BackgroundFill(Color.SILVER, CornerRadii.EMPTY, new Insets(0))));
         translateButton.setOnAction(e -> {
             try {
-                VerifyScreen.displayVerifyScreen(stage,wordInput.getText());
+                displayVerifyScreen("You typed" ,wordInput.getText());
             } catch (Exception ex) {
                 ex.printStackTrace();
             }
@@ -93,6 +95,5 @@ public class TranslationScreen {
         Scene scene = new Scene(layout, 700, 500);
         window.setScene(scene);
         window.show();
-        return scene;
     }
 }
