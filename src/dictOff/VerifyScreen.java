@@ -13,15 +13,14 @@ import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
 public class VerifyScreen {
-    Stage window;
-    Button button1,button2;
 
-    public void displayVerifyScreen(Stage stage) throws Exception {
-        window=stage;
-        window.setTitle("");
+    static Button button1,button2;
+
+    public static Scene displayVerifyScreen(Stage stage, String word) throws Exception {
+        stage.setTitle("");
 
         HBox hBox1= new HBox();
-        Text text = new Text("You Typed: ");
+        Text text = new Text("You Typed: " + word);
         text.setFont(Font.font("Times New Roman", FontPosture.REGULAR,45));
         hBox1.setMaxHeight(200);
         hBox1.setMaxWidth(600);
@@ -34,6 +33,13 @@ public class VerifyScreen {
         button1.setStyle("-fx-background-radius: 10 10 10 10; -fx-border-color: black; -fx-border-width: 2;-fx-border-radius: 10 10 10 10");
         button1.setFont(Font.font("Times New Roman", FontPosture.REGULAR,25));
         button1.setTextFill(Color.GRAY);
+        button1.setOnAction(e -> {
+            try {
+                VocabScreen.displayVocabScreen(stage,word);
+            } catch (Exception ex) {
+                ex.printStackTrace();
+            }
+        });
 
         button2 = new Button("GO BACK");
         button2.setStyle("-fx-background-radius: 10 10 10 10; -fx-border-color: black; -fx-border-width: 2;-fx-border-radius: 10 10 10 10");
@@ -58,7 +64,8 @@ public class VerifyScreen {
         stack.setStyle("-fx-background-color: #D9D9D9");
 
         Scene scene = new Scene(stack,1200,800);
-        window.setScene(scene);
-        window.show();
+        stage.setScene(scene);
+        stage.show();
+        return scene;
     }
 }

@@ -16,12 +16,12 @@ import java.io.IOException;
 import java.util.ArrayList;
 
 public class VocabScreen {
-    Stage window;
-    public void start(Stage stage) throws Exception {
-        window=stage;
-        window.setTitle("");
+
+    public static Scene displayVocabScreen(Stage stage, String word) throws Exception {
+
+        stage.setTitle("");
         VBox vBox1= new VBox();
-        Text text = new Text("TRANSLATIONS OF");
+        Text text = new Text("TRANSLATIONS OF " + word);
         Text text1 = new Text("(Source Language: ENG)");
         text.setFont(Font.font("Times New Roman", FontPosture.REGULAR,45));
         text1.setFont(Font.font("Times New Roman", FontPosture.REGULAR,45));
@@ -38,8 +38,8 @@ public class VocabScreen {
         vBox.setAlignment(Pos.TOP_LEFT);
         vBox.getChildren().add(ita);
         Text vocbIta = new Text();
-        add("data/eng-ita.dict",vBox,vocbIta);
-        System.out.println(readFile("data/eng-ita.dict"));
+        add("data/eng-ita.dict",word,vBox,vocbIta);
+        System.out.println(readFile("data/eng-ita.dict",word));
 
 
         //System.out.println(readFile("data/eng-tur.dict"));
@@ -50,7 +50,7 @@ public class VocabScreen {
         Text tur = new Text("TUR");
         tur.setFont(Font.font("Times New Roman", FontPosture.REGULAR,15));
         vBox2.getChildren().add(tur);
-        add("data/eng-tur.dict",vBox2,vocbTur);
+        add("data/eng-tur.dict",word,vBox2,vocbTur);
 
 
 
@@ -74,19 +74,19 @@ public class VocabScreen {
 
 
         Scene scene = new Scene(stack,1200,800);
-        window.setScene(scene);
-        window.show();
+        stage.setScene(scene);
+        stage.show();
+        return scene;
     }
 
-    public ArrayList<String> readFile(String fileName){
+    public static ArrayList<String> readFile(String fileName, String word){
         ArrayList<String> arrayList = new ArrayList<>();
         try (BufferedReader br = new BufferedReader(new FileReader(fileName))) {
             String line;
-            String zygoma ="come";
             while ((line = br.readLine()) != null) {
                 String[] arr = line.split(" /");
 
-                if(arr[0].equals(zygoma)){
+                if(arr[0].equals(word)){
                     String s = br.readLine();
 
                     while (isNumeric(Character.toString(s.charAt(0)))){
@@ -100,9 +100,9 @@ public class VocabScreen {
         }
         return arrayList;
     }
-    public void add(String s, VBox vBox, Text vocbText){
-        for(int i=0; i<readFile(s).size();i++){
-            vocbText = new Text(readFile(s).get(i));
+    public static void add(String s,String word, VBox vBox, Text vocbText){
+        for(int i=0; i<readFile(s,word).size();i++){
+            vocbText = new Text(readFile(s,word).get(i));
             vocbText.setFont(Font.font("Times New Roman", FontPosture.REGULAR,15));
             vBox.getChildren().add(vocbText);
         }

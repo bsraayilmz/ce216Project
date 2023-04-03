@@ -34,6 +34,13 @@ public class TranslationScreen {
         translateButton.setBorder(new Border(new BorderStroke(Color.BLACK,BorderStrokeStyle.SOLID,CornerRadii.EMPTY,BorderWidths.DEFAULT)));
         translateButton.setTextFill(Color.BLACK);
         translateButton.setBackground(new Background(new BackgroundFill(Color.SILVER, CornerRadii.EMPTY, new Insets(0))));
+        translateButton.setOnAction(e -> {
+            try {
+                VerifyScreen.displayVerifyScreen(stage,wordInput.getText());
+            } catch (Exception ex) {
+                ex.printStackTrace();
+            }
+        });
 
 
         HBox imageBox = new HBox();
