@@ -22,7 +22,4 @@ public class Main extends Application {
         loginScreen.displayLoginScreen(stage);
 
     }
-
-
-
 }
