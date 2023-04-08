@@ -8,7 +8,7 @@
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" name="javafx.graphics" level="application" />
-    <orderEntry type="library" name="javafx-swt" level="application" />
     <orderEntry type="library" name="JavaFX-20" level="application" />
+    <orderEntry type="library" name="javafx-swt" level="application" />
   </component>
 </module>

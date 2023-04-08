@@ -32,7 +32,7 @@ public class VerifyScreen {
         button1.setOnAction(e -> {
             try {
                 answer = true;
-                VocabScreen.displayVocabScreen(stage,word);
+                VocabScreen.displayVocabScreen(stage,word,"tur");
                 TranslationScreen.window.close();
             } catch (Exception ex) {
                 ex.printStackTrace();
