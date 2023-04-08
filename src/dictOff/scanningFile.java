@@ -11,6 +11,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 
 public class scanningFile {
+
     public static ArrayList<String> readFile(String fileName, String word){
         ArrayList<String> arrayList = new ArrayList<>();
         try (BufferedReader br = new BufferedReader(new FileReader(fileName))) {

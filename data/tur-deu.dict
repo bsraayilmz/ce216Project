@@ -1,147 +1,79 @@
-
-00-database-dictfmt-1.12.1
-Turkish-German FreeDict Dictionary
-
-Maintainer: [up for grabs]
-
-Edition: 0.2.3
-Size: 941 headwords
-
-Publisher: FreeDict.
-
-
-Availability:
-
-    Copyright (C) 1999-2019 by various authors listed below.
-    Available under the terms of the GNU General Public License ver. 2.0 and
-  any later version.
-    This program is free software; you can redistribute it and/or modify it
-  under the terms of the GNU General Public License as published by the
-  Free Software Foundation; either version 2 of the License, or (at your
-  option) any later version.
-    This program is distributed in the hope that it will be useful, but
-  WITHOUT ANY WARRANTY; without even the implied warranty of
-  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General
-  Public License for more details.
-    You should have received a copy of the GNU General Public License along
-  with this program; if not, write to the Free Software Foundation, Inc.,
-  59 Temple Place - Suite 330, Boston, MA 02111-1307, USA.
-
-Published at: http://freedict.org/
-
-Notes:
-
- * Database Status: too small
-
-
-Source(s):
-
-  Home: http://www.travlang.com/ This Database was generated from the
-  Ergane project.
-
-The Project:
-
-  This dictionary comes to you through nice people making it available for
-  free and for good. It is part of the FreeDict project,
-  http://freedict.org/. This project aims to make translating dictionaries
-  available for free. Your contributions are welcome!
-
-Changelog:
-
- * 2019-05-03 Ivan Panchenko ver. 0.2.3:
-   insert missing spaces, replace incorrect "ß" through "ss"
- * 2017-12-09 Sebastian Humenda ver. 0.2:
-   * update licencing stanza (thanks to Karl Bartel)
-   * remove duplicated entries
- * 2010-10-25 Piotr Bański:
-   Conversion of TEI P4 source into P5 via tools/freedict_P4toP5.xsl;
-   manual clean-up. We are back to version from before Michael Bunk's
-   re-import from Ergane of 2006-12-22 that was rolled back due to
-   Ergane's cryptic change of database licensing.
- * 2005-02-12 Michael Bunk:
-   Converted file to TEI P4
- * 2000-04-30 Horst Eyermann:
-   Database was converted to TEI format and checked into CVS
- * 2000-01-01 Horst Eyermann:
-   This Database was generated from ergane, http://www.travlang.com -
-   Thanks!
-Turkish-German FreeDict Dictionary ver. 0.2.3
-Afrika /afrikˈa/
+Formatted by Dictoff
 Afrika
 Afrikalı /afrikaɫˈɯ/
-afrikanisch
+1.afrikanisch
 Alman /aɫmˈan/
 1. deutsch
 2. Deutscher
 Almanya /aɫmˈanja/
-Deutschland
+1.Deutschland
 Amerika /ameɾikˈa/
-Vereinigte Staaten
+1.Vereinigte Staaten
 Amerikalı /ameɾikaɫˈɯ/
-amerikanisch
+1.amerikanisch
 Amerikan timsahı /ameɾikˈan tɪmsahˈɯ/
-Alligator
+1.Alligator
 Anadolu /anadoɫˈʊ/
-Anatolien
+1.Anatolien
 Ankara /ˈankaɾa/
-Ankara
+1.Ankara
 Arap /aɾˈap/
-Araber
+1.Araber
 Arjantin /arʒantˈɪn/
-Argentinien
+1.Argentinien
 Arnavut /arnavˈʊt/
-albanesisch, albanisch
+1.albanesisch, albanisch
 Arnavutluk /arnavʊtɫˈʊk/
-Albanien
+1.Albanien
 Asya /asjˈa/
-Asien
+1.Asien
 Atlas Okyanusu /atɫˈas ɔkjanusˈʊ/
-Atlantischer Ozean
+1.Atlantischer Ozean
 Avrupalı /ˈavrupaɫɯ/
 1. europäisch
 2. Europäer
 Avustralya /avʊstraɫjˈa/
-Australien
+1.Australien
 Avustralyalı /avʊstraɫjaɫˈɯ/
-australisch
+1.australisch
 Avusturya /avˈʊstʊrja/
-Österreich
+1.Österreich
 Avusturyalı /avʊstʊrjaɫˈɯ/
-österreichisch
+1.österreichisch
 Belçika /bæltʃikˈa/
-Belgien
+1.Belgien
 Belçikalı /bæltʃikaɫˈɯ/
-belgisch
+1.belgisch
 Birleşik Devletler /bɪrleʃˈɪk dɛvlɛtlˈɛr/
-Vereinigte Staaten
+1.Vereinigte Staaten
 Brezilya /brezɪljˈa/
-Brasilien
+1.Brasilien
 Brezilyalı /brezɪljaɫˈɯ/
-brasilianisch
+1.brasilianisch
 Britanya /britanjˈa/
-Britannien
+1.Britannien
 Bulgaristan /bʊɫɡaɾɪstˈan/
-Bulgarien
+1.Bulgarien
 Cezayir /dʒezajˈɪr/
-Algerien
+1.Algerien
 Cezayirli /dʒezajɪrlˈɪ/
-algerisch
+1.algerisch
 Danimarka /danimarkˈa/
-Dänemark
+1.Dänemark
 Danimarkalı /danimarkaɫˈɯ/
-Däne
+1.Däne
 Filistin /filɪstˈɪn/
-Palästina
+1.Palästina
 Fransa /frˈansa/
-Frankreich
+1.Frankreich
 Fransız /frˈansɯz/
-französisch
+1.französisch
 Habeşistan /habeʃɪstˈan/
-Äthiopien
+1.Äthiopien
 Hindistan /hɪndɪstˈan/
-Indien
+1.Indien
 Hintli /hɪntlˈɪ/
-Inder
+1.Inder
 Hollanda /hɔɫɫandˈa/
 1. Holland
 2. Niederlande, die Niederlande
@@ -151,7 +83,7 @@ Hollandalı /hɔɫɫandaɫˈɯ/
 3. niederländisch
 4. Niederländer
 Hıristiyan /hɯɾɪstijˈan/
-Christ
+1.Christ
 Japonca /ʒapɔndʒˈa/
 1. japanisch
 2. Japaner
@@ -159,97 +91,97 @@ Japonyalı /ʒapɔnjaɫˈɯ/
 1. japanisch
 2. Japaner
 Kanada /kanadˈa/
-Kanada
+1.Kanada
 Kanadalı /kanadaɫˈɯ/
-kanadisch
+1.kanadisch
 Kıbrıs /kɯbrˈɯs/
-Zypern
+1.Zypern
 Kıbrıslı /kɯbrɯsɫˈɯ/
-Zypriot
+1.Zypriot
 Kızılderili /kɯzɯɫdeɾilˈɪ/
-Indianer
+1.Indianer
 Macaristan /madʒaɾɪstˈan/
-Ungarn
+1.Ungarn
 Musevi /musevˈɪ/
-Jude
+1.Jude
 Müslüman /møslymˈan/
-Muslim
+1.Muslim
 Mısır /mɯsˈɯr/
-Ägypten
+1.Ägypten
 Mısırlı /mɯsɯrɫˈɯ/
 1. ägyptisch
 2. Ägypter
 Noel /noˈæl/
-Weihnachten
+1.Weihnachten
 Norveç /nɔrvˈɛtʃ/
-Norwegen
+1.Norwegen
 Norveçce /nɔrvˈɛtʃdʒɛ/
-Norweger
+1.Norweger
 Norveçli /nɔrvɛtʃlˈɪ/
 1. norwegisch
 2. Norweger
 Paskalya /paskaɫjˈa/
-Ostern
+1.Ostern
 Polonya /poɫɔnjˈa/
-Polen
+1.Polen
 Polonyalı /poɫɔnjaɫˈɯ/
 1. polnisch
 2. Pole
 Portekiz /pɔrtˈekɪz/
-Portugal
+1.Portugal
 Portekizli /pɔrtˈekɪzlɪ/
 1. portugiesisch
 2. Portugiese
 Ren /rˈæn/
-Rhein
+1.Rhein
 Rumanya /rumanjˈa/
-Rumänien
+1.Rumänien
 Rumca /rʊmdʒˈa/
-Grieche
+1.Grieche
 Rus /rˈʊs/
-Russe
+1.Russe
 Rusya /rʊsjˈa/
-Russland
+1.Russland
 Rusça /rʊstʃˈa/
-russisch
+1.russisch
 Suriyeli /suɾijelˈɪ/
-syrisch
+1.syrisch
 Türkiye /tørkijˈɛ/
-Türkei, die Türkei
+1.Türkei, die Türkei
 Yahudi /jahudˈɪ/
-Jude
+1.Jude
 Yugoslavya /juɡɔsɫavjˈa/
-Jugoslawien
+1.Jugoslawien
 Yunanistan /junanɪstˈan/
-Griechenland
+1.Griechenland
 Yunanlı /junanɫˈɯ/
-griechisch
+1.griechisch
 abes /abˈɛs/
 1. abgeschmackt, absurd, ungereimt, widersinnig
 2. nutzlos
 3. vergebens, vergeblich
 abide /abidˈɛ/
-Denkmal, Monument
+1.Denkmal, Monument
 abla /ˈabɫa/
-Schwester
+1.Schwester
 abluka /abɫukˈa/
-Blockade
+1.Blockade
 abluka etmek /abɫukˈa ɛtmˈɛk/
-blockieren
+1.blockieren
 abone /abonˈɛ/
-Abonnement
+1.Abonnement
 abuk sabuk /abˈʊk sabˈʊk/
-Gallimathias, Unsinn
+1.Gallimathias, Unsinn
 acayip /adʒajˈɪp/
-befremdend, kurios, seltsam, sonderbar, wunderlich
+1.befremdend, kurios, seltsam, sonderbar, wunderlich
 acele /ˈadʒɛlɛ/
-geschwind, hurtig, rasch, schnell
+1.geschwind, hurtig, rasch, schnell
 acemi /adʒemˈɪ/
-Novize
+1.Novize
 acente /adʒæntˈɛ/
-Agent, Geschäftsbesorger
+1.Agent, Geschäftsbesorger
 aciz /ˈadʒɪz/
-flau, gelinde, schwach
+1.flau, gelinde, schwach
 acı /adʒˈɯ/
 1. bitter
 2. Schmerz, Weh
@@ -259,733 +191,733 @@ acıklı /adʒɯkɫˈɯ/
 2. traurig
 3. tragisch
 acıkmak /adʒɯkmˈak/
-bedauern
+1.bedauern
 acımak /adʒɯmˈak/
-Schmerz verursachen, schmerzen, wehtun
+1.Schmerz verursachen, schmerzen, wehtun
 ad /ˈad/
-Name
+1.Name
 ada /adˈa/
-Eiland, Insel
+1.Eiland, Insel
 adam /adˈam/
-Mensch
+1.Mensch
 adres /adrˈɛs/
-Adresse
+1.Adresse
 af /ˈaf/
-Amnestie, Begnadigung, Straferlass
+1.Amnestie, Begnadigung, Straferlass
 akasya /akasjˈa/
-Akazie
+1.Akazie
 akordeon /akɔrdeˈɔn/
-Ziehharmonika
+1.Ziehharmonika
 akrobat /akrobˈat/
-Akrobat
+1.Akrobat
 aktör /aktˈœr/
-Schauspieler
+1.Schauspieler
 akustik /akʊstˈɪk/
-Akustik
+1.Akustik
 akvaryum /akvˈarjʊm/
-Aquarium
+1.Aquarium
 akümülatör /akymyɫatˈœr/
-Akkumulator
+1.Akkumulator
 akşam /akʃˈam/
-Abend
+1.Abend
 akıl /akˈɯɫ/
-Gehirn, Hirn
+1.Gehirn, Hirn
 alay /aɫˈaj/
-Ironie
+1.Ironie
 alaşım /aɫˈaʃɯm/
-Legierung
+1.Legierung
 albay /aɫbˈaj/
-Oberst
+1.Oberst
 albüm /ˈaɫbøm/
-Album
+1.Album
 alev /alˈɛv/
-Flamme
+1.Flamme
 aleyhinde /alɛjhɪndˈɛ/
-an, gegen, gegenüber, wider
+1.an, gegen, gegenüber, wider
 alfabe /aɫfabˈɛ/
-Alphabet
+1.Alphabet
 alkiş /aɫkˈɪʃ/
-Applaus, Beifall
+1.Applaus, Beifall
 alkol /aɫkˈɔɫ/
-Alkohol, Spiritus
+1.Alkohol, Spiritus
 alkışlamak /aɫkɯʃɫamˈak/
-applaudieren, Beifall spenden
+1.applaudieren, Beifall spenden
 almak /aɫmˈak/
 1. fassen, nehmen
 2. bekommen, empfangen, erhalten
 almanak /aɫmanˈak/
-Almanach
+1.Almanach
 altı /aɫtˈɯ/
-sechs
+1.sechs
 alüminyum /alymˈɪnjʊm/
-Aluminium
+1.Aluminium
 amatör /amatˈœr/
-Amateur, Liebhaber
+1.Amateur, Liebhaber
 amerikalı /ameɾikaɫˈɯ/
-amerikanisch
+1.amerikanisch
 amiral /amiɾˈaɫ/
-Admiral
+1.Admiral
 amonyak /amɔnjˈak/
-Ammoniak
+1.Ammoniak
 amper /ampˈɛr/
-Ampere
+1.Ampere
 anahtar /anahtˈar/
-Schlüssel
+1.Schlüssel
 anarşi /anarʃˈɪ/
-Anarchie
+1.Anarchie
 anatomi /anatomˈɪ/
-Anatomie, Zergliederungskunst
+1.Anatomie, Zergliederungskunst
 ancak /andʒˈak/
-kaum
+1.kaum
 anemi /anemˈɪ/
-Blutarmut
+1.Blutarmut
 anlamak /anɫamˈak/
-begreifen, erfassen, verstehen
+1.begreifen, erfassen, verstehen
 anne /annˈɛ/
-Mutter
+1.Mutter
 ansiklopedi /ansɪkɫopedˈɪ/
-Enzyklopädie
+1.Enzyklopädie
 anten /antˈæn/
-Fühler, Fühlhorn
+1.Fühler, Fühlhorn
 antika /antikˈa/
-altertümlich, antik
+1.altertümlich, antik
 apostrof /apɔstrˈɔf/
-Apostroph
+1.Apostroph
 apse /ˈapsɛ/
-Abszess, Eiterbeule, Geschwulst
+1.Abszess, Eiterbeule, Geschwulst
 aralık /ˈaɾaɫɯk/
-Dezember
+1.Dezember
 aramak /aɾamˈak/
-ausschauen nach, suchen, aufsuchen
+1.ausschauen nach, suchen, aufsuchen
 arasında /aɾasɯndˈa/
-unter, mitten unter, zwischen
+1.unter, mitten unter, zwischen
 arena /aɾenˈa/
-Arena, Kampfplatz
+1.Arena, Kampfplatz
 arkadaş /arkadˈaʃ/
-Freund
+1.Freund
 arkasından /arkasɯndˈan/
 1. hinter
 2. nach
 arpa /arpˈa/
-Gerste
+1.Gerste
 arzu /arzˈʊ/
-Appetit
+1.Appetit
 arı /aɾˈɯ/
-Biene
+1.Biene
 arı kovanı /aɾˈɯ kovanˈɯ/
-Bienenkorb, Bienenstock
+1.Bienenkorb, Bienenstock
 asfalt /asfˈaɫt/
-Asphalt, Erdpech
+1.Asphalt, Erdpech
 asker /askˈɛr/
 1. Armee, Heer
 2. Armee
 3. Soldat
 astronomi /astronomˈɪ/
-Astronomie, Himmelskunde, Sternkunde
+1.Astronomie, Himmelskunde, Sternkunde
 astım /ˈastɯm/
-Asthma
+1.Asthma
 at /ˈat/
-Gaul, Pferd
+1.Gaul, Pferd
 ata /atˈa/
-Ahn, Vorfahr, Urahn
+1.Ahn, Vorfahr, Urahn
 atardamar /atardamˈar/
-Arterie, Pulsader, Schlagader
+1.Arterie, Pulsader, Schlagader
 ateş /atˈɛʃ/
-Feuer
+1.Feuer
 atlet /atlˈɛt/
-Athlet
+1.Athlet
 atmak /atmˈak/
-schleudern, werfen
+1.schleudern, werfen
 atmosfer /atmɔsfˈɛr/
-Atmosphäre
+1.Atmosphäre
 atom /atˈɔm/
-Atom
+1.Atom
 ay /ˈaj/
 1. Mond
 2. Monat
 ayak bileği /ajˈak bilejˈɪ/
-Knöchel
+1.Knöchel
 ayak parmağı /ajˈak parmaːˈɯ/
-Zehe
+1.Zehe
 aç /ˈatʃ/
-hungrig
+1.hungrig
 açgözlü /atʃɟœzlˈø/
-unersättlich
+1.unersättlich
 açmak /atʃmˈak/
-aufmachen, öffnen
+1.aufmachen, öffnen
 açık /atʃˈɯk/
 1. hell, licht, lichtvoll
 2. anschaulich, bestimmt, deutlich, klar
 3. offen
 açıkgöz /atʃɯkɟˈœz/
-abgefeimt, arglistig, gerieben, gewiegt, gewitzigt, listig, schlau
+1.abgefeimt, arglistig, gerieben, gewiegt, gewitzigt, listig, schlau
 açıklama /atʃˈɯkɫama/
-Aufklärung, Aufschluss, Erläuterung
+1.Aufklärung, Aufschluss, Erläuterung
 açıklamak /atʃɯkɫamˈak/
 1. darlegen, einleuchten, erklären, erläutern
 2. aufbieten, veröffentlichen
 açıkça /atʃɯktʃˈa/
-ausdrücklich
+1.ausdrücklich
 ağustos /aːʊstˈɔs/
-August
+1.August
 baba /babˈa/
-Väterchen
+1.Väterchen
 babacığım /babadʒˈɯɯɯm/
-Väterchen
+1.Väterchen
 baca /badʒˈa/
-Schornstein
+1.Schornstein
 bagaj /baɡˈaʒ/
-Bagage, Gepäck, Verpackung
+1.Bagage, Gepäck, Verpackung
 bakteriler /bakteɾilˈɛr/
-Bakterie
+1.Bakterie
 bakışım /bakˈɯʃɯm/
-Ebenmaß, Gleichmaß, Symmetrie
+1.Ebenmaß, Gleichmaß, Symmetrie
 balina /balinˈa/
-Walfisch
+1.Walfisch
 balkon /baɫkˈɔn/
-Altan, Balkon
+1.Altan, Balkon
 balon /baɫˈɔn/
-Ballon
+1.Ballon
 balta /baɫtˈa/
-Axt, Beil, Hacke
+1.Axt, Beil, Hacke
 balık /baɫˈɯk/
-Fisch
+1.Fisch
 banka /bˈanka/
-Bank
+1.Bank
 banyo /banjˈɔ/
-Badestube
+1.Badestube
 banyo odası /banjˈɔ odasˈɯ/
-Badestube
+1.Badestube
 barbar /barbˈar/
-Barbar
+1.Barbar
 barikat /baɾikˈat/
-Barrikade, Verhau
+1.Barrikade, Verhau
 barometre /baɾomɛtrˈɛ/
-Barometer
+1.Barometer
 baron /baɾˈɔn/
-Baron, Freiherr
+1.Baron, Freiherr
 basil /basˈɪl/
-Bazillus
+1.Bazillus
 basur /basˈʊr/
-Hämorrhoiden
+1.Hämorrhoiden
 battaniye /batanijˈɛ/
-Bettdecke, Decke
+1.Bettdecke, Decke
 batı /batˈɯ/
-Abendland, Okzident, Westen
+1.Abendland, Okzident, Westen
 batıya ait /batɯjˈa aˈɪt/
-westlich
+1.westlich
 baykuş /bajkˈʊʃ/
-Eule
+1.Eule
 bayrak /bajrˈak/
-Banner, Fahne, Flagge
+1.Banner, Fahne, Flagge
 başka /baʃkˈa/
-anderer, anders, sonst
+1.anderer, anders, sonst
 başlamak /baʃɫamˈak/
-anbrechen, anfangen, beginnen
+1.anbrechen, anfangen, beginnen
 beden /bedˈæn/
-Körper, Leib
+1.Körper, Leib
 beden yapısı /bedˈæn japɯsˈɯ/
-Anatomie, Zergliederungskunst
+1.Anatomie, Zergliederungskunst
 beklemek /bɛklemˈɛk/
-gewärtigen, harren, warten, erwarten
+1.gewärtigen, harren, warten, erwarten
 belkemiği /bælkemijˈɪ/
-Rückgrat
+1.Rückgrat
 benzin /bænzˈɪn/
-Benzin
+1.Benzin
 beygir /bɛjɟˈɪr/
-Gaul, Pferd
+1.Gaul, Pferd
 beyin /bejˈɪn/
-Gehirn, Hirn
+1.Gehirn, Hirn
 bez /bˈɛz/
-Tuch
+1.Tuch
 beş /bˈɛʃ/
-fünf
+1.fünf
 beğenmek /bejænmˈɛk/
 1. approbieren, billigen, genehmigen, gutheißen
 2. achten, mögen, schätzen, wertschätzen, würdigen
 biftek /bɪftˈɛk/
-Beefsteak
+1.Beefsteak
 bilardo /biɫardˈɔ/
-Billard
+1.Billard
 bilet /bilˈɛt/
-Billett, Fahrkarte, Karte
+1.Billett, Fahrkarte, Karte
 bilezik /bilezˈɪk/
-Armband
+1.Armband
 bilgisinde /bɪlɟisɪndˈɛ/
-Adjektiv, Eigenschaftswort
+1.Adjektiv, Eigenschaftswort
 bilmek /bɪlmˈɛk/
-wissen
+1.wissen
 bina /binˈa/
-Bau, Bauwerk, Gebäude
+1.Bau, Bauwerk, Gebäude
 bir /bˈɪr/
 1. ein, eine, eins
 bira /biɾˈa/
-Bier
+1.Bier
 birader /biɾadˈɛr/
-Bruder
+1.Bruder
 birden fazla kadın alma /bɪrdˈæn fˈazɫa kadˈɯn ˈaɫma/
-Polygamie, Vielweiberei
+1.Polygamie, Vielweiberei
 biriktirmek /biɾɪktɪrmˈɛk/
-sammeln, einsammeln
+1.sammeln, einsammeln
 birlik /bɪrlˈɪk/
-Einigkeit, Einheit
+1.Einigkeit, Einheit
 bir daha /bɪr dahˈa/
-anderer, anders, sonst
+1.anderer, anders, sonst
 bir uzvu kesmek /bɪr ʊzvˈʊ kɛsmˈɛk/
-abnehmen, abschneiden, amputieren
+1.abnehmen, abschneiden, amputieren
 bisiklet /bisɪklˈɛt/
 1. Fahrrad, Rad, Rover
 biyografi /bijɔɡrafˈɪ/
-Biographie, Lebensbeschreibung
+1.Biographie, Lebensbeschreibung
 biyoloji /bijoɫoʒˈɪ/
-Biologie, Lebenslehre
+1.Biologie, Lebenslehre
 biz /bˈɪz/
-uns, unser, wir
+1.uns, unser, wir
 biçak /bitʃˈak/
-Messer
+1.Messer
 boksör /bɔksˈœr/
-Boxer
+1.Boxer
 bomba /bɔmbˈa/
-Bombe
+1.Bombe
 boykot /bɔjkˈɔt/
-Aussperrung, Boykott
+1.Aussperrung, Boykott
 boş /bˈɔʃ/
-leer
+1.leer
 boğa güreşi alanı /boːˈa ɟyɾeʃˈɪ aɫanˈɯ/
-Arena, Kampfplatz
+1.Arena, Kampfplatz
 broşür /broʃˈør/
-Broschüre
+1.Broschüre
 bugün /buɡˈøn/
-heute
+1.heute
 bulmak /bʊɫmˈak/
-finden, befinden, erachten, ermitteln, vorfinden
+1.finden, befinden, erachten, ermitteln, vorfinden
 bulunmayış /buɫʊnmajˈɯʃ/
-Abwesenheit
+1.Abwesenheit
 bulut /buɫˈʊt/
-Wolke
+1.Wolke
 bulüz /bˈuɫøz/
-Bluse
+1.Bluse
 burun /buɾˈʊn/
-Nase
+1.Nase
 burç /bˈʊrtʃ/
-Horoskop
+1.Horoskop
 buz /bˈʊz/
-Eis
+1.Eis
 böbrek /bœbrˈɛk/
-Niere
+1.Niere
 bölüm /bˈœløm/
-Kapitel
+1.Kapitel
 bülbül /bølbˈøl/
-Nachtigall
+1.Nachtigall
 bütün /bytˈøn/
-alles
+1.alles
 büyük /byjˈøk/
-groß
+1.groß
 büyük elçi /byjˈøk æltʃˈɪ/
-Botschafter, Gesandter
+1.Botschafter, Gesandter
 büyük kilise /byjˈøk kilˈisɛ/
-Dom, Kathedrale, Münster
+1.Dom, Kathedrale, Münster
 büyük zil /byjˈøk zˈɪl/
-Zimbel
+1.Zimbel
 bırakmak /bɯɾakmˈak/
-abreisen, fortgehen
+1.abreisen, fortgehen
 cadde /dʒadˈɛ/
-Straße
+1.Straße
 cambaz /dʒambˈaz/
-Akrobat
+1.Akrobat
 cami /dʒamˈɪ/
-Moschee
+1.Moschee
 cebir /dʒebˈɪr/
-Algebra, Buchstabenrechnung
+1.Algebra, Buchstabenrechnung
 cephane /dʒɛphanˈɛ/
-Munition
+1.Munition
 cevap /dʒevˈap/
-Antwort
+1.Antwort
 cevap vermek /dʒevˈap vɛrmˈɛk/
-antworten, beantworten, entgegnen, erwidern
+1.antworten, beantworten, entgegnen, erwidern
 ceviz /dʒˈevɪz/
-Walnuss
+1.Walnuss
 ceylan /dʒɛjɫˈan/
-Gazelle
+1.Gazelle
 coğrafya /dʒoːɾafjˈa/
-Erdbeschreibung, Erdkunde, Geographie
+1.Erdbeschreibung, Erdkunde, Geographie
 cuma /dʒˈuma/
-Freitag
+1.Freitag
 cumartesi /dʒumartesˈɪ/
-Sabbat
+1.Sabbat
 cümle kuruluşu /dʒˈømlɛ kuɾuɫuʃˈʊ/
-Syntax
+1.Syntax
 da /dˈa/
-auch, ebenfalls, gleichfalls
+1.auch, ebenfalls, gleichfalls
 daha iyi /dahˈa ijˈi/
-besser
+1.besser
 daha şimdiden /dahˈa ʃɪmdidˈæn/
-bereits, schon
+1.bereits, schon
 dahi /dahˈɪ/
-auch, ebenfalls, gleichfalls
+1.auch, ebenfalls, gleichfalls
 daima /daˈima/
-allemal, allzeit, fortwährend, immer, jederzeit, stets
+1.allemal, allzeit, fortwährend, immer, jederzeit, stets
 daire /daiɾˈɛ/
-Kreis
+1.Kreis
 damat /damˈat/
-Eidam, Schwiegersohn
+1.Eidam, Schwiegersohn
 dana /danˈa/
-Kalb
+1.Kalb
 dans /dˈans/
-Tanz
+1.Tanz
 dans etmek /dˈans ɛtmˈɛk/
-tanzen
+1.tanzen
 dar /dˈar/
-schmal
+1.schmal
 darı /daɾˈɯ/
-Mais
+1.Mais
 dağ /dˈaː/
-Berg
+1.Berg
 de /dˈɛ/
-auch, ebenfalls, gleichfalls
+1.auch, ebenfalls, gleichfalls
 demek /demˈɛk/
-erwähnen, sagen
+1.erwähnen, sagen
 demir /demˈɪr/
-Eisen
+1.Eisen
 demirci /demɪrdʒˈɪ/
-Schmied
+1.Schmied
 deri /deɾˈɪ/
-Leder
+1.Leder
 deve /devˈɛ/
-Kamel
+1.Kamel
 difteri /dɪfteɾˈɪ/
-Diphtherie
+1.Diphtherie
 dikenli çalı /dˈicænlɪ tʃaɫˈɯ/
-Dorn, Grat, Stachel
+1.Dorn, Grat, Stachel
 diktatör /dɪktatˈœr/
-Diktator
+1.Diktator
 dilenci /dilændʒˈɪ/
-Bettler
+1.Bettler
 dimağ /dimˈaː/
-Gehirn, Hirn
+1.Gehirn, Hirn
 dinamit /dinamˈɪt/
-Dynamit
+1.Dynamit
 dinlemek /dɪnlemˈɛk/
-anhören, horchen, aushorchen, zuhören
+1.anhören, horchen, aushorchen, zuhören
 dinsizlik /dˈɪnsɪzlɪk/
-Atheismus, Gottesleugnung
+1.Atheismus, Gottesleugnung
 dip /dˈɪp/
-Boden, Grund
+1.Boden, Grund
 diploma /dɪpɫˈoma/
-Diplom, Prüfungszeugnis, Urkunde
+1.Diplom, Prüfungszeugnis, Urkunde
 diplomat /dɪpɫomˈat/
-Diplomat
+1.Diplomat
 dirsek /dˈɪrsɛk/
-Ellbogen
+1.Ellbogen
 diyalog /dijaɫˈɔɡ/
-Dialog, Zwiegespräch
+1.Dialog, Zwiegespräch
 diz /dˈɪz/
-Knie
+1.Knie
 diğer bir /dijˈɛr bˈɪr/
-anderer, anders, sonst
+1.anderer, anders, sonst
 dokuz /dˈokʊz/
-neun
+1.neun
 dolar /doɫˈar/
-Dollar
+1.Dollar
 domuz /dˈomʊz/
-Schwein
+1.Schwein
 domuz eti /dˈomʊz etˈɪ/
-Schweinefleisch
+1.Schweinefleisch
 domuz pastarması /dˈomʊz pastarmasˈɯ/
-Speck
+1.Speck
 dondurma /dˈɔndʊrma/
-Eis, Gefrorenes, Speiseeis
+1.Eis, Gefrorenes, Speiseeis
 doğru /doːɾˈʊ/
-akkurat, genau
+1.akkurat, genau
 doğu /doːˈʊ/
-Orient, Osten
+1.Orient, Osten
 doğum /dˈoːʊm/
-Geburt
+1.Geburt
 doğum günü /dˈoːʊm ɟynˈø/
-Geburtstag
+1.Geburtstag
 doğuya ait /doːujˈa aˈɪt/
-östlich
+1.östlich
 duka /dukˈa/
-Herzog
+1.Herzog
 durmak /dʊrmˈak/
-halten, anhalten, haltmachen, stocken, stoppen
+1.halten, anhalten, haltmachen, stocken, stoppen
 dört /dˈœrt/
-vier
+1.vier
 dük /dˈøk/
-Herzog
+1.Herzog
 dükkân /døkˈan/
-Butique, Geschäft, Kramladen, Laden
+1.Butique, Geschäft, Kramladen, Laden
 dülger /dølɟˈɛr/
-Zimmermann
+1.Zimmermann
 dün /dˈøn/
-gestern
+1.gestern
 dünya /dønjˈa/
-Welt
+1.Welt
 düzenlemek /dyzænlemˈɛk/
-arrangieren, einrichten, ordnen, anorden, veranstalten
+1.arrangieren, einrichten, ordnen, anorden, veranstalten
 düşmek /døʃmˈɛk/
-fallen
+1.fallen
 düşünmek /dyʃønmˈɛk/
-denken
+1.denken
 ecnebi memlekette /ɛdʒnebˈɪ mæmlekɛtˈɛ/
-Ausland
+1.Ausland
 ekim /ˈekɪm/
-Oktober
+1.Oktober
 ekmek /ɛkmˈɛk/
-Brot
+1.Brot
 elbise /ælbˈisɛ/
-Kleider
+1.Kleider
 elektrik /elɛktrˈɪk/
-Elektrizität
+1.Elektrizität
 elma /ˈælma/
-Apfel
+1.Apfel
 emniyet /æmnijˈɛt/
-Polizei
+1.Polizei
 engel /ænɟˈæl/
-Barriere, Schranke
+1.Barriere, Schranke
 erkek /ɛrkˈɛk/
-Mann
+1.Mann
 erkek kardeş /ɛrkˈɛk kardˈɛʃ/
-Bruder
+1.Bruder
 eski /ɛskˈɪ/
 1. Ex‐
 2. alt
 etmek /ɛtmˈɛk/
-anfertigen, herstellen, leiten, machen, tun, zurücklegen
+1.anfertigen, herstellen, leiten, machen, tun, zurücklegen
 evet /evˈɛt/
-ja, doch
+1.ja, doch
 ev kadını /ˈɛv kadɯnˈɯ/
-Frau des Hauses
+1.Frau des Hauses
 eylül /ɛjlˈøl/
-September
+1.September
 eş /ˈɛʃ/
-Frau, Gemahlin
+1.Frau, Gemahlin
 eşek /eʃˈɛk/
-Esel
+1.Esel
 eşkiya /ɛʃkijˈa/
-Bandit, Räuber
+1.Bandit, Räuber
 eşlik etmek /ɛʃlˈɪk ɛtmˈɛk/
-begleiten
+1.begleiten
 eğer /ejˈɛr/
-falls, insofern, wenn, wofern
+1.falls, insofern, wenn, wofern
 eğlendirmek /ɛjlændɪrmˈɛk/
-amüsieren, belustigen, ergötzen, unterhalten
+1.amüsieren, belustigen, ergötzen, unterhalten
 fakat /fakˈat/
-aber, allein, dagegen, sondern
+1.aber, allein, dagegen, sondern
 falı /faɫˈɯ/
-Horoskop
+1.Horoskop
 fare /faɾˈɛ/
-Maus
+1.Maus
 fark /fˈark/
-Unterschied
+1.Unterschied
 fasulye /fasʊɫjˈɛ/
-Bohne
+1.Bohne
 felaket /feɫakˈɛt/
-Katastrophe
+1.Katastrophe
 fena /fenˈa/
-böse, schlecht
+1.böse, schlecht
 feshetmek /fɛshɛtmˈɛk/
-annullieren, für null und nichtig erklären, kassieren
+1.annullieren, für null und nichtig erklären, kassieren
 fikir /fikˈɪr/
-Gedanke, Idee, Vorstellung
+1.Gedanke, Idee, Vorstellung
 fikir vermek /fikˈɪr vɛrmˈɛk/
-raten, beraten, einen Rat geben
+1.raten, beraten, einen Rat geben
 fil /fˈɪl/
-Elefant
+1.Elefant
 fildişi /fɪldiʃˈɪ/
-Elfenbein
+1.Elfenbein
 fizik /fizˈɪk/
-Physik
+1.Physik
 formül /fɔrmˈøl/
-Formel
+1.Formel
 fren /frˈæn/
-Bremse
+1.Bremse
 fıkra /fɯkrˈa/
-Anekdote
+1.Anekdote
 fındık /fɯndˈɯk/
-Nuss
+1.Nuss
 fırıncı /fɯɾɯndʒˈɯ/
-Bäcker
+1.Bäcker
 fırında pişirmek /fɯɾɯndˈa piʃɪrmˈɛk/
-backen
+1.backen
 fıskiye /fɯskijˈɛ/
-Brunnen, Fontäne, Springbrunnen
+1.Brunnen, Fontäne, Springbrunnen
 gaga /ɡaɡˈa/
-Schnabel
+1.Schnabel
 gazeteci /ɡazetedʒˈɪ/
-Journalist
+1.Journalist
 gece /ɟˈedʒɛ/
-Nacht
+1.Nacht
 gelmek /ɟælmˈɛk/
-kommen
+1.kommen
 gemi /ɟemˈɪ/
-Boot
+1.Boot
 genelev /ɟenelˈɛv/
-Bordell
+1.Bordell
 genişlik /ɟenɪʃlˈɪk/
-Breite
+1.Breite
 geometri /ɟeomɛtrˈɪ/
-Geometrie
+1.Geometrie
 geriye doğru /ɟeɾijˈɛ doːɾˈʊ/
-zurück
+1.zurück
 getirmek /ɟetɪrmˈɛk/
-bringen, anbringen, eintragen, heranbringen, überbringen
+1.bringen, anbringen, eintragen, heranbringen, überbringen
 girmek /ɟɪrmˈɛk/
-eintreten
+1.eintreten
 gitmek /ɟɪtmˈɛk/
-fahren, gehen, treten
+1.fahren, gehen, treten
 gri /ɡrˈɪ/
-grau
+1.grau
 grup /ɡrˈʊp/
-Gruppe
+1.Gruppe
 göbek /ɟœbˈɛk/
-Bauch, Unterleib
+1.Bauch, Unterleib
 göndermek /ɟœndɛrmˈɛk/
-schicken, senden, einsenden
+1.schicken, senden, einsenden
 görmek /ɟœrmˈɛk/
-sehen, ansehen
+1.sehen, ansehen
 gövde /ɟœvdˈɛ/
-Körper, Leib
+1.Körper, Leib
 gün /ɟˈøn/
-Tag
+1.Tag
 gündem /ɟøndˈæm/
-Agenda, Notizbuch
+1.Agenda, Notizbuch
 gündüz /ɟˈøndøz/
-Tag
+1.Tag
 gürültü /ɟyɾøltˈø/
-Aufsehen, Braus
+1.Aufsehen, Braus
 güve /ɟyvˈɛ/
-Motte
+1.Motte
 güzel /ɟyzˈæl/
-hübsch, schön
+1.hübsch, schön
 güzel koku /ɟyzˈæl kokˈʊ/
-Aroma, Duft
+1.Aroma, Duft
 güç /ɟˈøtʃ/
-Energie, Tatkraft, Willenskraft
+1.Energie, Tatkraft, Willenskraft
 haber vermek /habˈɛr vɛrmˈɛk/
-ankündigen, anzeigen, avisieren, melden, anmelden, verkünden
+1.ankündigen, anzeigen, avisieren, melden, anmelden, verkünden
 hafta /haftˈa/
-Woche
+1.Woche
 halihazırda /halihazɯrdˈa/
-bereits, schon
+1.bereits, schon
 halita /halitˈa/
-Legierung
+1.Legierung
 hareket /haɾekˈɛt/
-Handlung, Tat
+1.Handlung, Tat
 hasırdan yapılmış /hasɯrdˈan japɯɫmˈɯʃ/
-Stroh
+1.Stroh
 hava /havˈa/
 1. Luft
 2. Atmosphäre
 havaî /havaˈɯ/
-Fühler, Fühlhorn
+1.Fühler, Fühlhorn
 havuç /havˈʊtʃ/
-Karotte, Möhre, Mohrrübe
+1.Karotte, Möhre, Mohrrübe
 havyar /havjˈar/
-Kaviar
+1.Kaviar
 haydut /hajdˈʊt/
-Bandit, Räuber
+1.Bandit, Räuber
 hayran olmak /hajrˈan ɔɫmˈak/
-bewundern
+1.bewundern
 hayvan /hajvˈan/
-Tier
+1.Tier
 hayvanbilim /hajvanbˈilɪm/
-Zoologie
+1.Zoologie
 hayvansal /hajvansˈaɫ/
-Tier
+1.Tier
 haziran /haziɾˈan/
-Juni
+1.Juni
 hece /hˈedʒɛ/
-Silbe
+1.Silbe
 hedef /hedˈɛf/
-Ziel, Zweck
+1.Ziel, Zweck
 hemen hemen /hemˈæn hemˈæn/
-beinahe, fast, nahezu, schier, ungefähr
+1.beinahe, fast, nahezu, schier, ungefähr
 her zaman /hˈɛr zamˈan/
-allemal, allzeit, fortwährend, immer, jederzeit, stets
+1.allemal, allzeit, fortwährend, immer, jederzeit, stets
 hesap /hesˈap/
-Konto, Rechnung
+1.Konto, Rechnung
 heyet /hejˈɛt/
-Ausschuss, Komitee
+1.Ausschuss, Komitee
 hidrojen /hɪdroʒˈæn/
-Wasserstoff
+1.Wasserstoff
 hikâye /hikajˈɛ/
-Anekdote
+1.Anekdote
 hiçbir yerde /hɪtʃbˈɪr jɛrdˈɛ/
-nirgends
+1.nirgends
 hiçbir şey /hɪtʃbˈɪr ʃˈɛj/
-nichts
+1.nichts
 horoz /hoɾˈɔz/
-Hahn
+1.Hahn
 hortlak /hɔrtɫˈak/
-Geist, Gespenst, Phantom, Spuk
+1.Geist, Gespenst, Phantom, Spuk
 hoş /hˈɔʃ/
 1. behaglich, herrlich, genehm, angenehm
 2. hübsch
 3. süß
 hücum /hˈydʒʊm/
-Anfall, Angriff
+1.Anfall, Angriff
 hürmet göstermek /hørmˈɛt ɟœstɛrmˈɛk/
-ehren, beehren, verehren
+1.ehren, beehren, verehren
 hırslı /hɯrsɫˈɯ/
-ehrgeizig
+1.ehrgeizig
 hırsızlık /hˈɯrsɯzɫɯk/
-Diebstahl
+1.Diebstahl
 hıyar /hɯjˈar/
-Gurke
+1.Gurke
 hızlandırmak /hɯzɫandɯrmˈak/
-beschleunigen
+1.beschleunigen
 idealist /idealˈɪst/
-Idealist
+1.Idealist
 ihtiras /ɪhtiɾˈas/
-Ehrgeiz
+1.Ehrgeiz
 iki /ikˈɪ/
-zwei
+1.zwei
 iklim /ˈɪklɪm/
-Klima
+1.Klima
 ilahi /iɫahˈɪ/
-Hymne, Lobgesang
+1.Hymne, Lobgesang
 ilahiyat /iɫahijˈat/
-Theologie
+1.Theologie
 ilan /iɫˈan/
-Annonce, Anzeige, Inserat
+1.Annonce, Anzeige, Inserat
 ilan etmek /iɫˈan ɛtmˈɛk/
-ankündigen, anzeigen, avisieren, melden, anmelden, verkünden
+1.ankündigen, anzeigen, avisieren, melden, anmelden, verkünden
 imparator /ɪmpaɾatˈɔr/
-Imperator, Kaiser
+1.Imperator, Kaiser
 imparatorluk /ɪmpaɾatɔrɫˈʊk/
-Kaiserreich, Kaisertum
+1.Kaiserreich, Kaisertum
 inanmak /inanmˈak/
-glauben
+1.glauben
 inanç /inˈantʃ/
-Glaube, Glauben
+1.Glaube, Glauben
 inek /inˈɛk/
-Kuh
+1.Kuh
 iptal etmek /ɪptˈaɫ ɛtmˈɛk/
-annullieren, für null und nichtig erklären, kassieren
+1.annullieren, für null und nichtig erklären, kassieren
 irtifa /ɪrtifˈa/
-Höhe
+1.Höhe
 ise /ˈise/
-falls, insofern, wenn, wofern
+1.falls, insofern, wenn, wofern
 isim /ˈisɪm/
 1. Name
 2. Hauptwort, Substantiv
 istek /ɪstˈɛk/
-Appetit
+1.Appetit
 istihza /ɪstɪhzˈa/
-Ironie
+1.Ironie
 istiridye /ɪstiɾɪdjˈɛ/
-Auster
+1.Auster
 itaat etmek /itaˈat ɛtmˈɛk/
-folgen, befolgen, gehörchen
+1.folgen, befolgen, gehörchen
 itham etmek /ɪthˈam ɛtmˈɛk/
-anklagen, beschuldigen
+1.anklagen, beschuldigen
 iyod /ijˈɔd/
-Jod
+1.Jod
 izin vermek /izˈɪn vɛrmˈɛk/
-erlauben, gestatten
+1.erlauben, gestatten
 içilen şey /itʃilˈæn ʃˈɛj/
-Getränk, Trank
+1.Getränk, Trank
 içmek /ɪtʃmˈɛk/
 1. rauchen
 2. trinken
@@ -994,224 +926,224 @@ iş /ˈɪʃ/
 2. Handlung, Tat
 3. Arbeit
 işitmek /iʃɪtmˈɛk/
-hören, vernehmen
+1.hören, vernehmen
 iştah /ɪʃtˈah/
-Appetit
+1.Appetit
 jeoloji /ʒeoɫoʒˈɪ/
-Geologie
+1.Geologie
 kabul etmek /kabˈʊɫ ɛtmˈɛk/
-annehmen, empfangen, genehmigen
+1.annehmen, empfangen, genehmigen
 kafes /kafˈɛs/
-Bauer, Käfig
+1.Bauer, Käfig
 kahve /kahvˈɛ/
-Kaffee
+1.Kaffee
 kahverengi /kahveɾænɡˈɪ/
-braun
+1.braun
 kalay /kaɫˈaj/
-Zinn
+1.Zinn
 kalça /kaɫtʃˈa/
-Schenkel, Oberschenkel
+1.Schenkel, Oberschenkel
 kan /kˈan/
-Blut
+1.Blut
 kanal /kanˈaɫ/
-Graben, Kanal
+1.Graben, Kanal
 kanarya /kanarjˈa/
-Kanarienvogel
+1.Kanarienvogel
 kansızlık /kˈansɯzɫɯk/
-Blutarmut
+1.Blutarmut
 kanyak /kanjˈak/
-Kognak
+1.Kognak
 kaos /kaˈɔs/
-Chaos
+1.Chaos
 kapamak /kapamˈak/
-schließen, verschließen, zumachen
+1.schließen, verschließen, zumachen
 kaplan /kapɫˈan/
-Tiger
+1.Tiger
 kaptan /kaptˈan/
-Hauptmann, Kapitän
+1.Hauptmann, Kapitän
 kapı /kapˈɯ/
-Tor
+1.Tor
 kara /kaɾˈa/
-schwarz
+1.schwarz
 karaağaç /kaɾaˈaːtʃ/
-Rüster, Ulme
+1.Rüster, Ulme
 karakol /kaɾakˈɔɫ/
-Polizeiamt, Polizeiwache
+1.Polizeiamt, Polizeiwache
 karartmak /kaɾartmˈak/
-anschwärzen
+1.anschwärzen
 karmakarışık hal /karmakaɾɯʃˈɯk hˈaɫ/
-Chaos
+1.Chaos
 karnabahar /karnabahˈar/
-Blumenkohl, Karfiol
+1.Blumenkohl, Karfiol
 kart /kˈart/
-Karte, Zettel
+1.Karte, Zettel
 kartal /kartˈaɫ/
-Adler
+1.Adler
 kartpostal /kartpɔstˈaɫ/
-Postkarte
+1.Postkarte
 karşı /karʃˈɯ/
-an, gegen, gegenüber, wider
+1.an, gegen, gegenüber, wider
 karı /kaɾˈɯ/
-Frau, Gemahlin
+1.Frau, Gemahlin
 karın /kaɾˈɯn/
-Bauch, Unterleib
+1.Bauch, Unterleib
 karınca /kaɾɯndʒˈa/
-Ameise
+1.Ameise
 kas /kˈas/
-Muskel
+1.Muskel
 kasap /kasˈap/
-Fleischer
+1.Fleischer
 kasım /kˈasɯm/
-November
+1.November
 kasırga /kasɯrɡˈa/
-Wirbelwind, Zyklon
+1.Wirbelwind, Zyklon
 katalog /kataɫˈɔɡ/
-Katalog, Verzeichnis
+1.Katalog, Verzeichnis
 kategori /kateɡoɾˈɪ/
-Kategorie
+1.Kategorie
 kat'î /katˈɯ/
-akkurat, genau
+1.akkurat, genau
 kaybetmek /kajbɛtmˈɛk/
-verlieren
+1.verlieren
 kayık /kajˈɯk/
-Boot
+1.Boot
 kayısı /kajɯsˈɯ/
-Aprikose, Marille
+1.Aprikose, Marille
 kaza /kazˈa/
-Unfall
+1.Unfall
 kedı /kedˈɯ/
-Katze
+1.Katze
 kelebek /kelebˈɛk/
-Falter, Schmetterling
+1.Falter, Schmetterling
 kemik /kemˈɪk/
-Gebein, Knochen
+1.Gebein, Knochen
 kent /kˈænt/
-Ort, Stadt
+1.Ort, Stadt
 kereviz /keɾˈevɪz/
-Sellerie
+1.Sellerie
 kesin /kesˈɪn/
-akkurat, genau
+1.akkurat, genau
 keskin /kɛskˈɪn/
-bitter
+1.bitter
 kesmek /kɛsmˈɛk/
-schneiden
+1.schneiden
 kestane /kɛstanˈɛ/
-Kastanie
+1.Kastanie
 keza /kezˈa/
-auch, ebenfalls, gleichfalls
+1.auch, ebenfalls, gleichfalls
 keşiş /keʃˈɪʃ/
-Mönch
+1.Mönch
 kil /kˈɪl/
-Lehm, Ton, Tonerde
+1.Lehm, Ton, Tonerde
 kilo /kiɫˈɔ/
-Kilogramm
+1.Kilogramm
 kimya /kɪmjˈa/
-Chemie
+1.Chemie
 kiraz /kiɾˈaz/
-Kirsche
+1.Kirsche
 kirli /kɪrlˈɪ/
-unlauter
+1.unlauter
 kitap /kitˈap/
-Buch
+1.Buch
 kitapçı dükkanı /kitaptʃˈɯ døkanˈɯ/
-Buchhandlung
+1.Buchhandlung
 kişla /kˈɪʃɫa/
-Kaserne
+1.Kaserne
 klinik /klinˈɪk/
-Klinik
+1.Klinik
 kolera /koleɾˈa/
-Cholera
+1.Cholera
 koltuk /kɔɫtˈʊk/
-Lehnstuhl
+1.Lehnstuhl
 komedi /kˈomedɪ/
-Komödie, Lustspiel
+1.Komödie, Lustspiel
 komite /komitˈɛ/
-Ausschuss, Komitee
+1.Ausschuss, Komitee
 komünizm /komynˈɪzm/
-Kommunismus
+1.Kommunismus
 komşu /kɔmʃˈʊ/
-Nachbar
+1.Nachbar
 kongre /kɔnɡrˈɛ/
-Kongress
+1.Kongress
 konuşma /konˈʊʃma/
-Dialog, Zwiegespräch
+1.Dialog, Zwiegespräch
 kova /kovˈa/
-Eimer
+1.Eimer
 koşmak /kɔʃmˈak/
-laufen
+1.laufen
 kral /krˈaɫ/
-König
+1.König
 kraliyet /kralijˈɛt/
-Königreich
+1.Königreich
 kristal /krɪstˈaɫ/
-Kristall
+1.Kristall
 kriz /krˈɪz/
-Krisis, Krise
+1.Krisis, Krise
 krom /krˈɔm/
-Chrom
+1.Chrom
 kulak /kuɫˈak/
-Ohr
+1.Ohr
 kullanmak /kʊɫɫanmˈak/
-anwenden, benutzen, brauchen, gebrauchen, verwenden, verwerten
+1.anwenden, benutzen, brauchen, gebrauchen, verwenden, verwerten
 kulübe /kulybˈɛ/
-Hütte
+1.Hütte
 kulüp /kulˈøp/
-Klub
+1.Klub
 kum /kˈʊm/
-Sand
+1.Sand
 kumaş /kumˈaʃ/
-Tuch
+1.Tuch
 kumsal /kʊmsˈaɫ/
-Strand
+1.Strand
 kurt /kˈʊrt/
-Wurm
+1.Wurm
 kutsal /kʊtsˈaɫ/
-heilig
+1.heilig
 kutu /kutˈʊ/
-Büchse, Schachtel
+1.Büchse, Schachtel
 kuvvet /kʊvvˈɛt/
 1. Energie, Tatkraft, Willenskraft
 2. Gewalt, Kraft
 kuyruklu yıldız /kʊjrʊkɫˈʊ jˈɯɫdɯz/
-Komet, Schweifstern
+1.Komet, Schweifstern
 kuzey /kuzˈɛj/
-Norden
+1.Norden
 kuzeye ait /kuzejˈɛ aˈɪt/
-nördlich
+1.nördlich
 kuş /kˈʊʃ/
-Vogel
+1.Vogel
 kuğu /kˈʊː/
-Schwan
+1.Schwan
 kyruk /kjrˈʊk/
-Bürzel, Fahne, Lunte, Rute, Schleppe, Schwanz, Schweif, Sterz, Wedel
+1.Bürzel, Fahne, Lunte, Rute, Schleppe, Schwanz, Schweif, Sterz, Wedel
 köknar /kœknˈar/
-Fichte, Tanne
+1.Fichte, Tanne
 köpek /kœpˈɛk/
-Hund
+1.Hund
 köprü /kœprˈø/
-Brücke
+1.Brücke
 kötü /kœtˈø/
-böse, schlecht
+1.böse, schlecht
 kül /kˈøl/
-Asche
+1.Asche
 kültür /køltˈør/
-Kultur
+1.Kultur
 kül tablası /kˈøl tabɫasˈɯ/
-Aschenbecher
+1.Aschenbecher
 kâtip /katˈɪp/
-Angestellte, Kanzlist
+1.Angestellte, Kanzlist
 kâğıt para /kaːˈɯt paɾˈa/
-Bon, Schein
+1.Bon, Schein
 kılçık /kɯɫtʃˈɯk/
-Gräte
+1.Gräte
 kılıç /kɯɫˈɯtʃ/
-Schwert
+1.Schwert
 kırlangıç /kɯrɫanɡˈɯtʃ/
-Schwalbe
+1.Schwalbe
 kısım /kˈɯsɯm/
-Kapitel
+1.Kapitel
 kıyı /kɯjˈɯ/
-Küste
+1.Küste
 kız /kˈɯz/
 1. Tochter
 2. Dirne, Mädchen
@@ -1219,386 +1151,386 @@ kızgın /kɯzɡˈɯn/
 1. arg, böse
 2. heiß
 kız evlat /kˈɯz ɛvɫˈat/
-Tochter
+1.Tochter
 kıç /kˈɯtʃ/
-Boden, Grund
+1.Boden, Grund
 lahana /ɫahanˈa/
-Kohl
+1.Kohl
 lehçe /lˈɛhtʃɛ/
-Dialekt, Mundart
+1.Dialekt, Mundart
 limon /limˈɔn/
-Zitrone
+1.Zitrone
 limonata /limonatˈa/
-Limonade
+1.Limonade
 maaş /maˈaʃ/
-Gage, Gehalt, Salär
+1.Gage, Gehalt, Salär
 macera /madʒeɾˈa/
-Angelegenheit, Ding, Sache, Werk
+1.Angelegenheit, Ding, Sache, Werk
 madde /madˈɛ/
-Ding
+1.Ding
 makine /makinˈɛ/
-Maschine
+1.Maschine
 manda /mandˈa/
-Büffel
+1.Büffel
 marangoz /maɾanɡˈɔz/
-Zimmermann
+1.Zimmermann
 mart /mˈart/
-März
+1.März
 marul /maɾˈʊɫ/
-Kopfsalat, Lattich, Salat
+1.Kopfsalat, Lattich, Salat
 mavi /mavˈɪ/
-blau
+1.blau
 maymun /majmˈʊn/
-Affe
+1.Affe
 mayıs /majˈɯs/
-Mai
+1.Mai
 melek /melˈɛk/
-Engel
+1.Engel
 merkez /mɛrkˈɛz/
-Mittelpunkt, Zentrum
+1.Mittelpunkt, Zentrum
 mermi /mɛrmˈɪ/
-Kugel
+1.Kugel
 mesele /mˈeselɛ/
-Angelegenheit, Ding, Sache, Werk
+1.Angelegenheit, Ding, Sache, Werk
 meslekdaş /mɛslɛkdˈaʃ/
-Amtsbruder, Amtsgenosse, Genosse, Kollege
+1.Amtsbruder, Amtsgenosse, Genosse, Kollege
 mezarlık /mezarɫˈɯk/
-Friedhof, Gottesacker, Kirchhof
+1.Friedhof, Gottesacker, Kirchhof
 meşe /meʃˈɛ/
-Eiche
+1.Eiche
 millet /mɪllˈɛt/
-Nation
+1.Nation
 milyar /mɪljˈar/
-Milliarde
+1.Milliarde
 mimar /mimˈar/
-Architekt
+1.Architekt
 misafir /misafˈɪr/
-Gast
+1.Gast
 modern /modˈɛrn/
-modern
+1.modern
 molekül /molekˈøl/
-Molekül
+1.Molekül
 motor /motˈɔr/
-Motor
+1.Motor
 motosiklet /motosɪklˈɛt/
-Kraftfahrrad, Motorrad
+1.Kraftfahrrad, Motorrad
 muharebe /muhaɾebˈɛ/
-Kampf, Schlacht
+1.Kampf, Schlacht
 muhasebeci /muhasebedʒˈɪ/
-Buchrevisor
+1.Buchrevisor
 muhteris /mʊhteɾˈɪs/
-ehrgeizig
+1.ehrgeizig
 muktedir /mʊktˈedɪr/
-begabt, fähig, imstande, tüchtig
+1.begabt, fähig, imstande, tüchtig
 mum /mˈʊm/
-Kerze, Licht
+1.Kerze, Licht
 mutfak /mʊtfˈak/
-Küche
+1.Küche
 muvafakat etmek /muvafakˈat ɛtmˈɛk/
-beipflichten, beistimmen, einwilligen, zustimmen, zuwilligen
+1.beipflichten, beistimmen, einwilligen, zustimmen, zuwilligen
 muz /mˈʊz/
-Banane
+1.Banane
 mücadele /mydʒadˈelɛ/
-Konflikt, Streit, Widerstreit
+1.Konflikt, Streit, Widerstreit
 mühendis /myhændˈɪs/
-Ingenieur
+1.Ingenieur
 mühim /mˈyhɪm/
-arg, bedeutend, bedeutsam, beträchtlich, erheblich, ernst, wichtig
+1.arg, bedeutend, bedeutsam, beträchtlich, erheblich, ernst, wichtig
 müneccimlik /mynˈɛdʒɪmlɪk/
-Astrologie, Sterndeutung
+1.Astrologie, Sterndeutung
 müsaade etmek /mysaadˈɛ ɛtmˈɛk/
-erlauben, gestatten
+1.erlauben, gestatten
 müvekkil /myvɛkˈɪl/
-Klient, Kunde
+1.Klient, Kunde
 müşteri /møʃteɾˈɪ/
-Klient, Kunde
+1.Klient, Kunde
 mısır /mɯsˈɯr/
-Mais
+1.Mais
 mızrak /mɯzrˈak/
-Lanze, Speer
+1.Lanze, Speer
 nakletmek /naklɛtmˈɛk/
-tragen
+1.tragen
 nalbant /naɫbˈant/
-Schmied
+1.Schmied
 namevcut /namɛvdʒˈʊt/
-abwesend
+1.abwesend
 namus /namˈʊs/
-Ehre
+1.Ehre
 nashihat /nashihˈat/
-Rat, Ratschlag
+1.Rat, Ratschlag
 nazari /nazaɾˈɪ/
-theoretisch
+1.theoretisch
 nefes /nefˈɛs/
-Atem, Hauch
+1.Atem, Hauch
 nefes alma /nefˈɛs ˈaɫma/
-Atem, Hauch
+1.Atem, Hauch
 nefes almak /nefˈɛs aɫmˈak/
-atmen
+1.atmen
 nefis /nefˈɪs/
-hübsch
+1.hübsch
 nehir /nehˈɪr/
-Fluss
+1.Fluss
 nisan /nˈisan/
-April
+1.April
 o /ˈɔ/
 1. er, ihm, ihn, seiner
 2. es
 3. die, ihr, ihrer, sie
 ocak ayı /odʒˈak ajˈɯ/
-Januar
+1.Januar
 ok /ˈɔk/
-Pfeil
+1.Pfeil
 oksijen /ɔksiʒˈæn/
-Oxygen, Sauerstoff
+1.Oxygen, Sauerstoff
 okumak /okumˈak/
-lesen
+1.lesen
 olay /oɫˈaj/
-Unfall
+1.Unfall
 olmak /ɔɫmˈak/
 1. geschehen, vorkommen, werden, zustande kommen
 on /ˈɔn/
-zehn
+1.zehn
 on bır /ˈɔn bˈɯr/
-elf
+1.elf
 ordu /ˈɔrdʊ/
 1. Armee, Heer
 2. Armee
 otel /otˈæl/
-Hotel
+1.Hotel
 otobüs /otobˈøs/
-Autobus, Bus
+1.Autobus, Bus
 otomobil /otomobˈɪl/
-Auto
+1.Auto
 oturmak /otʊrmˈak/
-sitzen
+1.sitzen
 oğlan /oːɫˈan/
-Junge, Knabe
+1.Junge, Knabe
 oğul /oːˈʊɫ/
-Sohn
+1.Sohn
 papatya /papatjˈa/
-Gänseblümchen, kleines Maßlieb, Marienblume
+1.Gänseblümchen, kleines Maßlieb, Marienblume
 para /paɾˈa/
-Geld
+1.Geld
 pars /pˈars/
-Leopard
+1.Leopard
 patates /patatˈɛs/
-Erdapfel, Kartoffel
+1.Erdapfel, Kartoffel
 patron /patrˈɔn/
-Befehlshaber, Chef, Haupt, Häuptling, Herr, Oberhaupt, Vorsteher
+1.Befehlshaber, Chef, Haupt, Häuptling, Herr, Oberhaupt, Vorsteher
 pazartesi /pazartesˈɪ/
-Montag
+1.Montag
 pek /pˈɛk/
-sehr
+1.sehr
 pençe /pˈæntʃɛ/
-Klaue, Kralle
+1.Klaue, Kralle
 perde /pɛrdˈɛ/
-Gardine, Vorhang
+1.Gardine, Vorhang
 perhiz /pˈɛrhɪz/
-Diät
+1.Diät
 peri /peɾˈɪ/
-Nymphe
+1.Nymphe
 perşembe /pɛrʃæmbˈɛ/
-Donnerstag
+1.Donnerstag
 peynir /pɛjnˈɪr/
-Käse
+1.Käse
 pire /piɾˈɛ/
-Floh
+1.Floh
 piskopos /pɪskopˈɔs/
-Bischof
+1.Bischof
 piç /pˈɪtʃ/
-Bastard, Mischling
+1.Bastard, Mischling
 plaj /pɫˈaʒ/
-Strand
+1.Strand
 polis /polˈɪs/
-Polizei
+1.Polizei
 porsuk /pɔrsˈʊk/
-Dachs
+1.Dachs
 portakal /pɔrtakˈaɫ/
-Apfelsine, Orange, Pomeranze
+1.Apfelsine, Orange, Pomeranze
 puro /puɾˈɔ/
-Zigarre
+1.Zigarre
 pusula /pusˈuɫa/
-Kompass
+1.Kompass
 rahibe /rahibˈɛ/
-Nonne
+1.Nonne
 rejim /rˈeʒɪm/
-Diät
+1.Diät
 reklam /rɛkɫˈam/
-Annonce, Anzeige, Inserat
+1.Annonce, Anzeige, Inserat
 renk /rˈænk/
-Farbe
+1.Farbe
 ressam /rˈɛssam/
-Artist
+1.Artist
 revolver /revɔɫvˈɛr/
-Revolver
+1.Revolver
 roman /romˈan/
-Roman
+1.Roman
 rüzgar /røzɡˈar/
-Wind
+1.Wind
 saat /saˈat/
 1. Uhr
 2. Stunde
 sabah /sabˈah/
-Frühe, Morgen
+1.Frühe, Morgen
 sabah kahvaltısı /sabˈah kahvaɫtɯsˈɯ/
-Frühstück
+1.Frühstück
 sadaka /sadakˈa/
-Almosen
+1.Almosen
 sadece /sadˈedʒɛ/
-kaum
+1.kaum
 sahil /sahˈɪl/
-Küste
+1.Küste
 sakal /sakˈaɫ/
-Bart
+1.Bart
 salata /sˈaɫata/
-Kopfsalat, Lattich, Salat
+1.Kopfsalat, Lattich, Salat
 salatalık /saɫataɫˈɯk/
-Gurke
+1.Gurke
 saldırmak /saɫdɯrmˈak/
-anfallen, angreifen, ausfallen, befallen, überfallen
+1.anfallen, angreifen, ausfallen, befallen, überfallen
 saldırış /saɫdɯɾˈɯʃ/
-Anfall, Angriff
+1.Anfall, Angriff
 salı /saɫˈɯ/
-Dienstag
+1.Dienstag
 saman /samˈan/
-Stroh
+1.Stroh
 sanatkâr /sanatkˈar/
-Artist
+1.Artist
 sandal /sandˈaɫ/
 1. Boot
 2. Sandale
 sandalye /sandaɫjˈɛ/
-Stuhl
+1.Stuhl
 sandviç /sandvˈɪtʃ/
-Sandwich
+1.Sandwich
 sanki /sankˈɪ/
-als ob, gleichsam
+1.als ob, gleichsam
 sanmak /sanmˈak/
-vermuten, voraussetzen
+1.vermuten, voraussetzen
 santimetre /santimɛtrˈɛ/
-Zentimeter
+1.Zentimeter
 sarmaşık /sarmaʃˈɯk/
-Efeu
+1.Efeu
 sarışın /saɾɯʃˈɯn/
-blond
+1.blond
 satmak /satmˈak/
-veräußern, verkaufen
+1.veräußern, verkaufen
 savaş /savˈaʃ/
-Krieg
+1.Krieg
 sayfa /sajfˈa/
-Folio, Seite
+1.Folio, Seite
 saymak /sajmˈak/
-zählen, aufzählen
+1.zählen, aufzählen
 saçma /sˈatʃma/
-abgeschmackt, absurd, ungereimt, widersinnig
+1.abgeschmackt, absurd, ungereimt, widersinnig
 sağır /saːˈɯr/
-taub
+1.taub
 sekiz /sˈekɪz/
-acht
+1.acht
 selvi /sælvˈɪ/
-Zypresse
+1.Zypresse
 sembol /sæmbˈɔɫ/
-Symbol
+1.Symbol
 sene /senˈɛ/
-Jahr
+1.Jahr
 sepet /sepˈɛt/
-Korb
+1.Korb
 sesli harf /sɛslˈɪ hˈarf/
-Vokal
+1.Vokal
 ses düzeni /sˈɛs dyzenˈɪ/
-Akustik
+1.Akustik
 sevmek /sɛvmˈɛk/
-gernhaben, lieben, mögen
+1.gernhaben, lieben, mögen
 seçmek /sɛtʃmˈɛk/
-auslesen, wählen, auswählen, erwählen
+1.auslesen, wählen, auswählen, erwählen
 sidik torbası /sidˈɪk tɔrbasˈɯ/
-Blase
+1.Blase
 sigar /siɡˈar/
-Zigarre
+1.Zigarre
 sigara /siɡaɾˈa/
-Zigarette
+1.Zigarette
 silah /siɫˈah/
-Gewehr
+1.Gewehr
 silindir /silˈɪndɪr/
-Walze, Zylinder
+1.Walze, Zylinder
 simetri /simɛtrˈɪ/
-Ebenmaß, Gleichmaß, Symmetrie
+1.Ebenmaß, Gleichmaß, Symmetrie
 simetrik /simɛtrˈɪk/
-symmetrisch
+1.symmetrisch
 sincap /sɪndʒˈap/
-Eichhorn, Eichhörnchen
+1.Eichhorn, Eichhörnchen
 sinema /sinˈema/
-Kino
+1.Kino
 sirk /sˈɪrk/
-Zirkus
+1.Zirkus
 sivrisinek /sɪvrisinˈɛk/
-Moskito, Stechmücke
+1.Moskito, Stechmücke
 siyah /sijˈah/
-schwarz
+1.schwarz
 sokak /sokˈak/
-Straße
+1.Straße
 solucan /soɫudʒˈan/
-Wurm
+1.Wurm
 solumak /soɫumˈak/
-atmen
+1.atmen
 som balığı /sˈɔm baɫɯɯˈɯ/
-Lachs, Salm
+1.Lachs, Salm
 sonbahar /sɔnbahˈar/
-Herbst
+1.Herbst
 sonra /sɔnrˈa/
 1. hinter
 2. nach
 3. dann, darauf, hernach, hierauf, hinten, hinterher, nachher, später
 sonraları /sɔnraɫaɾˈɯ/
-dann, darauf, hernach, hierauf, hinten, hinterher, nachher, später
+1.dann, darauf, hernach, hierauf, hinten, hinterher, nachher, später
 sormak /sɔrmˈak/
-fragen, anfragen
+1.fragen, anfragen
 soyadı /sojadˈɯ/
-Familienname
+1.Familienname
 soğan /soːˈan/
-Zwiebel
+1.Zwiebel
 sporcu /spɔrdʒˈʊ/
-Athlet
+1.Athlet
 su /sˈʊ/
-Wasser
+1.Wasser
 sultan /sʊɫtˈan/
-Sultan
+1.Sultan
 susuzluk /sˈusʊzɫʊk/
-Durst
+1.Durst
 suçlamak /sʊtʃɫamˈak/
-anklagen, beschuldigen
+1.anklagen, beschuldigen
 suçlu /sʊtʃɫˈʊ/
-schuldig
+1.schuldig
 söylemek /sœjlemˈɛk/
-erwähnen, sagen
+1.erwähnen, sagen
 söz /sˈœz/
-Vokabel, Wort
+1.Vokabel, Wort
 sözcük /sœzdʒˈøk/
-Vokabel, Wort
+1.Vokabel, Wort
 sülün /sylˈøn/
-Fasan
+1.Fasan
 süngü /sønɡˈø/
-Bajonett
+1.Bajonett
 süpürge /sypørɡˈɛ/
-Besen
+1.Besen
 sıcak /sɯdʒˈak/
-heiß
+1.heiß
 sıfır /sɯfˈɯr/
-Null
+1.Null
 sıgır eti /sɯɡˈɯr etˈɪ/
-Rindfleisch
+1.Rindfleisch
 sınıf /sɯnˈɯf/
-Kategorie
+1.Kategorie
 sıra /sɯɾˈa/
-Bank
+1.Bank
 sıtma /sˈɯtma/
-Malaria
+1.Malaria
 takdire değer /takdiɾˈɛ dejˈɛr/
-bewundernswert, wunderbar
+1.bewundernswert, wunderbar
 takdir etmek /tˈakdɪr ɛtmˈɛk/
-applaudieren, Beifall spenden
+1.applaudieren, Beifall spenden
 taksi /taksˈɪ/
-Taxe, Taxi
+1.Taxe, Taxi
 takvim /tˈakvɪm/
 1. Almanach
 2. Kalender
@@ -1606,188 +1538,188 @@ tam /tˈam/
 1. akkurat, genau
 2. bestimmt, bündig, exakt, präzis, präzise, pünktlich
 tanımak /tanɯmˈak/
-kennen
+1.kennen
 taparcasına sevmek /tapardʒasɯnˈa sɛvmˈɛk/
-anbeten, verehren, vergöttern
+1.anbeten, verehren, vergöttern
 tarak /taɾˈak/
-Kamm
+1.Kamm
 taramak /taɾamˈak/
-kämmen
+1.kämmen
 tatlı /tatɫˈɯ/
-süß
+1.süß
 tavan /tavˈan/
-Decke, Zimmerdecke
+1.Decke, Zimmerdecke
 tavşan /tavʃˈan/
 1. Kaninchen
 2. Hase
 tay /tˈaj/
-Fohlen, Füllen
+1.Fohlen, Füllen
 tayyare /tajjaɾˈɛ/
-Aeroplan, Flugmaschine, Flugzeug
+1.Aeroplan, Flugmaschine, Flugzeug
 tayyare mayadanı /tajjaɾˈɛ majadanˈɯ/
-Flugplatz
+1.Flugplatz
 taşımak /taʃɯmˈak/
-tragen
+1.tragen
 tedavi /tedavˈɪ/
-Therapie
+1.Therapie
 tehlike /tɛhlikˈɛ/
-Gefahr
+1.Gefahr
 tehlikeli /tɛhlikelˈɪ/
-besorglich, gefährlich
+1.besorglich, gefährlich
 tekrar /tɛkrˈar/
 1. abermalig, abermals, von neuem, wieder
 2. wiederholt, zurück
 temmuz /tˈæmmʊz/
-Juli
+1.Juli
 teoloji /teoɫoʒˈɪ/
-Theologie
+1.Theologie
 teorik /teoɾˈɪk/
-theoretisch
+1.theoretisch
 tepe /tepˈɛ/
-Halde, Hügel
+1.Halde, Hügel
 ter /tˈɛr/
-Schweiß
+1.Schweiß
 tereyağı /teɾejaːˈɯ/
-Butter
+1.Butter
 terlemek /tɛrlemˈɛk/
-schwitzen
+1.schwitzen
 termometre /tɛrmomɛtrˈɛ/
-Thermometer
+1.Thermometer
 tertip etmek /tɛrtˈɪp ɛtmˈɛk/
-arrangieren, einrichten, ordnen, anordnen, veranstalten
+1.arrangieren, einrichten, ordnen, anordnen, veranstalten
 terzi /tɛrzˈɪ/
-Schneider
+1.Schneider
 tezgâh /tɛzɡˈah/
-Bank
+1.Bank
 teşekkür /teʃɛkˈør/
-danke
+1.danke
 tilki /tɪlkˈɪ/
-Fuchs
+1.Fuchs
 timsah /tɪmsˈah/
-Krokodil
+1.Krokodil
 tiyatro /tijatrˈɔ/
-Theater
+1.Theater
 top /tˈɔp/
 1. Gewehr
 2. Kanon, Kanone
 toplamak /tɔpɫamˈak/
-sammeln, einsammeln
+1.sammeln, einsammeln
 toprak /tɔprˈak/
-Boden, Erdboden, Erde, Grund, Land, Terrain
+1.Boden, Erdboden, Erde, Grund, Land, Terrain
 tren /trˈæn/
 1. Zug
 2. Bahnzug, Eisenbahnzug
 tugay /tuɡˈaj/
-Brigade
+1.Brigade
 tunç /tˈʊntʃ/
-Bronze, Erz
+1.Bronze, Erz
 tutku /tʊtkˈʊ/
-Ehrgeiz
+1.Ehrgeiz
 tutkulu /tʊtkuɫˈʊ/
-ehrgeizig
+1.ehrgeizig
 tutmak /tʊtmˈak/
-halten, aufhalten
+1.halten, aufhalten
 tuz /tˈʊz/
-Salz
+1.Salz
 tuzlu /tʊzɫˈʊ/
-salzen, salzig
+1.salzen, salzig
 tuğla /tˈuːɫa/
-Backstein, Ziegel, Ziegelstein
+1.Backstein, Ziegel, Ziegelstein
 tören /tœɾˈæn/
-Feierlichkeit, Förmlichkeit, Zeremonie
+1.Feierlichkeit, Förmlichkeit, Zeremonie
 tüfek /tyfˈɛk/
-Gewehr
+1.Gewehr
 tırmanmak /tɯrmanmˈak/
-klettern, klimmen
+1.klettern, klimmen
 tırtıl /tɯrtˈɯɫ/
-Raupe
+1.Raupe
 ufuk /ufˈʊk/
-Gesichtskreis, Horizont
+1.Gesichtskreis, Horizont
 ulus /uɫˈʊs/
-Nation
+1.Nation
 ulusal /uɫusˈaɫ/
-national
+1.national
 ummak /ʊmmˈak/
-hoffen
+1.hoffen
 umut /umˈʊt/
-Hoffnung
+1.Hoffnung
 unutmak /unʊtmˈak/
-vergessen
+1.vergessen
 uygun /ʊjɡˈʊn/
-behaglich, herrlich, genehm, angenehm
+1.behaglich, herrlich, genehm, angenehm
 uyumak /ujumˈak/
-schlafen
+1.schlafen
 uzak /uzˈak/
-entlegen, fern, entfernt, weit
+1.entlegen, fern, entfernt, weit
 uçak /utʃˈak/
 1. Aeroplan, Flugmaschine, Flugzeug
 uçaklar /utʃakɫˈar/
-Flugzeug
+1.Flugzeug
 uçmak /ʊtʃmˈak/
-fliegen, huschen
+1.fliegen, huschen
 vapur /vapˈʊr/
-Dampfer
+1.Dampfer
 varil /vaɾˈɪl/
-Fass, Tonne
+1.Fass, Tonne
 varış /vaɾˈɯʃ/
-Ankunft, Eintreffen
+1.Ankunft, Eintreffen
 ve /vˈɛ/
-und
+1.und
 vermek /vɛrmˈɛk/
-erteilen, geben, angeben, herreichen
+1.erteilen, geben, angeben, herreichen
 vestiyer /vɛstijˈɛr/
-Garderobe
+1.Garderobe
 virgül /vɪrɟˈøl/
 1. Apostroph
 2. Komma
 viski /vɪskˈɪ/
-Whisky
+1.Whisky
 volkan /vɔɫkˈan/
-Vulkan
+1.Vulkan
 vücut /vydʒˈʊt/
-Körper, Leib
+1.Körper, Leib
 yaban eşeği /jabˈan eʃejˈɪ/
-Zebra
+1.Zebra
 yakında /jakɯndˈa/
-bald, alsbald, baldig
+1.bald, alsbald, baldig
 yalan /jaɫˈan/
-flunkern, lügen, belügen
+1.flunkern, lügen, belügen
 yalnız /jˈaɫnɯz/
-allein, alleinig, bloß, einzig
+1.allein, alleinig, bloß, einzig
 yamyam /jamjˈam/
-Kannibale, Menschenfresser
+1.Kannibale, Menschenfresser
 yapmak /japmˈak/
-anfertigen, herstellen, leiten, machen, tun, zurücklegen
+1.anfertigen, herstellen, leiten, machen, tun, zurücklegen
 yat /jˈat/
-Jacht, Yacht
+1.Jacht, Yacht
 yatak /jatˈak/
-Bett, Bettstelle
+1.Bett, Bettstelle
 yatak odası /jatˈak odasˈɯ/
-Schlafzimmer
+1.Schlafzimmer
 yavru kedi /javrˈʊ kedˈɪ/
-Kätzchen
+1.Kätzchen
 yazar /jazˈar/
-Autor, Urheber, Verfasser
+1.Autor, Urheber, Verfasser
 yazmak /jazmˈak/
-schreiben
+1.schreiben
 yaş /jˈaʃ/
-Alter
+1.Alter
 yaşamak /jaʃamˈak/
-leben
+1.leben
 yağ /jˈaː/
-Öl
+1.Öl
 yedi /jedˈɪ/
-sieben
+1.sieben
 yemin /jemˈɪn/
-Eid
+1.Eid
 yeni /jenˈɪ/
-neu
+1.neu
 yeryüzü /jˈɛrjyzø/
-Boden, Erdboden, Erde, Grund, Land, Terrain
+1.Boden, Erdboden, Erde, Grund, Land, Terrain
 yetişkin /jetɪʃkˈɪn/
-gedeihen, wachsen, anwachsen
+1.gedeihen, wachsen, anwachsen
 yeşil /jeʃˈɪl/
-grün
+1.grün
 yeğen /jejˈæn/
 1. Nichte
 2. Neffe
@@ -1795,215 +1727,215 @@ yine /jinˈɛ/
 1. abermalig, abermals, von neuem, wieder
 2. wiederholt, zurück
 yokluk /jɔkɫˈʊk/
-Abwesenheit
+1.Abwesenheit
 yollamak /jɔɫɫamˈak/
-schicken, senden, einsenden
+1.schicken, senden, einsenden
 yulaf /juɫˈaf/
-Hafer
+1.Hafer
 yumurta /jumʊrtˈa/
-Ei
+1.Ei
 yunus baliğı /junˈʊs balijˈɯ/
-Delphin, Tümmler
+1.Delphin, Tümmler
 yüksek okul /jˈøksɛk okˈʊɫ/
-Kollegium
+1.Kollegium
 yün /jˈøn/
-Wolle
+1.Wolle
 yürümek /jyɾymˈɛk/
-gehen, laufen, marschieren, treten
+1.gehen, laufen, marschieren, treten
 yüz /jˈøz/
-hundert
+1.hundert
 yüzmek /jøzmˈɛk/
-schwimmen
+1.schwimmen
 yüzünden /jyzøndˈæn/
-da, denn, weil
+1.da, denn, weil
 yıldız /jˈɯɫdɯz/
-Horoskop
+1.Horoskop
 yıllık /jɯɫɫˈɯk/
 1. Almanach
 2. jährlich
 zabıta /zabɯtˈa/
-Polizei
+1.Polizei
 zambak /zambˈak/
-Lilie
+1.Lilie
 zarf /zˈarf/
-Adverb, Umstandswort
+1.Adverb, Umstandswort
 zarif /zaɾˈɪf/
-elegant, geschmackvoll
+1.elegant, geschmackvoll
 zar zor /zˈar zˈɔr/
-kaum
+1.kaum
 zebra /zɛbrˈa/
-Zebra
+1.Zebra
 zehir /zehˈɪr/
-Gift
+1.Gift
 zeki /zekˈɪ/
-abgefeimt, arglistig, gerieben, gewiegt, gewitzigt, listig, schlau
+1.abgefeimt, arglistig, gerieben, gewiegt, gewitzigt, listig, schlau
 zeytin /zɛjtˈɪn/
-Olive
+1.Olive
 zincir /zɪndʒˈɪr/
-Kette
+1.Kette
 zooloji /zooɫoʒˈɪ/
-Zoologie
+1.Zoologie
 zürafa /zyɾafˈa/
-Giraffe
+1.Giraffe
 öfkeli /œfkelˈɪ/
-arg, böse
+1.arg, böse
 öldürmek /œldørmˈɛk/
-ermorden, töten
+1.ermorden, töten
 ölmek /œlmˈɛk/
-sterben
+1.sterben
 ölmüş /œlmˈøʃ/
-gestorben, tot, verstorben
+1.gestorben, tot, verstorben
 ölü /œlˈy/
-gestorben, tot, verstorben
+1.gestorben, tot, verstorben
 ördek /œrdˈɛk/
-Ente
+1.Ente
 örümcek ağı /œɾømdʒˈɛk aːˈɯ/
-Spinngewebe
+1.Spinngewebe
 özel /œzˈæl/
-spezial, speziell
+1.spezial, speziell
 özerklik /œzɛrklˈɪk/
-Autonomie, Selbstgesetzgebung
+1.Autonomie, Selbstgesetzgebung
 öğleden sonra /ˈœːledæn sɔnrˈa/
-Nachmittag
+1.Nachmittag
 öğrenmek /œːɾænmˈɛk/
-lernen
+1.lernen
 öğüt /œːˈøt/
-Rat, Ratschlag
+1.Rat, Ratschlag
 öğüt vermek /œːˈøt vɛrmˈɛk/
-raten, beraten, ratgeben
+1.raten, beraten, ratgeben
 ülkücü /ølkydʒˈø/
-Idealist
+1.Idealist
 üniversite /ynivɛrsitˈɛ/
-Hochschule, Universität
+1.Hochschule, Universität
 üstüne evlenme /østynˈɛ ɛvlˈænmɛ/
-Bigamie
+1.Bigamie
 üç /ˈøtʃ/
-drei
+1.drei
 Çin /tʃˈɪn/
-China
+1.China
 Şeytan /ʃɛjtˈan/
-Satanas, Teufel
+1.Satanas, Teufel
 çakı /tʃakˈɯ/
-Messer
+1.Messer
 çalar saat /tʃaɫˈar saˈat/
-Wecker
+1.Wecker
 çalişmak /tʃalɪʃmˈak/
-arbeiten
+1.arbeiten
 çalışkan /tʃaɫɯʃkˈan/
-beflissen, emsig, fleißig, geflissentlich, strebsam
+1.beflissen, emsig, fleißig, geflissentlich, strebsam
 çaprazvari /tʃaprazvaɾˈɪ/
-jenseits, quer, über, hinüber
+1.jenseits, quer, über, hinüber
 çarşamba /tʃarʃambˈa/
-Mittwoch
+1.Mittwoch
 çarşı /tʃarʃˈɯ/
-Basar, Markt, Warenhaus
+1.Basar, Markt, Warenhaus
 çay /tʃˈaj/
-Tee
+1.Tee
 çek /tʃˈɛk/
-Bankanweisung, Scheck
+1.Bankanweisung, Scheck
 çekmek /tʃɛkmˈɛk/
-ziehen, verziehen
+1.ziehen, verziehen
 çene /tʃenˈɛ/
 1. Kiefer, Kinnlade
 2. Kinn
 çeşme /tʃˈɛʃmɛ/
-Brunnen, Fontäne, Springbrunnen
+1.Brunnen, Fontäne, Springbrunnen
 çikolata /tʃikˈoɫata/
-Schokolade
+1.Schokolade
 çilek /tʃilˈɛk/
-Erdbeere
+1.Erdbeere
 çimento /tʃimæntˈɔ/
-Zement
+1.Zement
 çingene /tʃɪnɟenˈɛ/
-Zigeuner
+1.Zigeuner
 çinko /tʃɪnkˈɔ/
-Zink
+1.Zink
 çiplak /tʃɪpɫˈak/
-bloß, nackt
+1.bloß, nackt
 çiğnemek /tʃɪjnemˈɛk/
-kauen
+1.kauen
 çok beğenmek /tʃˈɔk bejænmˈɛk/
-bewundern
+1.bewundern
 çok geçmeden /tʃˈɔk ɟˈɛtʃmedæn/
-bald, alsbald, baldig
+1.bald, alsbald, baldig
 çorba /tʃɔrbˈa/
-Suppe
+1.Suppe
 çoçuk /tʃotʃˈʊk/
-Junge, Knabe
+1.Junge, Knabe
 çoğulu /tʃoːuɫˈʊ/
-Leben
+1.Leben
 çünkü /tʃønkˈø/
-da, denn, weil
+1.da, denn, weil
 çıkmak /tʃɯkmˈak/
-ausgehen, ausrücken
+1.ausgehen, ausrücken
 şapka /ʃapkˈa/
-Hut
+1.Hut
 şarap /ʃaɾˈap/
-Wein
+1.Wein
 şarkı /ʃarkˈɯ/
-Gesang, Lied
+1.Gesang, Lied
 şehir /ʃehˈɪr/
-Ort, Stadt
+1.Ort, Stadt
 şeref /ʃeɾˈɛf/
-Ehre
+1.Ehre
 şey /ʃˈɛj/
-Ding
+1.Ding
 şiddetli /ʃɪdɛtlˈɪ/
-bitter
+1.bitter
 şikayet etmek /ʃikajˈɛt ɛtmˈɛk/
-klagen, sich beklagen, verklagen
+1.klagen, sich beklagen, verklagen
 şikâyet /ʃikajˈɛt/
-Beschwerde, Klage
+1.Beschwerde, Klage
 şimdi /ʃɪmdˈɪ/
-jetzt, gegenwärtig, nun
+1.jetzt, gegenwärtig, nun
 şişe /ʃiʃˈɛ/
-Flasche
+1.Flasche
 şoför /ʃofˈœr/
-Chauffeur, Fahrer
+1.Chauffeur, Fahrer
 şubat /ʃubˈat/
-Februar
+1.Februar
 ılık /ɯɫˈɯk/
-warm
+1.warm
 ırmak /ɯrmˈak/
-Fluss
+1.Fluss
 İncil /ɪndʒˈɪl/
-Bibel
+1.Bibel
 İngiliz /ɪnɟˈilɪz/
 1. englisch
 2. Engländer
 3. britisch
 İngilizce /ɪnɟˈilɪzdʒɛ/
-englisch
+1.englisch
 İngiliz kamışı /ɪnɟˈilɪz kamɯʃˈɯ/
-Bambus
+1.Bambus
 İngiltere /ɪnɟɪltˈeɾɛ/
 1. England
 İrlanda /ɪrɫandˈa/
-Irland
+1.Irland
 İrlandalı /ɪrɫandaɫˈɯ/
-Ire
+1.Ire
 İsa /ˈisa/
-Christus
+1.Christus
 İslam /ɪsɫˈam/
-Islam
+1.Islam
 İspanya /ɪspanjˈa/
-Spanien
+1.Spanien
 İspanyol /ɪspanjˈɔɫ/
-Spanier
+1.Spanier
 İsrail /ɪsraˈɪl/
 1. Israel
 İsveç /ˈɪsvɛtʃ/
-Schweden
+1.Schweden
 İsveçli /ˈɪsvɛtʃlɪ/
 1. schwedisch
 2. Schwede
 İsviçre /ɪsvɪtʃrˈɛ/
-Schweiz, die Schweiz
+1.Schweiz, die Schweiz
 İsviçreli /ɪsvˈɪtʃrelɪ/
 1. schweizerisch
 2. Schweizer
 İtalya /itaɫjˈa/
-Italien
+1.Italien
 İtalyan /itaɫjˈan/
 1. italienisch
 2. Italiener

@@ -47,6 +47,16 @@ public class VocabScreen {
         scanningFile.add("data/eng-ita.dict",word,vBox,vocbIta);
         System.out.println(scanningFile.readFile("data/eng-ita.dict",word));
 
+        VBox vBox3= new VBox();
+        Text fra = new Text("fra");
+        ita.setFont(Font.font("Times New Roman", FontPosture.REGULAR,15));
+        vBox3.setMaxHeight(100);
+        vBox3.setMaxWidth(400);
+        vBox3.setAlignment(Pos.TOP_LEFT);
+        vBox3.getChildren().add(fra);
+        Text vocbFra = new Text();
+        scanningFile.add("data/eng-fra.dict",word,vBox3,vocbFra);
+        System.out.println(scanningFile.readFile("data/eng-fra.dict",word));
 
         VBox vBox2= new  VBox();
 
@@ -70,7 +80,7 @@ public class VocabScreen {
         vBoxMain.setMaxHeight(700);
         vBoxMain.setStyle("-fx-background-color: gainsboro; -fx-background-radius: 10; -fx-border-radius: 10; -fx-border-width: 1;");
         vBoxMain.setAlignment(Pos.TOP_CENTER);
-        vBoxMain.getChildren().addAll(vBox1,vBox,vBox2);
+        vBoxMain.getChildren().addAll(vBox1,vBox,vBox2,vBox3);
         vBoxMain.setSpacing(70);
 
         stack.setStyle("-fx-background-color: #DCDCDC");
