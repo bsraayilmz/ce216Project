@@ -12,6 +12,20 @@ import java.util.ArrayList;
 
 public class scanningFile {
 
+    public static ArrayList<String> translate(String StartLanguage, String translatedLanguage,String word){
+        if (!StartLanguage.equalsIgnoreCase("eng")&& !translatedLanguage.equalsIgnoreCase("eng")) {
+            String[] arr2 = readFile("data/"+StartLanguage+"-eng.dict",word).get(0).split(",");
+            String[] arr = arr2[0].split("1.");
+            System.out.println(arr[1]);
+            return readFile("data/eng-"+translatedLanguage+".dict",arr[1]);
+        }
+        else if(StartLanguage.equalsIgnoreCase("eng")){
+            return readFile("data/eng-"+translatedLanguage+".dict",word);
+        }else{
+            return readFile("data/"+StartLanguage+"-eng.dict",word);
+        }
+    }
+
     public static ArrayList<String> readFile(String fileName, String word){
         ArrayList<String> arrayList = new ArrayList<>();
         try (BufferedReader br = new BufferedReader(new FileReader(fileName))) {
@@ -33,13 +47,12 @@ public class scanningFile {
         }
         return arrayList;
     }
-    public static void add(String s, String word, VBox vBox, Text vocbText){
-        for(int i=0; i<readFile(s,word).size();i++){
-            vocbText = new Text(readFile(s,word).get(i));
+    public static void add(String StartLanguage, String translatedLanguage,String word, VBox vBox, Text vocbText){
+        for(int i=0; i<translate(StartLanguage,translatedLanguage,word).size();i++){
+            vocbText = new Text(translate(StartLanguage,translatedLanguage,word).get(i));
             vocbText.setFont(Font.font("Times New Roman", FontPosture.REGULAR,15));
             vBox.getChildren().add(vocbText);
         }
-
     }
     public static boolean isNumeric(String str) {
         try {
