@@ -3,6 +3,7 @@ import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.*;
 import javafx.scene.paint.Color;
@@ -18,14 +19,17 @@ public class TranslationScreen {
 
     static Stage window;
     static Button translateButton;
+    static ChoiceBox<String> choosingLanguage1;
     public static void displayTranslationScreen(Stage stage) throws Exception {
         window = stage;
         window.setTitle("DictOff");
 
         //Instruction text
-        Text text = new Text(" Type a word to find its translations:"); //in order to centre the text
-        text.setFont(Font.font("Times New Roman", FontWeight.BOLD, FontPosture.ITALIC, 20));
+        Text text = new Text(" Type a word to find its translations"); //in order to centre the text
+        Text text2 = new Text(" And then select the source language:"); //in order to centre the text
 
+        text.setFont(Font.font("Times New Roman", FontWeight.BOLD, FontPosture.ITALIC, 20));
+        text2.setFont(Font.font("Times New Roman", FontWeight.BOLD, FontPosture.ITALIC, 20));
 
         //Translate bar
         TextField wordInput = new TextField();
@@ -44,6 +48,10 @@ public class TranslationScreen {
             }
         });
 
+        choosingLanguage1 = new ChoiceBox<>();
+        choosingLanguage1.getItems().addAll("Turkish" , "English" , "German" , "French" , "Italian" , "Swedish" , "Modern Greek");
+        choosingLanguage1.setValue("Select Language");
+
 
         HBox imageBox = new HBox();
 
@@ -56,11 +64,14 @@ public class TranslationScreen {
         GridPane.setConstraints(wordInput,11,5);
 
         GridPane.setConstraints(translateButton,11,6);
-        GridPane.setMargin(translateButton,new Insets(0, 0,0,26)); //In order to centre the button
+        GridPane.setConstraints(choosingLanguage1, 11, 7);
+        GridPane.setMargin(choosingLanguage1, new Insets(0,0,0,75));
+        GridPane.setMargin(translateButton,new Insets(0, 0,0,65)); //In order to centre the button
+        choosingLanguage1.setPrefSize(130,50);
+        GridPane.setConstraints(text, 11, 3);
+        GridPane.setConstraints(text2, 11,4);
 
-        GridPane.setConstraints(text, 11, 4);
-
-        translateButton.setPrefSize(200,50);
+        translateButton.setPrefSize(150,50);
         wordInput.setMaxSize(300,50);
 
         wordInput.setFont(Font.font("Times New Roman",20));
@@ -79,7 +90,7 @@ public class TranslationScreen {
         HBox total = new HBox(backButton,quesButton);
         total.setSpacing(572);
         //Adding to GridPane
-        gridPane.getChildren().addAll(translateButton,text,wordInput);
+        gridPane.getChildren().addAll(translateButton,text,text2,wordInput, choosingLanguage1);
 
         //Main Layout
         BorderPane layout = new BorderPane();
