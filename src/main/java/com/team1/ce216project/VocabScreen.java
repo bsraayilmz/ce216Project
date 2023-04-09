@@ -90,7 +90,7 @@ public class VocabScreen {
             hBox1.getChildren().addAll(Turkish);
         }
 
-        Button German = new Button("ger");
+        Button German = new Button("deu");
         German.setPrefSize(90,50);
         German.setOnAction(e -> {
             scanningFile.add(startLanguage,"deu",word,vBox2,vocb);

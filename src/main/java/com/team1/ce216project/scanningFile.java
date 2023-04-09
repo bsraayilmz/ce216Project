@@ -15,6 +15,7 @@ import java.util.ArrayList;
 public class scanningFile {
     public static final String DATA_PATH = "src/main/resources/com/team1/ce216project/data/";
     public static final String IMAGES_PATH = "src/main/resources/com/team1/ce216project/images/";
+    //resources/com/team1/ce216project/data/eng-ell.dict
 
     public static ArrayList<String> translate(String StartLanguage, String translatedLanguage,String word){
         if (!StartLanguage.equalsIgnoreCase("eng")&& !translatedLanguage.equalsIgnoreCase("eng")) {
@@ -22,6 +23,8 @@ public class scanningFile {
             String[] arr = arr2[0].split("1.");
             System.out.println(arr[1]);
             return readFile(DATA_PATH+"eng-"+translatedLanguage+".dict",arr[1]);
+        }else if(translatedLanguage.equalsIgnoreCase("deu") && StartLanguage.equalsIgnoreCase("eng")){
+            return readEngDeuFile(DATA_PATH+"eng-deu.dict",word);
         }
         else if(StartLanguage.equalsIgnoreCase("eng")){
             return readFile(DATA_PATH+"eng-"+translatedLanguage+".dict",word);
@@ -51,9 +54,37 @@ public class scanningFile {
         }
         return arrayList;
     }
+    public static ArrayList<String> readEngDeuFile(String fileName, String word){
+        ArrayList<String> arrayList = new ArrayList<>();
+        try (BufferedReader br = new BufferedReader(new FileReader(fileName))) {
+            String line;
+            while ((line = br.readLine()) != null) {
+
+                String[] arr = line.split(" /");
+
+                if(arr[0].equals(word)){
+                    String s = br.readLine();
+
+                    if (s.contains(" <")){
+                        String[] arr1 =s.split("<");
+                        arrayList.add(arr1[0]);
+                        System.out.println(arr1[0]);
+                        s = br.readLine();
+                        break;
+                    }
+
+                }
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return arrayList;
+    }
     public static void add(String StartLanguage, String translatedLanguage,String word, VBox vBox, Text vocbText){
         if(translate(StartLanguage,translatedLanguage,word).isEmpty()){
             System.out.println("There is no " + translatedLanguage+" translation for this word.");
+            vocbText = new Text("There is no " + translatedLanguage+" translation for this word.");
+            vBox.getChildren().add(vocbText);
         }else {
             for (int i = 0; i < translate(StartLanguage, translatedLanguage, word).size(); i++) {
                 vocbText = new Text(translate(StartLanguage, translatedLanguage, word).get(i));

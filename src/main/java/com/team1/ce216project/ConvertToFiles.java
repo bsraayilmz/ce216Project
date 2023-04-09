@@ -49,6 +49,7 @@ public class ConvertToFiles {
             }
 
     }
+
     public static void replaceLinesForEll(String fileName) throws FileNotFoundException {
         Scanner sc = new Scanner(new File(fileName));
 

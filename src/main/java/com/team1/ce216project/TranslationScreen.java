@@ -49,7 +49,8 @@ public class TranslationScreen {
         });
 
         choosingLanguage1 = new ChoiceBox<>();
-        choosingLanguage1.getItems().addAll("Turkish" , "English" , "German" , "French" , "Italian" , "Swedish" , "Modern Greek");
+        // WORK IN PROGRESS DO NOT TOUCH
+        choosingLanguage1.getItems().addAll("tur" , "eng" , "deu" , "fra" , "ita" , "swe" , "ell");
         choosingLanguage1.setValue("Select Language");
 
 

@@ -25,6 +25,7 @@ public class Main extends Application {
             System.out.println("An error occurred.");
             e.printStackTrace();
         }
+
         ConvertToFiles.replaceLines(scanningFile.DATA_PATH+"eng-fra.dict");
         ConvertToFiles.replaceLines(scanningFile.DATA_PATH+"eng-ita.dict");
         ConvertToFiles.replaceLines(scanningFile.DATA_PATH+"tur-eng.dict");
