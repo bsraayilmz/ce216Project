@@ -31,7 +31,7 @@ public class flagsClass extends Exception{
         hBox= new HBox(flagsView);
 
         //to set the visual properties of the hBoxForFlags layout and image
-        hBox.setBackground(new Background(new BackgroundFill(Color.SILVER, CornerRadii.EMPTY, new Insets(0)))
+        hBox.setBackground(new Background(new BackgroundFill(Color.GAINSBORO, CornerRadii.EMPTY, new Insets(0)))
         );
         hBox.setSpacing(20);
         flagsView.setFitHeight(70);

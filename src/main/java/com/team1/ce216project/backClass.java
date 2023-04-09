@@ -31,8 +31,8 @@ public class backClass {
 
         returnButton = new Button();
         returnButton.setGraphic(returnView);//to add button property to the sign of return (to go back prev page)
-        returnButton.setBorder(new Border(new BorderStroke(Color.BLACK,BorderStrokeStyle.SOLID,CornerRadii.EMPTY,BorderWidths.DEFAULT)));
-        returnButton.setBackground(new Background(new BackgroundFill(Color.SILVER, CornerRadii.EMPTY, new Insets(0))));
+        returnButton.setBorder(new Border(new BorderStroke(Color.GAINSBORO,BorderStrokeStyle.SOLID,CornerRadii.EMPTY,BorderWidths.DEFAULT)));
+        returnButton.setBackground(new Background(new BackgroundFill(Color.GAINSBORO, CornerRadii.EMPTY, new Insets(0))));
         returnButton.setOnAction(e -> {
             try {
                 ActionScreen.displayActionScreen(ActionScreen.stage);

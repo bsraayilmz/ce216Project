@@ -31,9 +31,9 @@ public class questionMarkClass {
 
         helpButton = new Button();
         helpButton.setGraphic(questionMarkView); //to add button property to the question mark (help)
-        helpButton.setBorder(new Border(new BorderStroke(Color.BLACK,BorderStrokeStyle.SOLID,CornerRadii.EMPTY,BorderWidths.DEFAULT))
+        helpButton.setBorder(new Border(new BorderStroke(Color.GAINSBORO,BorderStrokeStyle.SOLID,CornerRadii.EMPTY,BorderWidths.DEFAULT))
         );
-        helpButton.setBackground(new Background(new BackgroundFill(Color.SILVER, CornerRadii.EMPTY, new Insets(0)))
+        helpButton.setBackground(new Background(new BackgroundFill(Color.GAINSBORO, CornerRadii.EMPTY, new Insets(0)))
         );
 
 
