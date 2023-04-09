@@ -18,6 +18,9 @@ public class Main extends Application {
         ConvertToFiles.replaceLines("data/swe-eng.dict");
         ConvertToFiles.replaceLines("data/ita-eng.dict");
         ConvertToFiles.replaceLines("data/ell-eng.dict");
+        ConvertToFiles.replaceLines("data/eng-ell.dict");
+
+
         LoginScreen loginScreen = new LoginScreen();
         loginScreen.displayLoginScreen(stage);
 

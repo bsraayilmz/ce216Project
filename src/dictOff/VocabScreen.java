@@ -1,36 +1,20 @@
 package dictOff;
 
-import javafx.application.Application;
-import javafx.fxml.FXMLLoader;
 import javafx.geometry.Pos;
-import javafx.geometry.Rectangle2D;
 import javafx.scene.Scene;
-import javafx.scene.control.Label;
+import javafx.scene.control.TextField;
 import javafx.scene.layout.*;
-import javafx.scene.paint.Color;
 import javafx.scene.text.Font;
 import javafx.scene.text.FontPosture;
 import javafx.scene.text.Text;
-import javafx.stage.Screen;
 import javafx.stage.Stage;
-
-import java.io.IOException;
-
-import javafx.application.Application;
 import javafx.geometry.Insets;
-import javafx.scene.Scene;
-import javafx.scene.control.Button;
-import javafx.stage.Stage;
-
-import javafx.application.Application;
-import javafx.geometry.Insets;
-import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.layout.HBox;
-import javafx.stage.Stage;
+
 
 public class VocabScreen {
-
+    private static boolean answer;
     public static Scene displayVocabScreen(Stage stage, String word,String startLanguage) throws Exception {
         StackPane stack = new StackPane();
 
@@ -39,7 +23,7 @@ public class VocabScreen {
 
         VBox vBox1= new VBox();
         Text text = new Text("TRANSLATIONS OF " + word);
-        Text text1 = new Text("(Source Language: ENG)");
+        Text text1 = new Text("(Source Language: "+ startLanguage +")");
         text.setFont(Font.font("Times New Roman", FontPosture.REGULAR,45));
         text1.setFont(Font.font("Times New Roman", FontPosture.REGULAR,45));
 
@@ -51,56 +35,88 @@ public class VocabScreen {
         vBox1.setAlignment(Pos.CENTER);
         vBox1.getChildren().addAll(text,text1);
 
-        VBox vBox= new VBox();
-        vBox.setMaxHeight(200);
-        vBox.setMaxWidth(500);
-        vBox.setAlignment(Pos.TOP_LEFT);
-        Text vocbIta = new Text();
+        HBox hBox1= new HBox();
+        hBox1.setMaxHeight(200);
+        hBox1.setMaxWidth(500);
+        hBox1.setAlignment(Pos.TOP_LEFT);
+        Text vocb = new Text();
+
+
+        VBox vBox2= new  VBox();
+        vBox2.setMaxHeight(200);
+        vBox2.setMaxWidth(500);
+        vBox2.setPadding(new Insets(10));
+        vBox2.setAlignment(Pos.TOP_LEFT);
+
 
         Button English = new Button("eng");
-        English.setPrefSize(80,50);
+        English.setPrefSize(90,50);
         English.setOnAction(e -> {
-            scanningFile.add(startLanguage,"eng",word,vBox,vocbIta);
-            System.out.println(scanningFile.readFile("data/"+startLanguage+"-eng.dict",word));
-        });
+            scanningFile.add(startLanguage,"eng",word,vBox2,vocb);
 
-        Button Italian = new Button("Itl");
-        Italian.setPrefSize(80,50);
-        Italian.setOnAction(e -> {
-            scanningFile.add(startLanguage,"ita",word,vBox,vocbIta);
-            System.out.println(scanningFile.readFile("data/"+startLanguage+"-eng.dict",word));
         });
-        Button Greek = new Button("Gre");
-        Greek.setPrefSize(80,50);
+        if(!startLanguage.equals(English.getText())){
+            hBox1.getChildren().addAll(English);
+        }
+
+        Button Italian = new Button("ita");
+        Italian.setPrefSize(90,50);
         Italian.setOnAction(e -> {
-            scanningFile.add(startLanguage,"ell",word,vBox,vocbIta);
-            System.out.println(scanningFile.readFile("data/"+startLanguage+"-eng.dict",word));
+            scanningFile.add(startLanguage,"ita",word,vBox2,vocb);
+
         });
-        Button Turkish = new Button("Tr");
-        Turkish.setPrefSize(80,50);
-        Italian.setOnAction(e -> {
-            scanningFile.add(startLanguage,"tur",word,vBox,vocbIta);
-            System.out.println(scanningFile.readFile("data/"+startLanguage+"-eng.dict",word));
+        if(!startLanguage.equals(Italian.getText())){
+            hBox1.getChildren().addAll(Italian);
+        }
+
+        Button Greek = new Button("gre");
+        Greek.setPrefSize(90,50);
+        Greek.setOnAction(e -> {
+            scanningFile.add(startLanguage,"ell",word,vBox2,vocb);
+
         });
-        Button German = new Button("Ger");
-        German.setPrefSize(80,50);
-        Italian.setOnAction(e -> {
-            scanningFile.add(startLanguage,"deu",word,vBox,vocbIta);
-            System.out.println(scanningFile.readFile("data/"+startLanguage+"-eng.dict",word));
+        if(!startLanguage.equals(Greek.getText())){
+            hBox1.getChildren().addAll(Greek);
+        }
+
+        Button Turkish = new Button("tur");
+        Turkish.setPrefSize(90,50);
+        Turkish.setOnAction(e -> {
+            scanningFile.add(startLanguage,"tur",word,vBox2,vocb);
+
         });
-        Button French  = new Button("Fr");
-        French.setPrefSize(80,50);
-        Italian.setOnAction(e -> {
-            scanningFile.add(startLanguage,"fra",word,vBox,vocbIta);
-            System.out.println(scanningFile.readFile("data/"+startLanguage+"-eng.dict",word));
+        if(!startLanguage.equals(Turkish.getText())){
+            hBox1.getChildren().addAll(Turkish);
+        }
+
+        Button German = new Button("ger");
+        German.setPrefSize(90,50);
+        German.setOnAction(e -> {
+            scanningFile.add(startLanguage,"deu",word,vBox2,vocb);
+
         });
-        Button Swedish = new Button("Swe");
-        Swedish.setPrefSize(80,50);
-        Italian.setOnAction(e -> {
-            scanningFile.add(startLanguage,"swe",word,vBox,vocbIta);
-            System.out.println(scanningFile.readFile("data/"+startLanguage+"-eng.dict",word));
+        if(!startLanguage.equals(German.getText())){
+            hBox1.getChildren().addAll(German);
+        }
+
+        Button French  = new Button("fra");
+        French.setPrefSize(90,50);
+        French.setOnAction(e -> {
+            scanningFile.add(startLanguage,"fra",word,vBox2,vocb);
         });
-        vBox.getChildren().addAll(English,Italian,Greek,German,Swedish,French);
+        if(!startLanguage.equals(French.getText())){
+            hBox1.getChildren().addAll(French);
+        }
+
+        Button Swedish = new Button("swe");
+        Swedish.setPrefSize(90,50);
+        Swedish.setOnAction(e -> {
+            scanningFile.add(startLanguage,"swe",word,vBox2,vocb);
+        });
+        if(!startLanguage.equals(Swedish.getText())){
+            hBox1.getChildren().addAll(Swedish);
+        }
+        hBox1.setSpacing(10);
 
         English.setFont(Font.font("Arial",20));
         English.setStyle("-fx-background-color: grey;");
@@ -152,7 +168,7 @@ public class VocabScreen {
         vBoxMain.setMaxHeight(700);
         vBoxMain.setStyle("-fx-background-color: gainsboro; -fx-background-radius: 10; -fx-border-radius: 10; -fx-border-width: 1;");
         vBoxMain.setAlignment(Pos.TOP_CENTER);
-        vBoxMain.getChildren().addAll(vBox1,vBox);
+        vBoxMain.getChildren().addAll(vBox1,hBox1,vBox2);
         vBoxMain.setSpacing(70);
 
         stack.setStyle("-fx-background-color: #DCDCDC");

@@ -1,5 +1,6 @@
 package dictOff;
 
+import javafx.scene.control.TextField;
 import javafx.scene.layout.VBox;
 import javafx.scene.text.Font;
 import javafx.scene.text.FontPosture;
@@ -48,11 +49,16 @@ public class scanningFile {
         return arrayList;
     }
     public static void add(String StartLanguage, String translatedLanguage,String word, VBox vBox, Text vocbText){
-        for(int i=0; i<translate(StartLanguage,translatedLanguage,word).size();i++){
-            vocbText = new Text(translate(StartLanguage,translatedLanguage,word).get(i));
-            vocbText.setFont(Font.font("Times New Roman", FontPosture.REGULAR,15));
-            vBox.getChildren().add(vocbText);
+        if(translate(StartLanguage,translatedLanguage,word).isEmpty()){
+            System.out.println("There is no " + translatedLanguage+" translation for this word.");
+        }else {
+            for (int i = 0; i < translate(StartLanguage, translatedLanguage, word).size(); i++) {
+                vocbText = new Text(translate(StartLanguage, translatedLanguage, word).get(i));
+                vocbText.setFont(Font.font("Times New Roman", FontPosture.REGULAR, 15));
+                vBox.getChildren().add(vocbText);
+            }
         }
+
     }
     public static boolean isNumeric(String str) {
         try {
