@@ -18,6 +18,7 @@ public class VocabScreen {
     private static boolean answer;
     public static Scene displayVocabScreen(Stage stage, String word,String startLanguage) throws Exception {
         StackPane stack = new StackPane();
+        boolean isTranslated = false;
 
         stage.setTitle("DictOff");
 
@@ -53,6 +54,9 @@ public class VocabScreen {
         Button English = new Button("eng");
         English.setPrefSize(90,50);
         English.setOnAction(e -> {
+            if(!vBox2.getChildren().isEmpty()){
+                vBox2.getChildren().remove(0);
+            }
             scanningFile.add(startLanguage,"eng",word,vBox2,vocb);
 
         });
@@ -63,6 +67,9 @@ public class VocabScreen {
         Button Italian = new Button("ita");
         Italian.setPrefSize(90,50);
         Italian.setOnAction(e -> {
+            if(!vBox2.getChildren().isEmpty()){
+                vBox2.getChildren().remove(0);
+            }
             scanningFile.add(startLanguage,"ita",word,vBox2,vocb);
 
         });
@@ -73,6 +80,9 @@ public class VocabScreen {
         Button Greek = new Button("gre");
         Greek.setPrefSize(90,50);
         Greek.setOnAction(e -> {
+            if(!vBox2.getChildren().isEmpty()){
+                vBox2.getChildren().remove(0);
+            }
             scanningFile.add(startLanguage,"ell",word,vBox2,vocb);
 
         });
@@ -83,6 +93,9 @@ public class VocabScreen {
         Button Turkish = new Button("tur");
         Turkish.setPrefSize(90,50);
         Turkish.setOnAction(e -> {
+            if(!vBox2.getChildren().isEmpty()){
+                vBox2.getChildren().remove(0);
+            }
             scanningFile.add(startLanguage,"tur",word,vBox2,vocb);
 
         });
@@ -93,6 +106,9 @@ public class VocabScreen {
         Button German = new Button("deu");
         German.setPrefSize(90,50);
         German.setOnAction(e -> {
+            if(!vBox2.getChildren().isEmpty()){
+                vBox2.getChildren().remove(0);
+            }
             scanningFile.add(startLanguage,"deu",word,vBox2,vocb);
 
         });
@@ -103,6 +119,9 @@ public class VocabScreen {
         Button French  = new Button("fra");
         French.setPrefSize(90,50);
         French.setOnAction(e -> {
+            if(!vBox2.getChildren().isEmpty()){
+                vBox2.getChildren().remove(0);
+            }
             scanningFile.add(startLanguage,"fra",word,vBox2,vocb);
         });
         if(!startLanguage.equals(French.getText())){
@@ -112,6 +131,9 @@ public class VocabScreen {
         Button Swedish = new Button("swe");
         Swedish.setPrefSize(90,50);
         Swedish.setOnAction(e -> {
+            if(!vBox2.getChildren().isEmpty()){
+                vBox2.getChildren().remove(0);
+            }
             scanningFile.add(startLanguage,"swe",word,vBox2,vocb);
         });
         if(!startLanguage.equals(Swedish.getText())){

@@ -5,6 +5,7 @@ import javafx.geometry.Pos;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.ChoiceBox;
+import javafx.scene.control.ComboBox;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.*;
 import javafx.scene.paint.Color;
@@ -13,6 +14,8 @@ import javafx.scene.text.FontPosture;
 import javafx.scene.text.FontWeight;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
+
+import java.util.Locale;
 
 import static com.team1.ce216project.VerifyScreen.displayVerifyScreen;
 public class TranslationScreen {
@@ -23,6 +26,7 @@ public class TranslationScreen {
     public static void displayTranslationScreen(Stage stage) throws Exception {
         window = stage;
         window.setTitle("DictOff");
+
 
         //Instruction text
         Text text = new Text(" Type a word to find its translations"); //in order to centre the text
