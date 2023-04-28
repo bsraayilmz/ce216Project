@@ -25,7 +25,7 @@ public class Main extends Application {
             System.out.println("An error occurred.");
             e.printStackTrace();
         }
-
+        //ConvertToFiles.fixBlank(scanningFile.DATA_PATH+"eng-fra.dict");
         ConvertToFiles.replaceLines(scanningFile.DATA_PATH+"eng-fra.dict");
         ConvertToFiles.replaceLines(scanningFile.DATA_PATH+"eng-ita.dict");
         ConvertToFiles.replaceLines(scanningFile.DATA_PATH+"tur-eng.dict");
@@ -35,6 +35,7 @@ public class Main extends Application {
         ConvertToFiles.replaceLines(scanningFile.DATA_PATH+"ita-eng.dict");
         ConvertToFiles.replaceLines(scanningFile.DATA_PATH+"ell-eng.dict");
         ConvertToFiles.replaceLines(scanningFile.DATA_PATH+"eng-ell.dict");
+
 
 
         LoginScreen loginScreen = new LoginScreen();
