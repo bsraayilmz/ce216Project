@@ -35,6 +35,33 @@ public class Main extends Application {
         ConvertToFiles.replaceLines(scanningFile.DATA_PATH+"ita-eng.dict");
         ConvertToFiles.replaceLines(scanningFile.DATA_PATH+"ell-eng.dict");
         ConvertToFiles.replaceLines(scanningFile.DATA_PATH+"eng-ell.dict");
+        ConvertToFiles.replaceLines(scanningFile.DATA_PATH+"fra-ell.dict");
+        ConvertToFiles.replaceLines(scanningFile.DATA_PATH+"fra-deu.dict");
+        ConvertToFiles.replaceLines(scanningFile.DATA_PATH+"fra-ita.dict");
+        ConvertToFiles.replaceLines(scanningFile.DATA_PATH+"fra-swe.dict");
+        ConvertToFiles.replaceLines(scanningFile.DATA_PATH+"fra-tur.dict");
+        ConvertToFiles.replaceLines(scanningFile.DATA_PATH+"deu-ell.dict");
+        ConvertToFiles.replaceLines(scanningFile.DATA_PATH+"deu-ita.dict");
+        ConvertToFiles.replaceLines(scanningFile.DATA_PATH+"deu-swe.dict");
+        ConvertToFiles.replaceLines(scanningFile.DATA_PATH+"deu-tur.dict");
+        ConvertToFiles.replaceLines(scanningFile.DATA_PATH+"deu-fra.dict");
+        ConvertToFiles.replaceLines(scanningFile.DATA_PATH+"ita-deu.dict");
+        ConvertToFiles.replaceLines(scanningFile.DATA_PATH+"ita-ell.dict");
+        ConvertToFiles.replaceLines(scanningFile.DATA_PATH+"ita-swe.dict");
+        ConvertToFiles.replaceLines(scanningFile.DATA_PATH+"ita-tur.dict");
+        ConvertToFiles.replaceLines(scanningFile.DATA_PATH+"tur-deu.dict");
+        ConvertToFiles.replaceLines(scanningFile.DATA_PATH+"swe-deu.dict");
+        ConvertToFiles.replaceLines(scanningFile.DATA_PATH+"swe-ell.dict");
+        ConvertToFiles.replaceLines(scanningFile.DATA_PATH+"swe-fra.dict");
+        ConvertToFiles.replaceLines(scanningFile.DATA_PATH+"swe-ita.dict");
+        ConvertToFiles.replaceLines(scanningFile.DATA_PATH+"swe-tur.dict");
+        ConvertToFiles.replaceLines(scanningFile.DATA_PATH+"ell-fra.dict");
+        ConvertToFiles.replaceLines(scanningFile.DATA_PATH+"ell-ita.dict");
+        ConvertToFiles.replaceLines(scanningFile.DATA_PATH+"ell-swe.dict");
+
+
+
+
 
 
 

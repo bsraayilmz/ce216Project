@@ -1,6 +1,7 @@
 package com.team1.ce216project;
 
 import java.io.*;
+import java.nio.charset.StandardCharsets;
 import java.util.Formatter;
 import java.util.Scanner;
 
@@ -12,7 +13,7 @@ public class ConvertToFiles {
         try {
             // input the (modified) file content to the StringBuffer "input"
             BufferedReader file;
-            file = new BufferedReader(new FileReader(fileName));
+            file = new BufferedReader(new InputStreamReader(new FileInputStream(fileName), StandardCharsets.UTF_8));
             StringBuilder inputBuffer = new StringBuilder();
             String line;
             String nextline = null;
@@ -41,8 +42,9 @@ public class ConvertToFiles {
 
                 // write the new string with the replaced line OVER the same file
                 FileOutputStream fileOut = new FileOutputStream(fileName);
-                fileOut.write(inputBuffer.toString().getBytes());
-                fileOut.close();
+                OutputStreamWriter writer = new OutputStreamWriter(fileOut, StandardCharsets.UTF_8);
+                writer.write(inputBuffer.toString());
+                writer.close();
 
             } }catch(Exception e){
                 e.printStackTrace();
@@ -83,4 +85,6 @@ public class ConvertToFiles {
         }
 
     }
+
+
 }
