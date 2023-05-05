@@ -4,36 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a9e0f112-0536-41c3-88c7-cb96deb3e3d8" name="Changes" comment="Changed eng-deu.dict file to fix new method which can read and display the word translation and connected the screens.">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/team1/ce216project/data/deu-ell.dict" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/team1/ce216project/data/deu-eng.dict" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/team1/ce216project/data/deu-fra.dict" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/team1/ce216project/data/deu-ita.dict" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/team1/ce216project/data/deu-swe.dict" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/team1/ce216project/data/deu-tur.dict" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/team1/ce216project/data/ell-fra.dict" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/team1/ce216project/data/ell-ita.dict" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/team1/ce216project/data/ell-swe.dict" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/team1/ce216project/data/fra-deu.dict" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/team1/ce216project/data/fra-ell.dict" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/team1/ce216project/data/fra-ita.dict" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/team1/ce216project/data/fra-swe.dict" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/team1/ce216project/data/fra-tur.dict" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/team1/ce216project/data/ita-deu.dict" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/team1/ce216project/data/ita-ell.dict" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/team1/ce216project/data/ita-swe.dict" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/team1/ce216project/data/ita-tur.dict" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/team1/ce216project/data/swe-deu.dict" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/team1/ce216project/data/swe-ell.dict" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/team1/ce216project/data/swe-fra.dict" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/team1/ce216project/data/swe-ita.dict" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/team1/ce216project/data/swe-tur.dict" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/team1/ce216project/data/tur-deu.dict" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/team1/ce216project/ConvertToFiles.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/team1/ce216project/ConvertToFiles.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/team1/ce216project/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/team1/ce216project/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/team1/ce216project/scanningFile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/team1/ce216project/scanningFile.java" afterDir="false" />
-    </list>
+    <list default="true" id="a9e0f112-0536-41c3-88c7-cb96deb3e3d8" name="Changes" comment="Changed eng-deu.dict file to fix new method which can read and display the word translation and connected the screens." />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -47,6 +18,9 @@
   <component name="ExternalProjectsManager">
     <system id="GRADLE">
       <state>
+        <task path="$PROJECT_DIR$">
+          <activation />
+        </task>
         <projects_view>
           <tree_state>
             <expand>
@@ -73,9 +47,9 @@
     </file-type-list>
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/src/main/java/com/team1/ce216project/Main.java" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/src/main/java/com/team1/ce216project/ConvertToFiles.java" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/src/main/resources/com/team1/ce216project/data/eng-tur.dict" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/src/main/java/com/team1/ce216project/Main.java" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
