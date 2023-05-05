@@ -19,6 +19,7 @@ import javafx.stage.Stage;
 
 import java.io.*;
 import java.nio.charset.StandardCharsets;
+import java.util.ArrayList;
 
 import static com.team1.ce216project.scanningFile.IMAGES_PATH;
 
@@ -26,7 +27,7 @@ public class SynonymScreen {
     static String engPath = scanningFile.DATA_PATH + "engSyn.txt";
     static String gerPath = scanningFile.DATA_PATH + "gerSyn.txt";
     static String ellPath = scanningFile.DATA_PATH + "greekSyn.txt";
-
+    static String pathTurkishSynonym = scanningFile.DATA_PATH+"trSyn.txt";
     private static Button synonymButton;
     private static ChoiceBox <String> choiceBox;
     public static Scene displaySynonymScreen(Stage stage) throws Exception {
@@ -52,6 +53,9 @@ public class SynonymScreen {
             }
             else if(choiceBox.getValue().equals("ell")){
                 System.out.println(oneLineSynonym(wordInput.getText(), ellPath));
+            }
+            else if(choiceBox.getValue().equals("tur")){
+                System.out.println(TurkishSynonym(wordInput.getText()));
             }
         });
 
@@ -135,6 +139,31 @@ public class SynonymScreen {
         return null;
     }
 
+    public static ArrayList<String> TurkishSynonym(String word) {
+        ArrayList<String> sameWords = new ArrayList<>();
+        try (BufferedReader br = new BufferedReader(new FileReader(pathTurkishSynonym, StandardCharsets.UTF_8))) {
+            String str = "";
+            String line;
 
+            while ((line = br.readLine()) != null) {
+                if(line.startsWith(word)) {
+                    String[] words = line.trim().split("\\s+");
+                    if(words[0].equals(word)) {
+                        for(int i=1; i<words.length; i++){
+                            sameWords.add(words[i]);
+                        }
+
+                    }
+                }
+            }
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+        return sameWords;
+    }
 
 }
+
+
+
+
