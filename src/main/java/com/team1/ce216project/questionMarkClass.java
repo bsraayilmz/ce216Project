@@ -46,11 +46,6 @@ public class questionMarkClass {
 
 
 
-
-
-
-
-
         helpButton.setOnAction(new EventHandler<ActionEvent>() {
 
             @Override
@@ -76,12 +71,8 @@ public class questionMarkClass {
                 btn3.setPrefSize(100,50);
 
                 vbox1.getChildren().addAll(label1, btn1, label2, btn2, label3, btn3,box2);
+                vbox1.setAlignment(Pos.CENTER);
                 vbox1.setStyle("-fx-background-color:gainsboro");
-
-
-
-
-
 
                 Image returnImage = null;
                 try {
@@ -95,14 +86,17 @@ public class questionMarkClass {
                 returnButton.setGraphic(returnView);//to add button property to the sign of return (to go back prev page)
                 returnButton.setBorder(new Border(new BorderStroke(Color.GAINSBORO,BorderStrokeStyle.SOLID,CornerRadii.EMPTY,BorderWidths.DEFAULT)));
                 returnButton.setBackground(new Background(new BackgroundFill(Color.GAINSBORO, CornerRadii.EMPTY, new Insets(0))));
+                returnButton.setAlignment(Pos.BOTTOM_LEFT);
                 returnButton.setOnAction(e -> {
                     newStage.close();
                 });
 
-                box2.getChildren().addAll(returnButton,returnView);
+
                 returnView.setFitHeight(50);
                 returnView.setFitWidth(47);
 
+                box2.getChildren().addAll(returnButton,returnView);
+                box2.setAlignment(Pos.BOTTOM_LEFT);
 
                 btn1.setFont(Font.font("Times New Roman", FontWeight.BOLD, 15));
                 btn1.setStyle("-fx-background-radius: 10 10 10 10; -fx-border-color: gray; -fx-border-width: 2;-fx-border-radius: 10 10 10 10");
@@ -113,27 +107,14 @@ public class questionMarkClass {
 
 
 
-
-                /*btn1.setFont(Font.font("Arial",20));
-                btn1.setStyle("-fx-background-color: grey;");
-                btn2.setFont(Font.font("Arial",20));
-                btn2.setStyle("-fx-background-color: grey;");
-                btn3.setFont(Font.font("Arial",20));
-                btn3.setStyle("-fx-background-color: grey;");*/
-
-
-                label1.setFont(Font.font("Arial",15));
+                label1.setFont(Font.font("Times New Roman",15));
                 label1.setStyle("-fx-background-color: yellow;");
-                label2.setFont(Font.font("Arial",15));
+                label2.setFont(Font.font("Times New Roman",15));
                 label2.setStyle("-fx-background-color: yellow;");
-                label3.setFont(Font.font("Arial",15));
+                label3.setFont(Font.font("Times New Roman",15));
                 label3.setStyle("-fx-background-color: yellow;");
 
-
-
-                vbox1.setAlignment(Pos.TOP_CENTER);
-
-
+                vbox1.setAlignment(Pos.CENTER);
 
                 btn1.setOnAction(new EventHandler<ActionEvent>() {
                     @Override
@@ -143,21 +124,24 @@ public class questionMarkClass {
                         newStage1.setTitle("Help Center");
                         Label label = new Label("Information for Translation");
                         StackPane pane = new StackPane(label);
+                        StackPane.setMargin(label, new Insets(25,0,0,0));
                         pane.setStyle("-fx-background-color:gainsboro");
-                        label.setFont(Font.font("Arial",20));
+                        label.setFont(Font.font("Times New Roman",20));
                         label.setStyle("-fx-background-color: yellow;");
-                        pane.setAlignment(Pos.TOP_CENTER);
-                        Text text = new Text("find a translation\n" +
+                        pane.setAlignment(Pos.CENTER);
+                        Text text = new Text("To Find a translation\n" +
                                 "1) Click the start button\n" +
                                 "2) Click Search translation button\n" +
                                 "3) Enter the words you need for translation and select the source language\n" +
                                 "4) Click the Find Translations button again.\n" +
                                 "5) dictoff translates your words into all languages \u200B\u200Bdictoff has. You can choose which you related ");
 
-                        text.setFont(Font.font("Arial",15));
-                        text.setStyle("-fx-background-color: yellow;");
+                        text.setFont(Font.font("Times New Roman",15));
+                        VBox.setMargin(text, new Insets(170,0,0,35));
+                        VBox vBox = new VBox(pane, text);
+                        vBox.setBackground(new Background(new BackgroundFill(Color.GAINSBORO, CornerRadii.EMPTY, new Insets(0))));                        text.setStyle("-fx-background-color: yellow;");
 
-                        StackPane stack = new StackPane(pane,text);
+                        StackPane stack = new StackPane(vBox);
 
 
                         Scene scene = new Scene(stack, 700, 550);
@@ -172,20 +156,21 @@ public class questionMarkClass {
                         // Create a new stage or screen for this button's action
                         Stage newStage2 = new Stage();
                         newStage2.setTitle("Help Center");
-                        Label label = new Label("Information for synonyms");
+                        Label label = new Label("Information for Synonyms");
                         StackPane pane = new StackPane(label);
+                        StackPane.setMargin(label, new Insets(25,0,0,0));
                         pane.setStyle("-fx-background-color:gainsboro");
-                        label.setFont(Font.font("Arial",20));
+                        label.setFont(Font.font("Times New Roman",20));
                         label.setStyle("-fx-background-color: yellow;");
                         pane.setAlignment(Pos.TOP_CENTER);
-                        Text text = new Text("find synonyms\n" +
+                        Text text = new Text("To Find synonyms\n" +
                                 "1) Click the start button\n" +
                                 "2) Click the \"Find Synonyms\" button\n" +
                                 "3) Enter the word you want as a synonym\n" +
                                 "4) Click the Find Synonyms button again.\n" +
                                 "5) dictoff will give you the synonyms you need");
 
-                        text.setFont(Font.font("Arial",15));
+                        text.setFont(Font.font("Times New Roman",15));
                         text.setStyle("-fx-background-color: yellow;");
 
                         StackPane stack = new StackPane(pane,text);
@@ -203,13 +188,14 @@ public class questionMarkClass {
                         // Create a new stage or screen for this button's action
                         Stage newStage3 = new Stage();
                         newStage3.setTitle("Help Center");
-                        Label label = new Label("Information for adding translations");
+                        Label label = new Label("Information for Adding Translations");
                         StackPane pane = new StackPane(label);
+                        StackPane.setMargin(label, new Insets(25,0,0,0));
                         pane.setStyle("-fx-background-color:gainsboro");
-                        label.setFont(Font.font("Arial",20));
+                        label.setFont(Font.font("Times New Roman",20));
                         label.setStyle("-fx-background-color: yellow;");
                         pane.setAlignment(Pos.TOP_CENTER);
-                        Text text = new Text("to add translations \n" +
+                        Text text = new Text("To add translations \n" +
                                 "1)click start button\n" +
                                 "2)click add translations button\n" +
                                 "3)enter the word that you want to add and elect source language \n" +
@@ -217,7 +203,7 @@ public class questionMarkClass {
                                 " enter the words meaning and choose which language it is\n" +
                                 "5) click add to list button \n" +
                                 "6)dictoff will add to list your words");
-                        text.setFont(Font.font("Arial",15));
+                        text.setFont(Font.font("Times New Roman",15));
                         text.setStyle("-fx-background-color: yellow;");
 
                         StackPane stack = new StackPane(pane,text);
@@ -238,26 +224,11 @@ public class questionMarkClass {
             }
         });
 
-       /* StackPane root = new StackPane();
-        root.setStyle("-fx-background-color:gainsboro");
-        root.getChildren().add(helpButton);
-        Scene scene = new Scene(root, 700, 500);
-        Stage.setScene(scene);
-        Stage.show();*/
-
-
-
-
-
-
         questionMarkView.setFitHeight(50);
         questionMarkView.setFitWidth(45);
 
         HBox box = new HBox(helpButton, questionMarkView);
         box.setAlignment(Pos.BOTTOM_RIGHT);
-
-
-
 
         return box;
     }
