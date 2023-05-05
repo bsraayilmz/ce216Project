@@ -1,0 +1,92 @@
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	
++++ b/.idea/workspace.xml	
+@@ -4,9 +4,9 @@
+     <option name="autoReloadType" value="SELECTIVE" />
+   </component>
+   <component name="ChangeListManager">
+-    <list default="true" id="a9e0f112-0536-41c3-88c7-cb96deb3e3d8" name="Changes" comment="Changed eng-deu.dict file to fix new method which can read and display the word translation and connected the screens.">
++    <list default="true" id="a9e0f112-0536-41c3-88c7-cb96deb3e3d8" name="Changes" comment="Adding a choice box to the SynonymScreen.">
+       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/main/java/com/team1/ce216project/questionMarkClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/team1/ce216project/questionMarkClass.java" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/main/java/com/team1/ce216project/SynonymScreen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/team1/ce216project/SynonymScreen.java" afterDir="false" />
+     </list>
+     <option name="SHOW_DIALOG" value="false" />
+     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+@@ -50,14 +50,16 @@
+     </file-type-list>
+   </component>
+   <component name="HighlightingSettingsPerFile">
++    <setting file="file://$PROJECT_DIR$/src/main/java/com/team1/ce216project/ConvertToFiles.java" root0="FORCE_HIGHLIGHTING" />
+     <setting file="file://$PROJECT_DIR$/src/main/java/com/team1/ce216project/Main.java" root0="FORCE_HIGHLIGHTING" />
++    <setting file="file://$PROJECT_DIR$/src/main/resources/com/team1/ce216project/data/eng-fra.dict" root0="FORCE_HIGHLIGHTING" />
+     <setting file="file://$PROJECT_DIR$/src/main/resources/com/team1/ce216project/data/eng-tur.dict" root0="FORCE_HIGHLIGHTING" />
+-    <setting file="file://$PROJECT_DIR$/src/main/java/com/team1/ce216project/ConvertToFiles.java" root0="FORCE_HIGHLIGHTING" />
+   </component>
+   <component name="MarkdownSettingsMigration">
+     <option name="stateVersion" value="1" />
+   </component>
+   <component name="ProjectId" id="2OAu9cNffhp7LAniBK9hxjLpwNl" />
++  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+   <component name="ProjectViewState">
+     <option name="hideEmptyMiddlePackages" value="true" />
+     <option name="showLibraryContents" value="true" />
+@@ -72,6 +74,7 @@
+   </component>
+   <component name="RecentsManager">
+     <key name="MoveFile.RECENT_KEYS">
++      <recent name="C:\Users\ASUS\Documents\GitHub\ce216Project\src\main\resources\com\team1\ce216project\data" />
+       <recent name="C:\Users\cansu\Belgeler\java-sorular\ce216Project\src\main\resources\com\team1\ce216project\data" />
+       <recent name="C:\Users\cansu\Belgeler\java-sorular\ce216Project\data" />
+     </key>
+@@ -147,7 +150,28 @@
+       <option name="project" value="LOCAL" />
+       <updated>1681059355524</updated>
+     </task>
+-    <option name="localTasksCounter" value="2" />
++    <task id="LOCAL-00002" summary="questionMarkClass edit - part 2:&#10;whenever a button is clicked, the other events like clicking another button from the previous screen is blocked, also, the back button's position is fixed.">
++      <created>1683294070997</created>
++      <option name="number" value="00002" />
++      <option name="presentableId" value="LOCAL-00002" />
++      <option name="project" value="LOCAL" />
++      <updated>1683294070997</updated>
++    </task>
++    <task id="LOCAL-00003" summary="Some of the synonym dictionary files.">
++      <created>1683299230160</created>
++      <option name="number" value="00003" />
++      <option name="presentableId" value="LOCAL-00003" />
++      <option name="project" value="LOCAL" />
++      <updated>1683299230160</updated>
++    </task>
++    <task id="LOCAL-00004" summary="Adding a choice box to the SynonymScreen.">
++      <created>1683302145696</created>
++      <option name="number" value="00004" />
++      <option name="presentableId" value="LOCAL-00004" />
++      <option name="project" value="LOCAL" />
++      <updated>1683302145696</updated>
++    </task>
++    <option name="localTasksCounter" value="5" />
+     <servers />
+   </component>
+   <component name="Vcs.Log.Tabs.Properties">
+@@ -160,11 +184,13 @@
+         </entry>
+       </map>
+     </option>
+-    <option name="oldMeFiltersMigrated" value="true" />
+   </component>
+   <component name="VcsManagerConfiguration">
+     <MESSAGE value="Changed eng-deu.dict file to fix new method which can read and display the word translation and connected the screens." />
+-    <option name="LAST_COMMIT_MESSAGE" value="Changed eng-deu.dict file to fix new method which can read and display the word translation and connected the screens." />
++    <MESSAGE value="questionMarkClass edit - part 2:&#10;whenever a button is clicked, the other events like clicking another button from the previous screen is blocked, also, the back button's position is fixed." />
++    <MESSAGE value="Some of the synonym dictionary files." />
++    <MESSAGE value="Adding a choice box to the SynonymScreen." />
++    <option name="LAST_COMMIT_MESSAGE" value="Adding a choice box to the SynonymScreen." />
+   </component>
+   <component name="XDebuggerManager">
+     <breakpoint-manager>

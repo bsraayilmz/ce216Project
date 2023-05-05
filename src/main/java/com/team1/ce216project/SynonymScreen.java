@@ -17,14 +17,17 @@ import javafx.scene.text.FontWeight;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
-import java.io.FileInputStream;
+import java.io.*;
+import java.nio.charset.StandardCharsets;
 
 import static com.team1.ce216project.scanningFile.IMAGES_PATH;
 
 public class SynonymScreen {
+    static String engPath = scanningFile.DATA_PATH + "engSyn.txt";
+    static String gerPath = scanningFile.DATA_PATH + "gerSyn.txt";
+    static String ellPath = scanningFile.DATA_PATH + "greekSyn.txt";
 
-
-   private static Button synonymButton;
+    private static Button synonymButton;
     private static ChoiceBox <String> choiceBox;
     public static Scene displaySynonymScreen(Stage stage) throws Exception {
         stage.setTitle("DictOff");
@@ -43,6 +46,14 @@ public class SynonymScreen {
         synonymButton.setBorder(new Border(new BorderStroke(Color.BLACK,BorderStrokeStyle.SOLID,CornerRadii.EMPTY,BorderWidths.DEFAULT)));
         synonymButton.setTextFill(Color.BLACK);
         synonymButton.setBackground(new Background(new BackgroundFill(Color.SILVER, CornerRadii.EMPTY, new Insets(0))));
+        synonymButton.setOnAction(e -> {
+            if(choiceBox.getValue().equals("deu")){
+                System.out.println(oneLineSynonym(wordInput.getText(), gerPath));
+            }
+            else if(choiceBox.getValue().equals("ell")){
+                System.out.println(oneLineSynonym(wordInput.getText(), ellPath));
+            }
+        });
 
         choiceBox = new ChoiceBox<>();
         // WORK IN PROGRESS DO NOT TOUCH
@@ -108,9 +119,21 @@ public class SynonymScreen {
         stage.show();
         return scene;
     }
-//    public static String engSynonym(){
-//
-//    }
+    public static String oneLineSynonym(String word, String fileName){
+        String str = "";
+        word = word.trim();
+        try(BufferedReader br = new BufferedReader(new InputStreamReader(new FileInputStream(fileName), StandardCharsets.UTF_8))){
+            String line;
+            while((line = br.readLine()) != null){
+                if(line.startsWith(word)){
+                    return line;
+                }
+            }
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+        return null;
+    }
 
 
 

@@ -1,0 +1,123 @@
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	
++++ b/.idea/workspace.xml	
+@@ -5,11 +5,8 @@
+   </component>
+   <component name="ChangeListManager">
+     <list default="true" id="a9e0f112-0536-41c3-88c7-cb96deb3e3d8" name="Changes" comment="Changed eng-deu.dict file to fix new method which can read and display the word translation and connected the screens.">
+-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/main/java/com/team1/ce216project/TranslationScreen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/team1/ce216project/TranslationScreen.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/main/java/com/team1/ce216project/VocabScreen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/team1/ce216project/VocabScreen.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/main/java/com/team1/ce216project/scanningFile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/team1/ce216project/scanningFile.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/team1/ce216project/data/eng-tur.dict" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/team1/ce216project/data/eng-tur.dict" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+     </list>
+     <option name="SHOW_DIALOG" value="false" />
+     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+@@ -24,12 +21,26 @@
+   <component name="ExternalProjectsManager">
+     <system id="GRADLE">
+       <state>
++        <task path="$PROJECT_DIR$">
++          <activation />
++        </task>
+         <projects_view>
+           <tree_state>
+             <expand>
+               <path>
+                 <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                 <item name="ce216Project" type="f1a62948:ProjectNode" />
++              </path>
++              <path>
++                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
++                <item name="ce216Project" type="f1a62948:ProjectNode" />
++                <item name="Tasks" type="e4a08cd1:TasksNode" />
++              </path>
++              <path>
++                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
++                <item name="ce216Project" type="f1a62948:ProjectNode" />
++                <item name="Tasks" type="e4a08cd1:TasksNode" />
++                <item name="distribution" type="c8890929:TasksNode$1" />
+               </path>
+             </expand>
+             <select />
+@@ -43,32 +54,33 @@
+   </component>
+   <component name="HighlightingSettingsPerFile">
+     <setting file="file://$PROJECT_DIR$/src/main/java/com/team1/ce216project/ConvertToFiles.java" root0="FORCE_HIGHLIGHTING" />
++    <setting file="file://$PROJECT_DIR$/src/main/java/com/team1/ce216project/Main.java" root0="FORCE_HIGHLIGHTING" />
+     <setting file="file://$PROJECT_DIR$/src/main/resources/com/team1/ce216project/data/eng-fra.dict" root0="FORCE_HIGHLIGHTING" />
+     <setting file="file://$PROJECT_DIR$/src/main/resources/com/team1/ce216project/data/eng-tur.dict" root0="FORCE_HIGHLIGHTING" />
+-    <setting file="file://$PROJECT_DIR$/src/main/java/com/team1/ce216project/Main.java" root0="FORCE_HIGHLIGHTING" />
+   </component>
+   <component name="MarkdownSettingsMigration">
+     <option name="stateVersion" value="1" />
+   </component>
+   <component name="ProjectId" id="2OAu9cNffhp7LAniBK9hxjLpwNl" />
++  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+   <component name="ProjectViewState">
+     <option name="hideEmptyMiddlePackages" value="true" />
+     <option name="showLibraryContents" value="true" />
+   </component>
+-  <component name="PropertiesComponent">
+-    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+-    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+-    <property name="project.structure.last.edited" value="Modules" />
+-    <property name="project.structure.proportion" value="0.15" />
+-    <property name="project.structure.side.proportion" value="0.2" />
+-  </component>
++  <component name="PropertiesComponent"><![CDATA[{
++  "keyToString": {
++    "RunOnceActivity.OpenProjectViewOnStart": "true",
++    "RunOnceActivity.ShowReadmeOnStart": "true",
++    "settings.editor.selected.configurable": "preferences.lookFeel"
++  }
++}]]></component>
+   <component name="RecentsManager">
+     <key name="MoveFile.RECENT_KEYS">
+       <recent name="C:\Users\cansu\Belgeler\java-sorular\ce216Project\src\main\resources\com\team1\ce216project\data" />
+       <recent name="C:\Users\cansu\Belgeler\java-sorular\ce216Project\data" />
+     </key>
+   </component>
+-  <component name="RunManager" selected="Application.Main (1)">
++  <component name="RunManager" selected="Gradle.ce216Project [distZip]">
+     <configuration name="Main (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+       <option name="MAIN_CLASS_NAME" value="com.team1.ce216project.Main" />
+       <module name="ce216Project.main" />
+@@ -96,8 +108,30 @@
+         <option name="Make" enabled="true" />
+       </method>
+     </configuration>
++    <configuration name="ce216Project [distZip]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
++      <ExternalSystemSettings>
++        <option name="executionName" />
++        <option name="externalProjectPath" value="$PROJECT_DIR$" />
++        <option name="externalSystemIdString" value="GRADLE" />
++        <option name="scriptParameters" />
++        <option name="taskDescriptions">
++          <list />
++        </option>
++        <option name="taskNames">
++          <list>
++            <option value="distZip" />
++          </list>
++        </option>
++        <option name="vmOptions" />
++      </ExternalSystemSettings>
++      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
++      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
++      <DebugAllEnabled>false</DebugAllEnabled>
++      <method v="2" />
++    </configuration>
+     <recent_temporary>
+       <list>
++        <item itemvalue="Gradle.ce216Project [distZip]" />
+         <item itemvalue="Application.Main (1)" />
+         <item itemvalue="Application.Main" />
+       </list>

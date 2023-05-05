@@ -1,0 +1,65 @@
+Index: src/main/java/com/team1/ce216project/SynonymScreen.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/com/team1/ce216project/SynonymScreen.java b/src/main/java/com/team1/ce216project/SynonymScreen.java
+--- a/src/main/java/com/team1/ce216project/SynonymScreen.java	
++++ b/src/main/java/com/team1/ce216project/SynonymScreen.java	
+@@ -17,14 +17,16 @@
+ import javafx.scene.text.Text;
+ import javafx.stage.Stage;
+ 
+-import java.io.FileInputStream;
++import java.io.*;
++import java.nio.charset.StandardCharsets;
+ 
+ import static com.team1.ce216project.scanningFile.IMAGES_PATH;
+ 
+ public class SynonymScreen {
+-
++    static String engPath = scanningFile.DATA_PATH + "engSyn.txt";
++    static String gerPath = scanningFile.DATA_PATH + "gerSyn.txt";
+ 
+-   private static Button synonymButton;
++    private static Button synonymButton;
+     private static ChoiceBox <String> choiceBox;
+     public static Scene displaySynonymScreen(Stage stage) throws Exception {
+         stage.setTitle("DictOff");
+@@ -43,6 +45,11 @@
+         synonymButton.setBorder(new Border(new BorderStroke(Color.BLACK,BorderStrokeStyle.SOLID,CornerRadii.EMPTY,BorderWidths.DEFAULT)));
+         synonymButton.setTextFill(Color.BLACK);
+         synonymButton.setBackground(new Background(new BackgroundFill(Color.SILVER, CornerRadii.EMPTY, new Insets(0))));
++        synonymButton.setOnAction(e -> {
++            if(choiceBox.getValue().equals("deu")){
++                System.out.println(gerSynonym(wordInput.getText()));
++            }
++        });
+ 
+         choiceBox = new ChoiceBox<>();
+         // WORK IN PROGRESS DO NOT TOUCH
+@@ -108,9 +115,21 @@
+         stage.show();
+         return scene;
+     }
+-//    public static String engSynonym(){
+-//
+-//    }
++    public static String gerSynonym(String word){
++        String str = "";
++        word = word.trim();
++        try(BufferedReader br = new BufferedReader(new InputStreamReader(new FileInputStream(gerPath), StandardCharsets.UTF_8))){
++            String line;
++            while((line = br.readLine()) != null){
++                if(line.startsWith(word)){
++                    return line;
++                }
++            }
++        } catch (IOException e) {
++            throw new RuntimeException(e);
++        }
++        return null;
++    }
+ 
+ 
+ 
