@@ -3,10 +3,7 @@ package com.team1.ce216project;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 import javafx.scene.Scene;
-import javafx.scene.control.Button;
-import javafx.scene.control.ChoiceBox;
-import javafx.scene.control.ComboBox;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
 import javafx.scene.layout.*;
 import javafx.scene.paint.Color;
 import javafx.scene.text.Font;
@@ -45,12 +42,30 @@ public class TranslationScreen {
         translateButton.setTextFill(Color.BLACK);
         translateButton.setBackground(new Background(new BackgroundFill(Color.SILVER, CornerRadii.EMPTY, new Insets(0))));
         translateButton.setOnAction(e -> {
+
+            if (wordInput.getText() == null || wordInput.getText().isEmpty()) {
+                Alert alert = new Alert(Alert.AlertType.WARNING);
+                alert.setTitle("Warning");
+                alert.setHeaderText("Warning");
+                alert.setContentText("Please write and select the language of the word!");
+                alert.showAndWait();
+            } else {
+                try {
+                    displayVerifyScreen("You typed", wordInput.getText());
+                } catch (Exception ex) {
+                    ex.printStackTrace();
+                }
+            }
+        });
+
+
+       /* translateButton.setOnAction(e -> {
             try {
                 displayVerifyScreen("You typed" ,wordInput.getText());
             } catch (Exception ex) {
                 ex.printStackTrace();
             }
-        });
+        }); */
 
         choosingLanguage1 = new ChoiceBox<>();
         // WORK IN PROGRESS DO NOT TOUCH

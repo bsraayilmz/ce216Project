@@ -4,6 +4,7 @@ import javafx.application.Application;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.TextField;
@@ -49,7 +50,7 @@ public class SynonymScreen {
         synonymButton.setTextFill(Color.BLACK);
         synonymButton.setBackground(new Background(new BackgroundFill(Color.SILVER, CornerRadii.EMPTY, new Insets(0))));
         synonymButton.setOnAction(e -> {
-            SynonymScreen.window.close();
+           /* SynonymScreen.window.close();*/
             if(choiceBox.getValue().equals("deu")){
                 Synonyms_AlertScreen.displaySynonymsScreen("German",oneLineSynonym(wordInput.getText(), gerPath) );
             }
@@ -58,6 +59,14 @@ public class SynonymScreen {
             }
             else if(choiceBox.getValue().equals("tur")){
                 Synonyms_AlertScreen.displaySynonymsScreen("Turkish", String.valueOf(TurkishSynonym(wordInput.getText())));
+            }
+            else{
+
+                    Alert alert = new Alert(Alert.AlertType.ERROR);
+                    alert.setTitle("Warning");
+                    alert.setHeaderText("Warning");
+                    alert.setContentText("Please type word or select a language from the choice box.");
+                    alert.showAndWait();
             }
         });
 

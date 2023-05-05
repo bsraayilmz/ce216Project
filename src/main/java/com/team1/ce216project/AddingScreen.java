@@ -6,6 +6,7 @@ import javafx.beans.value.ObservableValue;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.TextField;
@@ -79,7 +80,7 @@ public class AddingScreen {
         //to perform adding
         Button addToTheList = new Button("ADD TO THE LIST");
 
-        addToTheList.setOnAction(e -> {
+        /*addToTheList.setOnAction(e -> {
                     String path = scanningFile.DATA_PATH + choosingLanguage1() + "-" + choosingLanguage2() + ".dict";
                     try (BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(path, true))) {
                         EnteringWord = enterWordSpace.getText();
@@ -110,7 +111,48 @@ public class AddingScreen {
                     choosingLanguage1.setValue("Select Language");
                     choosingLanguage2.setValue("Select Language");
                 }
-        );
+        );*/
+
+        addToTheList.setOnAction(e -> {
+            String path = scanningFile.DATA_PATH + choosingLanguage1() + "-" + choosingLanguage2() + ".dict";
+            String EnteringWord = enterWordSpace.getText();
+            String EnteringTranslation = enterMeaningSpace.getText();
+            if (EnteringWord == null || EnteringWord.isEmpty() || EnteringTranslation == null || EnteringTranslation.isEmpty()) {
+                Alert alert = new Alert(Alert.AlertType.WARNING);
+                alert.setTitle("Warning");
+                alert.setHeaderText("Warning");
+                alert.setContentText("Please enter a word and its meaning.");
+                alert.showAndWait();
+            } else {
+                try (BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(path, true))) {
+                    bufferedWriter.append("\n");
+                    bufferedWriter.append(EnteringWord).append("\n").append("1. ").append(EnteringTranslation);
+                    PrintWriter printWriter = new PrintWriter(bufferedWriter);
+                    printWriter.close();
+                    try (BufferedReader br = new BufferedReader(new FileReader(path))) {
+                        String line;
+
+                        //to control if there are added original word and its added meaning in the specific file:
+                        while ((line = br.readLine()) != null) {
+                            if (line.contains(EnteringWord) && line.contains(EnteringTranslation)) {
+                                System.out.println("The word is added.");
+                                break;
+                            }
+                            System.out.println("The word file not found");
+                        }
+                    } catch (IOException ex) {
+                        System.err.format("IOException: %s%n", ex);
+                    }
+                } catch (IOException exception) {
+                    exception.printStackTrace();
+                }
+                enterWordSpace.setText("");
+                enterMeaningSpace.setText("");
+                choosingLanguage1.setValue("Select Language");
+                choosingLanguage2.setValue("Select Language");
+            }
+        });
+
         //to locate addToTheList in the grid pane
         GridPane.setConstraints(addToTheList, 4, 12);
 
