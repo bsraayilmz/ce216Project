@@ -5,6 +5,7 @@ import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
@@ -23,8 +24,8 @@ import static com.team1.ce216project.scanningFile.IMAGES_PATH;
 public class SynonymScreen {
 
 
-   private static Button translateButton;
-
+   private static Button synonymButton;
+    private static ChoiceBox <String> choiceBox;
     public static Scene displaySynonymScreen(Stage stage) throws Exception {
         stage.setTitle("DictOff");
 
@@ -38,10 +39,15 @@ public class SynonymScreen {
         wordInput.setPromptText("Enter the word here");
 
         //Translate button
-        translateButton = new Button("Find Synonyms");
-        translateButton.setBorder(new Border(new BorderStroke(Color.BLACK,BorderStrokeStyle.SOLID,CornerRadii.EMPTY,BorderWidths.DEFAULT)));
-        translateButton.setTextFill(Color.BLACK);
-        translateButton.setBackground(new Background(new BackgroundFill(Color.SILVER, CornerRadii.EMPTY, new Insets(0))));
+        synonymButton = new Button("Find Synonyms");
+        synonymButton.setBorder(new Border(new BorderStroke(Color.BLACK,BorderStrokeStyle.SOLID,CornerRadii.EMPTY,BorderWidths.DEFAULT)));
+        synonymButton.setTextFill(Color.BLACK);
+        synonymButton.setBackground(new Background(new BackgroundFill(Color.SILVER, CornerRadii.EMPTY, new Insets(0))));
+
+        choiceBox = new ChoiceBox<>();
+        // WORK IN PROGRESS DO NOT TOUCH
+        choiceBox.getItems().addAll("tur" , "eng" , "deu" , "fra" , "ita" , "swe" , "ell");
+        choiceBox.setValue("Select Language");
 
         //Adding the flags image
         Image image = new Image(new FileInputStream(IMAGES_PATH+"img.png"));
@@ -61,12 +67,13 @@ public class SynonymScreen {
 
         GridPane.setConstraints(wordInput,11,5);
 
-        GridPane.setConstraints(translateButton,11,6);
-        GridPane.setMargin(translateButton,new Insets(0, 0,0,26)); //In order to centre the button
-
+        GridPane.setConstraints(synonymButton,11,6);
+        GridPane.setMargin(synonymButton,new Insets(0, 0,0,26)); //In order to centre the button
+        GridPane.setConstraints(choiceBox, 11, 7);
+        GridPane.setMargin(choiceBox,new Insets(0, 0 ,0, 70));
         GridPane.setConstraints(text, 11, 4);
 
-        translateButton.setPrefSize(200,50);
+        synonymButton.setPrefSize(200,50);
         wordInput.setMaxSize(300,50);
 
         wordInput.setFont(Font.font("Times New Roman",20));
@@ -86,7 +93,7 @@ public class SynonymScreen {
         total.setSpacing(572);
 
         //Adding to GridPane
-        gridPane.getChildren().addAll(translateButton,text,wordInput);
+        gridPane.getChildren().addAll(synonymButton,text,wordInput,choiceBox);
 
         //Main Layout
         BorderPane layout = new BorderPane();
@@ -101,4 +108,10 @@ public class SynonymScreen {
         stage.show();
         return scene;
     }
+//    public static String engSynonym(){
+//
+//    }
+
+
+
 }
