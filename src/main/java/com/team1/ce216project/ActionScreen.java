@@ -24,12 +24,12 @@ public class ActionScreen {
         label.setStyle("-fx-font-weight: bold;");
         label.setFont(Font.font("Times New Roman", FontWeight.BOLD, 24));
 
-        Button btnTranslation = new Button("TRANSLATION");
-        btnTranslation.setPrefWidth(140);
-        btnTranslation.setPrefHeight(70);
-        btnTranslation.setStyle("-fx-background-radius: 10 10 10 10; -fx-border-color: gray; -fx-border-width: 2;-fx-border-radius: 10 10 10 10");
-        btnTranslation.setFont(Font.font("Times New Roman", FontWeight.BOLD, 10));
-        btnTranslation.setOnAction(e -> {
+        Button btnETranslation = new Button("EXTENDED TRANSLATION");
+        btnETranslation.setPrefWidth(150);
+        btnETranslation.setPrefHeight(70);
+        btnETranslation.setStyle("-fx-background-radius: 10 10 10 10; -fx-border-color: gray; -fx-border-width: 2;-fx-border-radius: 10 10 10 10");
+        btnETranslation.setFont(Font.font("Times New Roman", FontWeight.BOLD, 10));
+        btnETranslation.setOnAction(e -> {
             try {
                 TranslationScreen.displayTranslationScreen(primaryStage);
             } catch (Exception ex) {
@@ -39,7 +39,7 @@ public class ActionScreen {
 
         Button btnSynonyms = new Button("FIND SYNONYMS");
         btnSynonyms.setPrefHeight(70);
-        btnSynonyms.setPrefWidth(140);
+        btnSynonyms.setPrefWidth(150);
         btnSynonyms.setStyle("-fx-background-radius: 10 10 10 10; -fx-border-color: gray; -fx-border-width: 2;-fx-border-radius: 10 10 10 10");
         btnSynonyms.setFont(Font.font("Times New Roman", FontWeight.BOLD, 10));
         btnSynonyms.setOnAction(e -> {
@@ -51,7 +51,7 @@ public class ActionScreen {
         });
 
         Button btnAddTranslation = new Button("ADD A TRANSLATION");
-        btnAddTranslation.setPrefWidth(140);
+        btnAddTranslation.setPrefWidth(150);
         btnAddTranslation.setPrefHeight(70);
         btnAddTranslation.setFont(Font.font("Times New Roman", FontWeight.BOLD, 10));
         btnAddTranslation.setStyle("-fx-background-radius: 10 10 10 10; -fx-border-color: gray; -fx-border-width: 2;-fx-border-radius: 10 10 10 10");
@@ -62,10 +62,24 @@ public class ActionScreen {
                 ex.printStackTrace();
             }
         });
+        Button btnTranslation = new Button("TRANSLATION");
+        btnTranslation.setPrefHeight(70);
+        btnTranslation.setPrefWidth(150);
+        btnTranslation.setFont(Font.font("Times New Roman", FontWeight.BOLD, 10));
+        btnTranslation.setStyle("-fx-background-radius: 10 10 10 10; -fx-border-color: gray; -fx-border-width: 2;-fx-border-radius: 10 10 10 10");
+        btnTranslation.setOnAction(e -> {
+            try {
+                TranslationFinder.displayTranslationFScreen(primaryStage);
+            } catch (InstantiationException | IllegalAccessException ex) {
+                ex.printStackTrace();
+            } catch (Exception exception) {
+                exception.printStackTrace();
+            }
+        });
         HBox box = new HBox(questionMarkClass.class.newInstance().questionMark());
         box.setAlignment(Pos.BOTTOM_RIGHT);
 
-        VBox vbox = new VBox(45, label, btnTranslation, btnSynonyms, btnAddTranslation, box);
+        VBox vbox = new VBox(45, label, btnETranslation, btnSynonyms, btnAddTranslation,btnTranslation, box);
 
         vbox.setAlignment(Pos.CENTER);
 

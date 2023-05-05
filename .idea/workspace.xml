@@ -4,7 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c8df7942-3832-4166-92b9-570ddda8e065" name="Changes" comment="Changed eng-deu.dict file to fix new method which can read and display the word translation and connected the screens." />
+    <list default="true" id="c8df7942-3832-4166-92b9-570ddda8e065" name="Changes" comment="Changed eng-deu.dict file to fix new method which can read and display the word translation and connected the screens.">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/team1/ce216project/ActionScreen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/team1/ce216project/ActionScreen.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/team1/ce216project/TranslationFinder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/team1/ce216project/TranslationFinder.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
