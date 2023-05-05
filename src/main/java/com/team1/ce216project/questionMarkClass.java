@@ -6,6 +6,7 @@ import javafx.event.EventHandler;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Label;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
@@ -16,6 +17,7 @@ import javafx.scene.control.Button;
 import javafx.scene.text.Font;
 import javafx.scene.text.FontWeight;
 import javafx.scene.text.Text;
+import javafx.stage.Modality;
 import javafx.stage.Stage;
 
 import java.io.FileInputStream;
@@ -26,12 +28,13 @@ import static com.team1.ce216project.scanningFile.IMAGES_PATH;
 
 public class questionMarkClass {
     Button helpButton;
-    public HBox questionMark(){
+
+    public HBox questionMark() {
         Stage stage = new Stage();
         //to help when the users cannot understand what they do.
         Image questionMark = null;
         try {
-            questionMark = new Image(new FileInputStream(IMAGES_PATH+"questionMark.png"));
+            questionMark = new Image(new FileInputStream(IMAGES_PATH + "questionMark.png"));
         } catch (FileNotFoundException e) {
             throw new RuntimeException(e);
         }
@@ -39,11 +42,10 @@ public class questionMarkClass {
 
         helpButton = new Button();
         helpButton.setGraphic(questionMarkView); //to add button property to the question mark (help)
-        helpButton.setBorder(new Border(new BorderStroke(Color.GAINSBORO,BorderStrokeStyle.SOLID,CornerRadii.EMPTY,BorderWidths.DEFAULT))
+        helpButton.setBorder(new Border(new BorderStroke(Color.GAINSBORO, BorderStrokeStyle.SOLID, CornerRadii.EMPTY, BorderWidths.DEFAULT))
         );
         helpButton.setBackground(new Background(new BackgroundFill(Color.GAINSBORO, CornerRadii.EMPTY, new Insets(0)))
         );
-
 
 
         helpButton.setOnAction(new EventHandler<ActionEvent>() {
@@ -54,7 +56,6 @@ public class questionMarkClass {
                 Stage newStage = new Stage();
 
 
-
                 // Create a new layout for the stage
                 VBox vbox1 = new VBox(20);
                 HBox box2 = new HBox();
@@ -62,21 +63,21 @@ public class questionMarkClass {
 
                 Label label1 = new Label("help needed for translation");
                 Button btn1 = new Button("click");
-                btn1.setPrefSize(100,50);
+                btn1.setPrefSize(100, 50);
                 Label label2 = new Label("help needed for synonyms");
                 Button btn2 = new Button("click");
-                btn2.setPrefSize(100,50);
+                btn2.setPrefSize(100, 50);
                 Label label3 = new Label("help needed for adding translation");
                 Button btn3 = new Button("click");
-                btn3.setPrefSize(100,50);
+                btn3.setPrefSize(100, 50);
 
-                vbox1.getChildren().addAll(label1, btn1, label2, btn2, label3, btn3,box2);
+                vbox1.getChildren().addAll(label1, btn1, label2, btn2, label3, btn3, box2);
                 vbox1.setAlignment(Pos.CENTER);
                 vbox1.setStyle("-fx-background-color:gainsboro");
 
                 Image returnImage = null;
                 try {
-                    returnImage = new Image(new FileInputStream(IMAGES_PATH+"return.png"));
+                    returnImage = new Image(new FileInputStream(IMAGES_PATH + "return.png"));
                 } catch (FileNotFoundException e) {
                     throw new RuntimeException(e);
                 }
@@ -84,7 +85,7 @@ public class questionMarkClass {
 
                 Button returnButton = new Button();
                 returnButton.setGraphic(returnView);//to add button property to the sign of return (to go back prev page)
-                returnButton.setBorder(new Border(new BorderStroke(Color.GAINSBORO,BorderStrokeStyle.SOLID,CornerRadii.EMPTY,BorderWidths.DEFAULT)));
+                returnButton.setBorder(new Border(new BorderStroke(Color.GAINSBORO, BorderStrokeStyle.SOLID, CornerRadii.EMPTY, BorderWidths.DEFAULT)));
                 returnButton.setBackground(new Background(new BackgroundFill(Color.GAINSBORO, CornerRadii.EMPTY, new Insets(0))));
                 returnButton.setAlignment(Pos.BOTTOM_LEFT);
                 returnButton.setOnAction(e -> {
@@ -95,7 +96,8 @@ public class questionMarkClass {
                 returnView.setFitHeight(50);
                 returnView.setFitWidth(47);
 
-                box2.getChildren().addAll(returnButton,returnView);
+                box2.getChildren().addAll(returnButton, returnView);
+                box2.setMargin(returnButton,new Insets(0,0,-90,0));
                 box2.setAlignment(Pos.BOTTOM_LEFT);
 
                 btn1.setFont(Font.font("Times New Roman", FontWeight.BOLD, 15));
@@ -106,12 +108,11 @@ public class questionMarkClass {
                 btn3.setStyle("-fx-background-radius: 10 10 10 10; -fx-border-color: gray; -fx-border-width: 2;-fx-border-radius: 10 10 10 10");
 
 
-
-                label1.setFont(Font.font("Times New Roman",15));
+                label1.setFont(Font.font("Times New Roman", 15));
                 label1.setStyle("-fx-background-color: yellow;");
-                label2.setFont(Font.font("Times New Roman",15));
+                label2.setFont(Font.font("Times New Roman", 15));
                 label2.setStyle("-fx-background-color: yellow;");
-                label3.setFont(Font.font("Times New Roman",15));
+                label3.setFont(Font.font("Times New Roman", 15));
                 label3.setStyle("-fx-background-color: yellow;");
 
                 vbox1.setAlignment(Pos.CENTER);
@@ -121,12 +122,13 @@ public class questionMarkClass {
                     public void handle(ActionEvent event) {
                         // Create a new stage or screen for this button's action
                         Stage newStage1 = new Stage();
+                        newStage1.initModality(Modality.APPLICATION_MODAL);
                         newStage1.setTitle("Help Center");
                         Label label = new Label("Information for Translation");
                         StackPane pane = new StackPane(label);
-                        StackPane.setMargin(label, new Insets(25,0,0,0));
+                        StackPane.setMargin(label, new Insets(25, 0, 0, 0));
                         pane.setStyle("-fx-background-color:gainsboro");
-                        label.setFont(Font.font("Times New Roman",20));
+                        label.setFont(Font.font("Times New Roman", 20));
                         label.setStyle("-fx-background-color: yellow;");
                         pane.setAlignment(Pos.CENTER);
                         Text text = new Text("To Find a translation\n" +
@@ -136,10 +138,11 @@ public class questionMarkClass {
                                 "4) Click the Find Translations button again.\n" +
                                 "5) dictoff translates your words into all languages \u200B\u200Bdictoff has. You can choose which you related ");
 
-                        text.setFont(Font.font("Times New Roman",15));
-                        VBox.setMargin(text, new Insets(170,0,0,35));
+                        text.setFont(Font.font("Times New Roman", 15));
+                        VBox.setMargin(text, new Insets(170, 0, 0, 35));
                         VBox vBox = new VBox(pane, text);
-                        vBox.setBackground(new Background(new BackgroundFill(Color.GAINSBORO, CornerRadii.EMPTY, new Insets(0))));                        text.setStyle("-fx-background-color: yellow;");
+                        vBox.setBackground(new Background(new BackgroundFill(Color.GAINSBORO, CornerRadii.EMPTY, new Insets(0))));
+                        text.setStyle("-fx-background-color: yellow;");
 
                         StackPane stack = new StackPane(vBox);
 
@@ -155,12 +158,13 @@ public class questionMarkClass {
                     public void handle(ActionEvent event) {
                         // Create a new stage or screen for this button's action
                         Stage newStage2 = new Stage();
+                        newStage2.initModality(Modality.APPLICATION_MODAL);
                         newStage2.setTitle("Help Center");
                         Label label = new Label("Information for Synonyms");
                         StackPane pane = new StackPane(label);
-                        StackPane.setMargin(label, new Insets(25,0,0,0));
+                        StackPane.setMargin(label, new Insets(25, 0, 0, 0));
                         pane.setStyle("-fx-background-color:gainsboro");
-                        label.setFont(Font.font("Times New Roman",20));
+                        label.setFont(Font.font("Times New Roman", 20));
                         label.setStyle("-fx-background-color: yellow;");
                         pane.setAlignment(Pos.TOP_CENTER);
                         Text text = new Text("To Find synonyms\n" +
@@ -170,10 +174,10 @@ public class questionMarkClass {
                                 "4) Click the Find Synonyms button again.\n" +
                                 "5) dictoff will give you the synonyms you need");
 
-                        text.setFont(Font.font("Times New Roman",15));
+                        text.setFont(Font.font("Times New Roman", 15));
                         text.setStyle("-fx-background-color: yellow;");
 
-                        StackPane stack = new StackPane(pane,text);
+                        StackPane stack = new StackPane(pane, text);
 
 
                         Scene scene = new Scene(stack, 700, 500);
@@ -187,12 +191,13 @@ public class questionMarkClass {
                     public void handle(ActionEvent event) {
                         // Create a new stage or screen for this button's action
                         Stage newStage3 = new Stage();
+                        newStage3.initModality(Modality.APPLICATION_MODAL);
                         newStage3.setTitle("Help Center");
                         Label label = new Label("Information for Adding Translations");
                         StackPane pane = new StackPane(label);
-                        StackPane.setMargin(label, new Insets(25,0,0,0));
+                        StackPane.setMargin(label, new Insets(25, 0, 0, 0));
                         pane.setStyle("-fx-background-color:gainsboro");
-                        label.setFont(Font.font("Times New Roman",20));
+                        label.setFont(Font.font("Times New Roman", 20));
                         label.setStyle("-fx-background-color: yellow;");
                         pane.setAlignment(Pos.TOP_CENTER);
                         Text text = new Text("To add translations \n" +
@@ -203,11 +208,10 @@ public class questionMarkClass {
                                 " enter the words meaning and choose which language it is\n" +
                                 "5) click add to list button \n" +
                                 "6)dictoff will add to list your words");
-                        text.setFont(Font.font("Times New Roman",15));
+                        text.setFont(Font.font("Times New Roman", 15));
                         text.setStyle("-fx-background-color: yellow;");
 
-                        StackPane stack = new StackPane(pane,text);
-
+                        StackPane stack = new StackPane(pane, text);
 
 
                         Scene scene = new Scene(stack, 700, 500);
@@ -232,5 +236,4 @@ public class questionMarkClass {
 
         return box;
     }
-
 }
