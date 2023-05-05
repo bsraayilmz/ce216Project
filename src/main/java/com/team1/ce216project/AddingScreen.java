@@ -28,10 +28,9 @@ public class AddingScreen {
     public static String EnteringTranslation;
     private static ChoiceBox<String> choosingLanguage1;
     private static ChoiceBox<String> choosingLanguage2;
-
+    static Stage window;
     public static Scene displayAddingScreen(Stage stage) throws InstantiationException, IllegalAccessException {
-
-
+        window = stage;
         // To be able to use grid pane and hBoxForFlags layouts together
         BorderPane borderPane = new BorderPane();
 
@@ -98,6 +97,7 @@ public class AddingScreen {
                                     System.out.println("The word is added.");
                                     break;
                                 }
+                                System.out.println("The word file not found");
                             }
                         } catch (IOException ex) {
                             System.err.format("IOException: %s%n", ex);

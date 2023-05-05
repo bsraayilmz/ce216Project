@@ -24,13 +24,14 @@ import java.util.ArrayList;
 import static com.team1.ce216project.scanningFile.IMAGES_PATH;
 
 public class SynonymScreen {
-    static String engPath = scanningFile.DATA_PATH + "engSyn.txt";
-    static String gerPath = scanningFile.DATA_PATH + "gerSyn.txt";
-    static String ellPath = scanningFile.DATA_PATH + "greekSyn.txt";
-    static String pathTurkishSynonym = scanningFile.DATA_PATH+"trSyn.txt";
+    static Stage window;
+    private static String gerPath = scanningFile.DATA_PATH + "gerSyn.txt";
+    private static String ellPath = scanningFile.DATA_PATH + "greekSyn.txt";
+    private static String pathTurkishSynonym = scanningFile.DATA_PATH+"trSyn.txt";
     private static Button synonymButton;
     private static ChoiceBox <String> choiceBox;
     public static Scene displaySynonymScreen(Stage stage) throws Exception {
+        window = stage;
         stage.setTitle("DictOff");
 
         //Instruction text
@@ -48,20 +49,21 @@ public class SynonymScreen {
         synonymButton.setTextFill(Color.BLACK);
         synonymButton.setBackground(new Background(new BackgroundFill(Color.SILVER, CornerRadii.EMPTY, new Insets(0))));
         synonymButton.setOnAction(e -> {
+            SynonymScreen.window.close();
             if(choiceBox.getValue().equals("deu")){
-                System.out.println(oneLineSynonym(wordInput.getText(), gerPath));
+                Synonyms_AlertScreen.displaySynonymsScreen("German",oneLineSynonym(wordInput.getText(), gerPath) );
             }
             else if(choiceBox.getValue().equals("ell")){
-                System.out.println(oneLineSynonym(wordInput.getText(), ellPath));
+                Synonyms_AlertScreen.displaySynonymsScreen("Modern Greek",oneLineSynonym(wordInput.getText(), ellPath));
             }
             else if(choiceBox.getValue().equals("tur")){
-                System.out.println(TurkishSynonym(wordInput.getText()));
+                Synonyms_AlertScreen.displaySynonymsScreen("Turkish", String.valueOf(TurkishSynonym(wordInput.getText())));
             }
         });
 
         choiceBox = new ChoiceBox<>();
         // WORK IN PROGRESS DO NOT TOUCH
-        choiceBox.getItems().addAll("tur" , "eng" , "deu" , "fra" , "ita" , "swe" , "ell");
+        choiceBox.getItems().addAll("tur" ,"deu" ,"ell");
         choiceBox.setValue("Select Language");
 
         //Adding the flags image

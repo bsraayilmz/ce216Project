@@ -77,6 +77,7 @@ public class VerifyScreen {
         stage.setScene(scene);
         stage.showAndWait();
 
+
         return answer;
     }
 }
