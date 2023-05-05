@@ -40,7 +40,12 @@ public class scanningFile {
             String[] arr = arr2.split("1.");
             System.out.println(arr[1]);
             str=arr[1];
+            str=str.trim();
             str=readFile(DATA_PATH+"eng-"+translatedLange+".dict",arr[1]);
+            return str;
+        }
+        if(startLanguage.equals("eng")&& translatedLange.equals("deu")){
+            str=readEngDeuFile(DATA_PATH+"eng-deu.dict", word);
             return str;
         }
         str=readFile(DATA_PATH+startLanguage+"-"+translatedLange+".dict",word);
@@ -67,22 +72,23 @@ public class scanningFile {
         }
         return str;
     }
-    public static ArrayList<String> readEngDeuFile(String fileName, String word){
-        ArrayList<String> arrayList = new ArrayList<>();
+    public static String readEngDeuFile(String fileName, String word){
+        word =word.trim();
+        String str ="";
         try (BufferedReader br = new BufferedReader(new InputStreamReader(new FileInputStream(fileName), StandardCharsets.UTF_8))) {
             String line;
             while ((line = br.readLine()) != null) {
 
                 String[] arr = line.split(" /");
 
-                if(arr[0].equals(word)){
+                if(arr[0].equalsIgnoreCase(word)){
                     String s = br.readLine();
 
                     if (s.contains(" <")){
                         String[] arr1 =s.split("<");
-                        arrayList.add(arr1[0]);
-                        System.out.println(arr1[0]);
-                        s = br.readLine();
+                       str=arr1[0];
+                        System.out.println(str);
+                       str=str.trim();
                         break;
                     }
 
@@ -91,7 +97,7 @@ public class scanningFile {
         } catch (IOException e) {
             e.printStackTrace();
         }
-        return arrayList;
+        return str;
     }
     public static void add(String StartLanguage, String translatedLanguage,String word, VBox vBox, Text vocbText){
         if(translate(StartLanguage,translatedLanguage,word).equals("") || !isExists){

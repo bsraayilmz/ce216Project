@@ -58,7 +58,7 @@ public class ConvertToFiles {
         try {
             // input the (modified) file content to the StringBuffer "input"
             BufferedReader file;
-            file = new BufferedReader(new FileReader(fileName));
+            file = new BufferedReader(new InputStreamReader(new FileInputStream(fileName), StandardCharsets.UTF_8));
             StringBuilder inputBuffer = new StringBuilder();
             String line;
             if ((file.readLine()).equals("Formatted by Dictoff")) {
@@ -76,15 +76,15 @@ public class ConvertToFiles {
                 file.close();
 
                 // write the new string with the replaced line OVER the same file
-                FileOutputStream fileOut = new FileOutputStream(fileName);
-                fileOut.write(inputBuffer.toString().getBytes());
-                fileOut.close();
+            FileOutputStream fileOut = new FileOutputStream(fileName);
+            OutputStreamWriter writer = new OutputStreamWriter(fileOut, StandardCharsets.UTF_8);
+            writer.write(inputBuffer.toString());
+            writer.close();
 
              }catch(Exception e){
             e.printStackTrace();
         }
 
     }
-
 
 }
