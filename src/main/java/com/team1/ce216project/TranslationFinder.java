@@ -6,9 +6,7 @@ import javafx.collections.ObservableList;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 import javafx.scene.Scene;
-import javafx.scene.control.TableColumn;
-import javafx.scene.control.TableRow;
-import javafx.scene.control.TableView;
+import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.layout.*;
 import javafx.scene.paint.Color;
@@ -19,11 +17,28 @@ public class TranslationFinder  {
 
 
     public static void displayTranslationFScreen(Stage primaryStage)throws Exception {
-        ObservableList<SynonymRow> rows;
-        // Initialize the data for the table
+         ObservableList<SynonymRow>rows ;
         rows = FXCollections.observableArrayList();
+        // Initialize the data for the table
+        Label wordLabel = new Label("Word:");
+        Label languageLabel = new Label("Source Language:");
+        ComboBox<Language> languageComboBox = new ComboBox<>(FXCollections.observableArrayList(Language.values()));
+        TextField wordTextField = new TextField();
+        Button searchButton = new Button("Search");
+        searchButton.setOnAction(event -> {
+            Language sourceLanguage = languageComboBox.getValue();
+            String word = wordTextField.getText();
+            rows.clear();
+            for (Language language : Language.values()) {
+                String[] synonyms = getSynonyms(new Language[]{sourceLanguage, language}, word);
+                if (synonyms.length > 0) {
+                    rows.add(new SynonymRow(language.getName(), String.join(", ", synonyms)));
+                }
+            }
+        });
+
         for (Language language : Language.values()) {
-            String[] synonyms = getSynonyms(language, "example");
+            String[] synonyms = getSynonyms(Language.values(), "example");
             if (synonyms.length > 0) { // Check if synonyms exist for the language
                 rows.add(new SynonymRow(language.getName(), String.join(", ", synonyms)));
             }
@@ -31,18 +46,14 @@ public class TranslationFinder  {
 
         // Initialize the UI elements for the table
         TableView<SynonymRow> table = new TableView<>();
+
         TableColumn<SynonymRow, String> languageColumn = new TableColumn<>("Languages");
         TableColumn<SynonymRow, String> translationsColumn = new TableColumn<>("Translations");
         languageColumn.setCellValueFactory(new PropertyValueFactory<>("language"));
         translationsColumn.setCellValueFactory(new PropertyValueFactory<>("translations"));
         table.getColumns().addAll(languageColumn, translationsColumn);
         table.setItems(rows);
-        HBox backButton = new HBox(backClass.class.newInstance().quesBack());
-        backButton.setAlignment(Pos.BOTTOM_LEFT);
-        HBox quesButton = new HBox(questionMarkClass.class.newInstance().questionMark());
-        quesButton.setAlignment(Pos.BOTTOM_RIGHT);
-        HBox total = new HBox(backButton,quesButton);
-        total.setSpacing(572);
+
         // Set the style of the table
         table.setBackground(new Background(new BackgroundFill(Color.LIGHTGRAY, CornerRadii.EMPTY, Insets.EMPTY)));
         table.setColumnResizePolicy(TableView.CONSTRAINED_RESIZE_POLICY);
@@ -63,21 +74,40 @@ public class TranslationFinder  {
         table.setStyle("-fx-border-style: none;");
 
         // Add the UI elements to the scene
-        VBox root = new VBox(table,total);
+        HBox searchBox = new HBox(wordLabel, wordTextField, searchButton);
+        searchBox.setAlignment(Pos.CENTER);
+        HBox sourceLBox= new HBox(languageLabel,languageComboBox);
+        sourceLBox.setAlignment(Pos.CENTER);
+        sourceLBox.setSpacing(5);
+        searchBox.setSpacing(10);
+        VBox vbox = new VBox(sourceLBox, searchBox);
+        vbox.setAlignment(Pos.CENTER);
+        vbox.setSpacing(20);
+        vbox.setPadding(new Insets(10));
+        HBox backButton = new HBox(backClass.class.newInstance().quesBack());
+        backButton.setAlignment(Pos.BOTTOM_LEFT);
+        HBox quesButton = new HBox(questionMarkClass.class.newInstance().questionMark());
+        quesButton.setAlignment(Pos.BOTTOM_RIGHT);
+        HBox total = new HBox(backButton,quesButton);
+        total.setSpacing(572);
+        VBox root = new VBox(vbox,  table,total);
+        table.prefHeightProperty().bind(primaryStage.heightProperty().subtract(vbox.heightProperty()));
+        table.setItems(rows);
+        total.setSpacing(572);
+        root.setSpacing(30);
         Scene scene = new Scene(root, primaryStage.getWidth(), primaryStage.getHeight());
         primaryStage.widthProperty().addListener((obs, oldVal, newVal) -> {
-            scene.setRoot(new VBox(table,total));
+            scene.setRoot(new VBox(vbox,  table,total));
         });
-        root.setSpacing(10);
-        root.setPadding(new Insets(10));
+
+        root.setPadding(new Insets(90));
 
         primaryStage.setTitle("Translation Table");
-
         primaryStage.setScene(scene);
         primaryStage.show();
     }
 
-    private static String[] getSynonyms(Language language, String word) {
+    private static String[] getSynonyms(Language[] language, String word) {
         // Use an API to retrieve the synonyms for the given word and language
         return new String[] { "example", "synonym", "test" };
     }
