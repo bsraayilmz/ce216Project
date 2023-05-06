@@ -69,23 +69,10 @@ public class ActionScreen {
             }
         });
 
-        Button btnEditWord = new Button("EDIT A WORD OR TRANSLATION");
-        btnEditWord.setPrefHeight(150);
-        btnEditWord.setPrefWidth(200);
-        btnEditWord.setFont(Font.font("Times New Roman", FontWeight.BOLD, 10));
-        btnEditWord.setStyle("-fx-background-radius: 10 10 10 10; -fx-border-color: gray; -fx-border-width: 2;-fx-border-radius: 10 10 10 10");
-        btnEditWord.setOnAction(e -> {
-            try {
-                EditScreen.displayEditScreen(primaryStage);
-            } catch (Exception ex) {
-                ex.printStackTrace();
-            }
-        });
-
         HBox box = new HBox(questionMarkClass.class.newInstance().questionMark());
         box.setAlignment(Pos.BOTTOM_RIGHT);
 
-        VBox vbox = new VBox(45, label, btnETranslation, btnSynonyms, btnAddTranslation,btnTranslation, btnEditWord, box);
+        VBox vbox = new VBox(45, label, btnETranslation, btnSynonyms, btnAddTranslation,btnTranslation, box);
 
         vbox.setAlignment(Pos.CENTER);
 
