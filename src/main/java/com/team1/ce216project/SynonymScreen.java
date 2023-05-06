@@ -144,7 +144,6 @@ public class SynonymScreen {
         return scene;
     }
     public static String oneLineSynonym(String word, String fileName){
-        String str = "";
         word = word.trim();
         try(BufferedReader br = new BufferedReader(new InputStreamReader(new FileInputStream(fileName), StandardCharsets.UTF_8))){
             String line;

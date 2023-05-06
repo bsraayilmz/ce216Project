@@ -8,6 +8,8 @@ import javafx.geometry.Pos;
 import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Label;
+import javafx.scene.control.TextArea;
+import javafx.scene.control.skin.TextAreaSkin;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
@@ -131,12 +133,27 @@ public class questionMarkClass {
                         label.setFont(Font.font("Times New Roman", 20));
                         label.setStyle("-fx-background-color: yellow;");
                         pane.setAlignment(Pos.CENTER);
-                        Text text = new Text("To Find a translation\n" +
-                                "1) Click the start button\n" +
-                                "2) Click Search translation button\n" +
-                                "3) Enter the words you need for translation and select the source language\n" +
-                                "4) Click the Find Translations button again.\n" +
-                                "5) dictoff translates your words into all languages \u200B\u200Bdictoff has. You can choose which you related ");
+                        TextArea text = new TextArea("""
+                                Steps for to find more than one translation of a word in all languages:
+                                1) Click on the 'Start' button
+                                2) Click on the 'Extended Translation' button\s
+                                3) Enter the word into the text bar you want to search for translation and select the source language
+                                4) Click on the 'Find Translations' button.
+                                5) The app will translate your word through all languages \u200B\u200Bit has.
+                                6) Click on the buttons to see translations: ita for Italian, gre for Greek, eng for English,\s
+                                tur for Turkish, deu for German, fra for France, and swe for Swedish.
+                                7) Whenever a button is clicked, all the translations will be appeared on the screen.\s
+                                -----------------------------------------------------------------------------------------------------------------------------
+                                Steps for to find one translation of a word in all languages at the same time:\s
+                                1) Click on the 'Start' button
+                                2) Click on the 'Translation' button\s
+                                3) Enter the word into the text bar you want to search for translation and select the source language
+                                4) Click on the 'Search' button.
+                                5) The app will translate your word through all languages \u200B\u200Bit has and they will be listed on the screen.
+                                """
+                                  );
+                        text.setWrapText(true); //to make the text area "swappable"
+                        text.setEditable(false); //to prevent any addition/deletion from the helping document
 
                         text.setFont(Font.font("Times New Roman", 15));
                         VBox.setMargin(text, new Insets(170, 0, 0, 35));
@@ -145,7 +162,6 @@ public class questionMarkClass {
                         text.setStyle("-fx-background-color: yellow;");
 
                         StackPane stack = new StackPane(vBox);
-
 
                         Scene scene = new Scene(stack, 700, 550);
                         newStage1.setScene(scene);
@@ -167,15 +183,20 @@ public class questionMarkClass {
                         label.setFont(Font.font("Times New Roman", 20));
                         label.setStyle("-fx-background-color: yellow;");
                         pane.setAlignment(Pos.TOP_CENTER);
-                        Text text = new Text("To Find synonyms\n" +
-                                "1) Click the start button\n" +
-                                "2) Click the \"Find Synonyms\" button\n" +
-                                "3) Enter the word you want as a synonym\n" +
-                                "4) Click the Find Synonyms button again.\n" +
-                                "5) dictoff will give you the synonyms you need");
+                        TextArea text = new TextArea("""
+                                Steps to find synonyms:
+                                1) Click on the 'Start' button.
+                                2) Click on the 'Find Synonyms' button.
+                                3) Enter the word you want to find its synonyms.
+                                4) Choose the source language from the choice box.
+                                5) Click on the 'Find Synonyms' button.
+                                6) DictOff will give you the synonyms you need.""");
 
                         text.setFont(Font.font("Times New Roman", 15));
                         text.setStyle("-fx-background-color: yellow;");
+
+                        text.setWrapText(true); //to make the text area "swappable"
+                        text.setEditable(false); //to prevent any addition/deletion from the helping document
 
                         StackPane stack = new StackPane(pane, text);
 
@@ -200,16 +221,19 @@ public class questionMarkClass {
                         label.setFont(Font.font("Times New Roman", 20));
                         label.setStyle("-fx-background-color: yellow;");
                         pane.setAlignment(Pos.TOP_CENTER);
-                        Text text = new Text("To add translations \n" +
-                                "1)click start button\n" +
-                                "2)click add translations button\n" +
-                                "3)enter the word that you want to add and elect source language \n" +
-                                "4)in the language you want to translate\n" +
-                                " enter the words meaning and choose which language it is\n" +
-                                "5) click add to list button \n" +
-                                "6)dictoff will add to list your words");
+                        TextArea text = new TextArea("""
+                                Steps to add translations:
+                                1)Click on the 'Start' button.
+                                2)Click on the 'Add Translations' button.
+                                3)Enter the word into the first bar that you want to add and select the language of it.\s
+                                4)Enter the translation into the second bar that you want to add and select the language of it.\s
+                                5)Click on 'Add to the List' button\s
+                                6)Dictoff will add to the relevant list your words""");
                         text.setFont(Font.font("Times New Roman", 15));
                         text.setStyle("-fx-background-color: yellow;");
+
+                        text.setWrapText(true); //to make the text area "swappable"
+                        text.setEditable(false); //to prevent any addition/deletion from the helping document
 
                         StackPane stack = new StackPane(pane, text);
 
