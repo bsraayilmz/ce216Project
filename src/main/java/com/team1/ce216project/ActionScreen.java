@@ -1,20 +1,14 @@
 package com.team1.ce216project;
 
-
-
-
 import javafx.geometry.Pos;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
-import javafx.scene.image.Image;
-import javafx.scene.image.ImageView;
 import javafx.scene.layout.*;
 import javafx.scene.paint.Color;
 import javafx.scene.text.Font;
 import javafx.scene.text.FontWeight;
 import javafx.stage.Stage;
-
 
 public class ActionScreen {
     public static Stage stage;
@@ -22,11 +16,11 @@ public class ActionScreen {
         stage = primaryStage;
         Label label = new Label("What action would you like to perform?");
         label.setStyle("-fx-font-weight: bold;");
-        label.setFont(Font.font("Times New Roman", FontWeight.BOLD, 24));
+        label.setFont(Font.font("Times New Roman", FontWeight.BOLD, 30));
 
         Button btnETranslation = new Button("EXTENDED TRANSLATION");
-        btnETranslation.setPrefWidth(150);
-        btnETranslation.setPrefHeight(70);
+        btnETranslation.setPrefHeight(150);
+        btnETranslation.setPrefWidth(200);
         btnETranslation.setStyle("-fx-background-radius: 10 10 10 10; -fx-border-color: gray; -fx-border-width: 2;-fx-border-radius: 10 10 10 10");
         btnETranslation.setFont(Font.font("Times New Roman", FontWeight.BOLD, 10));
         btnETranslation.setOnAction(e -> {
@@ -38,8 +32,8 @@ public class ActionScreen {
         });
 
         Button btnSynonyms = new Button("FIND SYNONYMS");
-        btnSynonyms.setPrefHeight(70);
-        btnSynonyms.setPrefWidth(150);
+        btnSynonyms.setPrefHeight(150);
+        btnSynonyms.setPrefWidth(200);
         btnSynonyms.setStyle("-fx-background-radius: 10 10 10 10; -fx-border-color: gray; -fx-border-width: 2;-fx-border-radius: 10 10 10 10");
         btnSynonyms.setFont(Font.font("Times New Roman", FontWeight.BOLD, 10));
         btnSynonyms.setOnAction(e -> {
@@ -51,8 +45,8 @@ public class ActionScreen {
         });
 
         Button btnAddTranslation = new Button("ADD A TRANSLATION");
-        btnAddTranslation.setPrefWidth(150);
-        btnAddTranslation.setPrefHeight(70);
+        btnAddTranslation.setPrefHeight(150);
+        btnAddTranslation.setPrefWidth(200);
         btnAddTranslation.setFont(Font.font("Times New Roman", FontWeight.BOLD, 10));
         btnAddTranslation.setStyle("-fx-background-radius: 10 10 10 10; -fx-border-color: gray; -fx-border-width: 2;-fx-border-radius: 10 10 10 10");
         btnAddTranslation.setOnAction(e -> {
@@ -63,23 +57,35 @@ public class ActionScreen {
             }
         });
         Button btnTranslation = new Button("TRANSLATION");
-        btnTranslation.setPrefHeight(70);
-        btnTranslation.setPrefWidth(150);
+        btnTranslation.setPrefHeight(150);
+        btnTranslation.setPrefWidth(200);
         btnTranslation.setFont(Font.font("Times New Roman", FontWeight.BOLD, 10));
         btnTranslation.setStyle("-fx-background-radius: 10 10 10 10; -fx-border-color: gray; -fx-border-width: 2;-fx-border-radius: 10 10 10 10");
         btnTranslation.setOnAction(e -> {
             try {
                 TranslationFinder.displayTranslationFScreen(primaryStage);
-            } catch (InstantiationException | IllegalAccessException ex) {
+            } catch (Exception ex) {
                 ex.printStackTrace();
-            } catch (Exception exception) {
-                exception.printStackTrace();
             }
         });
+
+        Button btnEditWord = new Button("EDIT A WORD OR TRANSLATION");
+        btnEditWord.setPrefHeight(150);
+        btnEditWord.setPrefWidth(200);
+        btnEditWord.setFont(Font.font("Times New Roman", FontWeight.BOLD, 10));
+        btnEditWord.setStyle("-fx-background-radius: 10 10 10 10; -fx-border-color: gray; -fx-border-width: 2;-fx-border-radius: 10 10 10 10");
+        btnEditWord.setOnAction(e -> {
+            try {
+                EditScreen.displayEditScreen(primaryStage);
+            } catch (Exception ex) {
+                ex.printStackTrace();
+            }
+        });
+
         HBox box = new HBox(questionMarkClass.class.newInstance().questionMark());
         box.setAlignment(Pos.BOTTOM_RIGHT);
 
-        VBox vbox = new VBox(45, label, btnETranslation, btnSynonyms, btnAddTranslation,btnTranslation, box);
+        VBox vbox = new VBox(45, label, btnETranslation, btnSynonyms, btnAddTranslation,btnTranslation, btnEditWord, box);
 
         vbox.setAlignment(Pos.CENTER);
 
