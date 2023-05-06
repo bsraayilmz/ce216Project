@@ -8,22 +8,27 @@ import javafx.geometry.Pos;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.input.MouseButton;
 import javafx.scene.layout.*;
 import javafx.scene.paint.Color;
 import javafx.stage.Stage;
 
 public class TranslationFinder  {
 
-
-
     public static void displayTranslationFScreen(Stage primaryStage)throws Exception {
-         ObservableList<SynonymRow>rows ;
+        ObservableList<SynonymRow>rows ;
         rows = FXCollections.observableArrayList();
         // Initialize the data for the table
         Label wordLabel = new Label("Word:");
         Label languageLabel = new Label("Source Language:");
         ComboBox<Language> languageComboBox = new ComboBox<>(FXCollections.observableArrayList(Language.values()));
-        TextField wordTextField = new TextField();
+        TextArea wordTextField = new TextArea();
+        wordTextField.setWrapText(true);
+        wordTextField.setEditable(false);
+        wordTextField.setPrefWidth(250);
+        wordTextField.setMaxWidth(600);
+        wordTextField.setMaxHeight(300);
+        wordTextField.setPrefHeight(100);
         Button searchButton = new Button("Search");
         searchButton.setOnAction(event -> {
             Language sourceLanguage = languageComboBox.getValue();
@@ -48,7 +53,9 @@ public class TranslationFinder  {
         TableView<SynonymRow> table = new TableView<>();
 
         TableColumn<SynonymRow, String> languageColumn = new TableColumn<>("Languages");
+        languageColumn.setEditable(false);
         TableColumn<SynonymRow, String> translationsColumn = new TableColumn<>("Translations");
+        translationsColumn.setEditable(false);
         languageColumn.setCellValueFactory(new PropertyValueFactory<>("language"));
         translationsColumn.setCellValueFactory(new PropertyValueFactory<>("translations"));
         table.getColumns().addAll(languageColumn, translationsColumn);
@@ -63,7 +70,12 @@ public class TranslationFinder  {
         translationsColumn.setStyle("-fx-alignment: CENTER;");
         languageColumn.setStyle("-fx-font-weight: bold; -fx-font-size: 14; -fx-alignment: CENTER;");
         translationsColumn.setStyle("-fx-font-weight: bold; -fx-font-size: 14; -fx-alignment: CENTER;");
+
+        table.setEditable(false);
+        table.setFocusTraversable(false);
+        table.setBackground(Background.EMPTY);
         table.setBackground(new Background(new BackgroundFill(Color.GAINSBORO, CornerRadii.EMPTY, Insets.EMPTY)));
+
         table.setRowFactory(tv -> {
             TableRow<SynonymRow> row = new TableRow<>();
             row.setStyle("-fx-background-color: " + (row.getIndex() % 2 == 0 ? "#f7f7f7;" : "white;"));
@@ -86,9 +98,12 @@ public class TranslationFinder  {
         vbox.setPadding(new Insets(10));
         HBox backButton = new HBox(backClass.class.newInstance().quesBack());
         backButton.setAlignment(Pos.BOTTOM_LEFT);
+        backButton.setBackground(new Background(new BackgroundFill(Color.GAINSBORO, CornerRadii.EMPTY, Insets.EMPTY)));
         HBox quesButton = new HBox(questionMarkClass.class.newInstance().questionMark());
         quesButton.setAlignment(Pos.BOTTOM_RIGHT);
+        quesButton.setBackground(new Background(new BackgroundFill(Color.GAINSBORO, CornerRadii.EMPTY, Insets.EMPTY)));
         HBox total = new HBox(backButton,quesButton);
+        total.setBackground(new Background(new BackgroundFill(Color.GAINSBORO, CornerRadii.EMPTY, Insets.EMPTY)));
         total.setSpacing(572);
         VBox root = new VBox(vbox,  table,total);
         table.prefHeightProperty().bind(primaryStage.heightProperty().subtract(vbox.heightProperty()));
