@@ -22,13 +22,13 @@ public class TranslationFinder  {
         Label wordLabel = new Label("Word:");
         Label languageLabel = new Label("Source Language:");
         ComboBox<Language> languageComboBox = new ComboBox<>(FXCollections.observableArrayList(Language.values()));
-        TextArea wordTextField = new TextArea();
-        wordTextField.setWrapText(true);
-        wordTextField.setEditable(false);
-        wordTextField.setPrefWidth(250);
-        wordTextField.setMaxWidth(600);
-        wordTextField.setMaxHeight(300);
-        wordTextField.setPrefHeight(100);
+        TextField wordTextField = new TextField();
+//        wordTextField.setWrapText(true);
+//        wordTextField.setEditable(false);
+//        wordTextField.setPrefWidth(250);
+//        wordTextField.setMaxWidth(600);
+//        wordTextField.setMaxHeight(300);
+//        wordTextField.setPrefHeight(100);
         Button searchButton = new Button("Search");
         searchButton.setOnAction(event -> {
             Language sourceLanguage = languageComboBox.getValue();

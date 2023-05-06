@@ -3,6 +3,7 @@ package com.team1.ce216project;
 import javafx.geometry.Pos;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.TextArea;
 import javafx.scene.layout.VBox;
 import javafx.scene.paint.Color;
 import javafx.scene.text.Font;
@@ -21,7 +22,13 @@ public class Synonyms_AlertScreen {
 
         Text languageT = new Text("Language: " + language);
         languageT.setFont(Font.font("Times New Roman", FontPosture.REGULAR,25));
-        Text synonymsT = new Text("Synonyms:\n" + synonyms);
+        TextArea synonymsT = new TextArea("Synonyms:\n" + synonyms);
+        synonymsT.setWrapText(true);
+        synonymsT.setPrefWidth(500);
+        synonymsT.setMaxWidth(1200);
+        synonymsT.setMaxHeight(1000);
+        synonymsT.setPrefHeight(400);
+        synonymsT.setEditable(false);
         synonymsT.setFont(Font.font("Times New Roman", FontPosture.REGULAR,20));
 
 

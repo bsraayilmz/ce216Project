@@ -107,15 +107,24 @@ public class SynonymScreen {
         //Creating the Help button
 
         //HBox for Help and Back buttons
-        HBox backButton = new HBox(backClass.class.newInstance().quesBack());
-        backButton.setAlignment(Pos.BOTTOM_LEFT);
+        backClass backButton = new backClass();
+        HBox backBox = new HBox(backButton.quesBack());
+        backBox.setAlignment(Pos.BOTTOM_LEFT);
+        backButton.returnButton.setOnAction(e -> {
+            stage.close();
+            try {
+                ActionScreen.displayActionScreen(stage);
+            } catch (InstantiationException | IllegalAccessException ex) {
+                throw new RuntimeException(ex);
+            }
+        });
 
 
         HBox quesButton = new HBox(questionMarkClass.class.newInstance().questionMark());
         quesButton.setAlignment(Pos.BOTTOM_RIGHT);
 
 
-        HBox total = new HBox(backButton,quesButton);
+        HBox total = new HBox(backBox,quesButton);
         total.setSpacing(572);
 
         //Adding to GridPane
