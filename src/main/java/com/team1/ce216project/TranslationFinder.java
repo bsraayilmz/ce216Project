@@ -29,7 +29,7 @@ public class TranslationFinder  {
 //        wordTextField.setMaxWidth(600);
 //        wordTextField.setMaxHeight(300);
 //        wordTextField.setPrefHeight(100);
-        Button searchButton = new Button("Search");
+        /* Button searchButton = new Button("Search");
         searchButton.setOnAction(event -> {
             Language sourceLanguage = languageComboBox.getValue();
             String word = wordTextField.getText();
@@ -40,7 +40,40 @@ public class TranslationFinder  {
                     rows.add(new SynonymRow(language.getName(), String.join(", ", synonyms)));
                 }
             }
+        });*/
+
+        Button searchButton = new Button("Search");
+        searchButton.setOnAction(event -> {
+            Language sourceLanguage = languageComboBox.getValue();
+            String word = wordTextField.getText();
+            if (sourceLanguage == null || word.isEmpty()) {
+                Alert alert = new Alert(Alert.AlertType.WARNING);
+                alert.setTitle("Warning");
+                alert.setHeaderText("Warning");
+                alert.setContentText("Please select a language or enter a word.");
+                alert.showAndWait();
+                return;
+            }
+            rows.clear();
+            for (Language language : Language.values()) {
+                String[] synonyms = getSynonyms(new Language[]{sourceLanguage, language}, word);
+                if (synonyms.length > 0) {
+                    rows.add(new SynonymRow(language.getName(), String.join(", ", synonyms)));
+                }
+            }
         });
+
+
+
+
+
+
+
+
+
+
+
+
 
         for (Language language : Language.values()) {
             String[] synonyms = getSynonyms(Language.values(), "example");

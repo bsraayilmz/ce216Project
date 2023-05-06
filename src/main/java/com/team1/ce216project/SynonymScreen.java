@@ -62,7 +62,7 @@ public class SynonymScreen {
             }
             else{
 
-                    Alert alert = new Alert(Alert.AlertType.ERROR);
+                    Alert alert = new Alert(Alert.AlertType.WARNING);
                     alert.setTitle("Warning");
                     alert.setHeaderText("Warning");
                     alert.setContentText("Please type word or select a language from the choice box.");
