@@ -55,9 +55,9 @@ public class VocabScreen {
         English.setPrefSize(90,50);
         English.setOnAction(e -> {
             if(!vBox2.getChildren().isEmpty()){
-                vBox2.getChildren().remove(0);
+                vBox2.getChildren().remove(0,vBox2.getChildren().size());
             }
-            scanningFile.add(startLanguage,"eng",word,vBox2,vocb);
+            scanningFile.addExtendedTransation(startLanguage,"eng",word,vBox2,vocb);
 
         });
         if(!startLanguage.equals(English.getText())){
@@ -68,9 +68,9 @@ public class VocabScreen {
         Italian.setPrefSize(90,50);
         Italian.setOnAction(e -> {
             if(!vBox2.getChildren().isEmpty()){
-                vBox2.getChildren().remove(0);
+                vBox2.getChildren().remove(0,vBox2.getChildren().size());
             }
-            scanningFile.add(startLanguage,"ita",word,vBox2,vocb);
+            scanningFile.addExtendedTransation(startLanguage,"ita",word,vBox2,vocb);
 
         });
         if(!startLanguage.equals(Italian.getText())){
@@ -81,9 +81,11 @@ public class VocabScreen {
         Greek.setPrefSize(90,50);
         Greek.setOnAction(e -> {
             if(!vBox2.getChildren().isEmpty()){
-                vBox2.getChildren().remove(0);
+                vBox2.getChildren().remove(0,vBox2.getChildren().size());
+
+
             }
-            scanningFile.add(startLanguage,"ell",word,vBox2,vocb);
+            scanningFile.addExtendedTransation(startLanguage,"ell",word,vBox2,vocb);
 
         });
         if(!startLanguage.equals(Greek.getText())){
@@ -94,9 +96,9 @@ public class VocabScreen {
         Turkish.setPrefSize(90,50);
         Turkish.setOnAction(e -> {
             if(!vBox2.getChildren().isEmpty()){
-                vBox2.getChildren().remove(0);
+                vBox2.getChildren().remove(0,vBox2.getChildren().size());
             }
-            scanningFile.add(startLanguage,"tur",word,vBox2,vocb);
+            scanningFile.addExtendedTransation(startLanguage,"tur",word,vBox2,vocb);
 
         });
         if(!startLanguage.equals(Turkish.getText())){
@@ -107,9 +109,9 @@ public class VocabScreen {
         German.setPrefSize(90,50);
         German.setOnAction(e -> {
             if(!vBox2.getChildren().isEmpty()){
-                vBox2.getChildren().remove(0);
+                vBox2.getChildren().remove(0,vBox2.getChildren().size());
             }
-            scanningFile.add(startLanguage,"deu",word,vBox2,vocb);
+            scanningFile.addExtendedTransation(startLanguage,"deu",word,vBox2,vocb);
 
         });
         if(!startLanguage.equals(German.getText())){
@@ -120,9 +122,9 @@ public class VocabScreen {
         French.setPrefSize(90,50);
         French.setOnAction(e -> {
             if(!vBox2.getChildren().isEmpty()){
-                vBox2.getChildren().remove(0);
+                vBox2.getChildren().remove(0,vBox2.getChildren().size());
             }
-            scanningFile.add(startLanguage,"fra",word,vBox2,vocb);
+            scanningFile.addExtendedTransation(startLanguage,"fra",word,vBox2,vocb);
         });
         if(!startLanguage.equals(French.getText())){
             hBox1.getChildren().addAll(French);
@@ -132,9 +134,9 @@ public class VocabScreen {
         Swedish.setPrefSize(90,50);
         Swedish.setOnAction(e -> {
             if(!vBox2.getChildren().isEmpty()){
-                vBox2.getChildren().remove(0);
+                vBox2.getChildren().remove(0,vBox2.getChildren().size());
             }
-            scanningFile.add(startLanguage,"swe",word,vBox2,vocb);
+            scanningFile.addExtendedTransation(startLanguage,"swe",word,vBox2,vocb);
         });
         if(!startLanguage.equals(Swedish.getText())){
             hBox1.getChildren().addAll(Swedish);

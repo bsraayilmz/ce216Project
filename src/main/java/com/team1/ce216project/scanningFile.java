@@ -28,33 +28,32 @@ public class scanningFile {
             return readFile(DATA_PATH+StartLanguage+"-eng.dict",word);
         }
     }*/
-    public static String translate(String startLanguage, String translatedLange, String word){
+    public static ArrayList<String> translate(String startLanguage, String translatedLange, String word){
         String str ="";
+        ArrayList<String>arrayList=new ArrayList<>();
         if(!new File(DATA_PATH+startLanguage+"-"+translatedLange+".dict").exists()){
-            String arr2 = readFile(DATA_PATH+startLanguage+"-eng.dict",word);
-            str=arr2;
-            if(str.equals("")){
+
+            if(readFile(DATA_PATH+startLanguage+"-eng.dict",word).isEmpty()){
                 isExists=false;
-                return str;
+                return arrayList;
             }
-            String[] arr = arr2.split("1.");
-            System.out.println(arr[1]);
-            str=arr[1];
-            str=str.trim();
-            str=readFile(DATA_PATH+"eng-"+translatedLange+".dict",arr[1]);
-            return str;
+            String[] arr = readFile(DATA_PATH+startLanguage+"-eng.dict",word).get(0).split("1.");
+            str=arr[0].trim();
+            arrayList=readFile(DATA_PATH+"eng-"+translatedLange+".dict",str);
+            return arrayList;
         }
         if(startLanguage.equals("eng")&& translatedLange.equals("deu")){
-            str=readEngDeuFile(DATA_PATH+"eng-deu.dict", word);
-            return str;
+            return readEngDeuFile(DATA_PATH+"eng-deu.dict", word);
         }
-        str=readFile(DATA_PATH+startLanguage+"-"+translatedLange+".dict",word);
-        return str;
+
+        return  readFile(DATA_PATH+startLanguage+"-"+translatedLange+".dict",word);
     }
 
-    public static String readFile(String fileName, String word){
-        String str="";
+    public static ArrayList<String> readFile(String fileName, String word){
+        ArrayList<String> arrayList = new ArrayList<>();// creating string array list
+        // add trim method to get rid of spaces at the end and beginning of words
         word=word.trim();
+        //
         try (BufferedReader br = new BufferedReader(new InputStreamReader(new FileInputStream(fileName), StandardCharsets.UTF_8))) {
             String line;
             while ((line = br.readLine()) != null) {
@@ -62,19 +61,21 @@ public class scanningFile {
                 arr[0]=arr[0].trim();
                 if(arr[0].equalsIgnoreCase(word)){
                     String s = br.readLine();
-                    System.out.println(s);
-                    str=s;
+                    while (isNumeric(Character.toString(s.charAt(0)))){
+                        arrayList.add(s);
+                        s = br.readLine();
+                    }
                     break;
                 }
             }
         } catch (IOException e) {
             e.printStackTrace();
         }
-        return str;
+        return arrayList;
     }
-    public static String readEngDeuFile(String fileName, String word){
+    public static ArrayList<String> readEngDeuFile(String fileName, String word){
+        ArrayList<String> arrayList = new ArrayList<>();
         word =word.trim();
-        String str ="";
         try (BufferedReader br = new BufferedReader(new InputStreamReader(new FileInputStream(fileName), StandardCharsets.UTF_8))) {
             String line;
             while ((line = br.readLine()) != null) {
@@ -86,9 +87,10 @@ public class scanningFile {
 
                     if (s.contains(" <")){
                         String[] arr1 =s.split("<");
-                       str=arr1[0];
-                        System.out.println(str);
-                       str=str.trim();
+                        arr1[0]= arr1[0].trim() ;
+                        arrayList.add(arr1[0]);
+                        System.out.println(arr1[0]);
+                        s = br.readLine();
                         break;
                     }
 
@@ -97,22 +99,60 @@ public class scanningFile {
         } catch (IOException e) {
             e.printStackTrace();
         }
-        return str;
+        return arrayList;
     }
-    public static void add(String StartLanguage, String translatedLanguage,String word, VBox vBox, Text vocbText){
-        if(translate(StartLanguage,translatedLanguage,word).equals("") || !isExists){
+    public static void addExtendedTransation(String StartLanguage, String translatedLanguage,String word, VBox vBox, Text vocbText){
+        System.out.println(translate(StartLanguage,translatedLanguage,word).size());
+        if(translate(StartLanguage,translatedLanguage,word).size()==1){
+            if(translate(StartLanguage,translatedLanguage,word).get(0).contains(",")){
+            String[]arr= translate(StartLanguage,translatedLanguage,word).get(0).split(",");
+                for (int i = 0; i < arr.length; i++) {
+                    vocbText = new Text(arr[i]);
+                    vocbText.setFont(Font.font("Times New Roman", FontPosture.REGULAR, 15));
+                    vBox.getChildren().add(vocbText);
+                }
+
+            }else{
+                isExists=true;
+                vocbText = new Text("There is no more than one translation for this word "+ "in " + translatedLanguage);
+                vBox.getChildren().add(vocbText);
+            }
+        }
+        else if(translate(StartLanguage,translatedLanguage,word).size()>1){
+            for (int i = 0; i < translate(StartLanguage, translatedLanguage, word).size(); i++) {
+                vocbText = new Text(translate(StartLanguage, translatedLanguage, word).get(i));
+                vocbText.setFont(Font.font("Times New Roman", FontPosture.REGULAR, 15));
+                vBox.getChildren().add(vocbText);
+            }
+        }
+        else{
+            isExists=true;
+            vocbText = new Text("There is no " + translatedLanguage+" translation for this word.");
+            vBox.getChildren().add(vocbText);
+        }
+
+    }
+    /*public static void add(String StartLanguage, String translatedLanguage,String word, VBox vBox, Text vocbText){
+        if(translate(StartLanguage,translatedLanguage,word).isEmpty() || !isExists){
             isExists=true;
             vocbText = new Text("There is no " + translatedLanguage+" translation for this word.");
             vBox.getChildren().add(vocbText);
         }else {
-                vocbText = new Text(translate(StartLanguage, translatedLanguage, word));
+            if(translate(StartLanguage,translatedLanguage,word).get(0).contains(",")){
+                String[] arr = translate(StartLanguage,translatedLanguage,word).get(0).split(",");
+                vocbText = new Text(arr[0]);
+                vocbText.setFont(Font.font("Times New Roman", FontPosture.REGULAR, 15));
+                vBox.getChildren().add(vocbText);
+            }
+            String str=translate(StartLanguage,translatedLanguage,word).get(0);
+                vocbText = new Text(str);
                 vocbText.setFont(Font.font("Times New Roman", FontPosture.REGULAR, 15));
                 vBox.getChildren().add(vocbText);
 
         }
 
-    }
-    public static boolean isNumeric(String str) {
+    }*/
+    public static boolean isNumeric(String str) { // find the string has a number
         try {
             Double.parseDouble(str);
             return true;

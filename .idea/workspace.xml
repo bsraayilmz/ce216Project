@@ -4,10 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c8df7942-3832-4166-92b9-570ddda8e065" name="Changes" comment="Changed eng-deu.dict file to fix new method which can read and display the word translation and connected the screens.">
+    <list default="true" id="a9e0f112-0536-41c3-88c7-cb96deb3e3d8" name="Changes" comment="Changed eng-deu.dict file to fix new method which can read and display the word translation and connected the screens.">
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_5_05_2023_16_14__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_5_05_2023_16_14__Changes_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_5_05_2023_16_14__Changes_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_5_05_2023_16_14__Changes_1.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_5_05_2023_20_40__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_5_05_2023_20_40__Changes_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_5_05_2023_20_40__Changes_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_5_05_2023_20_40__Changes_1.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/team1/ce216project/ActionScreen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/team1/ce216project/ActionScreen.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/team1/ce216project/TranslationFinder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/team1/ce216project/TranslationFinder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/team1/ce216project/VocabScreen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/team1/ce216project/VocabScreen.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/team1/ce216project/scanningFile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/team1/ce216project/scanningFile.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,10 +62,10 @@
     </file-type-list>
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/src/main/java/com/team1/ce216project/Main.java" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/src/main/resources/com/team1/ce216project/data/eng-tur.dict" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/src/main/java/com/team1/ce216project/ConvertToFiles.java" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/src/main/resources/com/team1/ce216project/data/eng-fra.dict" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/main/resources/com/team1/ce216project/data/eng-tur.dict" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/main/java/com/team1/ce216project/Main.java" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -170,7 +174,6 @@
         </entry>
       </map>
     </option>
-    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Changed eng-deu.dict file to fix new method which can read and display the word translation and connected the screens." />
@@ -181,7 +184,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/team1/ce216project/scanningFile.java</url>
-          <line>62</line>
+          <line>61</line>
           <option name="timeStamp" value="1" />
         </line-breakpoint>
       </breakpoints>
