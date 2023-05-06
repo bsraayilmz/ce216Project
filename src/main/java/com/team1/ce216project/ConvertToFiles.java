@@ -86,5 +86,31 @@ public class ConvertToFiles {
         }
 
     }
+    public static void fixBlank(String fileName) throws FileNotFoundException {
+        try {
+            // input the (modified) file content to the StringBuffer "input"
+            BufferedReader file;
+            file = new BufferedReader(new InputStreamReader(new FileInputStream(fileName), StandardCharsets.UTF_8));
+            StringBuilder inputBuffer = new StringBuilder();
+            String line;
+            while ((line = file.readLine()) != null) {
+                if (!line.equals("")) {
+                    inputBuffer.append(line);
+                    inputBuffer.append('\n');
+
+                }
+            }
+            file.close();
+
+            // write the new string with the replaced line OVER the same file
+            FileOutputStream fileOut = new FileOutputStream(fileName);
+            OutputStreamWriter writer = new OutputStreamWriter(fileOut, StandardCharsets.UTF_8);
+            writer.write(inputBuffer.toString());
+            writer.close();
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
 
 }

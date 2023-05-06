@@ -58,6 +58,7 @@ public class Main extends Application {
         ConvertToFiles.replaceLines(scanningFile.DATA_PATH+"ell-fra.dict");
         ConvertToFiles.replaceLines(scanningFile.DATA_PATH+"ell-ita.dict");
         ConvertToFiles.replaceLines(scanningFile.DATA_PATH+"ell-swe.dict");
+        //ConvertToFiles.fixBlank(scanningFile.DATA_PATH+"deu-eng.dict");// only need to run for one time
 
 
 

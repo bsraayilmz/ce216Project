@@ -56,23 +56,14 @@ public class TranslationFinder  {
             }
             rows.clear();
             for (Language language : Language.values()) {
+                if (language.equals(sourceLanguage)) {
+                    continue;
+                }
                 String synonyms = getSynonyms(new Language[]{sourceLanguage, language}, word);
                     rows.add(new SynonymRow(language.getName(), String.join(", ", synonyms)));
 
             }
         });
-
-
-
-
-
-
-
-
-
-
-
-
 
         for (Language language : Language.values()) {
             String synonyms = getSynonyms(Language.values(), "example");

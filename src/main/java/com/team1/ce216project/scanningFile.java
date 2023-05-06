@@ -57,6 +57,9 @@ public class scanningFile {
         if(startLanguage.equals("eng")&& translatedLange.equals("deu")){
             return readEngDeuFile(DATA_PATH+"eng-deu.dict", word);
         }
+        if(startLanguage.equals("deu")&&translatedLange.equals("eng")){
+            return readDeuEngFile(DATA_PATH+"deu-eng.dict", word);
+        }
 
         return  readFile(DATA_PATH+startLanguage+"-"+translatedLange+".dict",word);
     }
@@ -113,6 +116,36 @@ public class scanningFile {
         }
         return arrayList;
     }
+    public static ArrayList<String> readDeuEngFile(String fileName, String word){
+        ArrayList<String> arrayList = new ArrayList<>();
+        word =word.trim();
+        try (BufferedReader br = new BufferedReader(new InputStreamReader(new FileInputStream(fileName), StandardCharsets.UTF_8))) {
+            String line;
+            while ((line = br.readLine()) != null) {
+
+                String[] arr = line.split(" /");
+
+                if(arr[0].equalsIgnoreCase(word)){
+                    String s = br.readLine();
+                    if (s.contains(" <")){
+                        String[] arr1 =s.split("<");
+                        arr1[0]= arr1[0].trim() ;
+                        arrayList.add(arr1[0]);
+                        System.out.println(arr1[0]);
+                        break;
+                    }
+                    System.out.println(s);
+                    arrayList.add(s);
+                    break;
+
+                }
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return arrayList;
+    }
+
     public static void addExtendedTransation(String StartLanguage, String translatedLanguage,String word, VBox vBox, TextArea vocbText){
         System.out.println(translate(StartLanguage,translatedLanguage,word).size());
         if(translate(StartLanguage,translatedLanguage,word).size()==1){
@@ -153,6 +186,7 @@ public class scanningFile {
 
     }
     public static String add(String StartLanguage, String translatedLanguage,String word){
+        String[] arr1;
         if(translate(StartLanguage,translatedLanguage,word).isEmpty()){
             isExists=true;
             return "There is no " + translatedLanguage+" translation for this word.";
@@ -161,10 +195,20 @@ public class scanningFile {
 
             if(translate(StartLanguage,translatedLanguage,word).get(0).contains(",")){
                 String[] arr = translate(StartLanguage,translatedLanguage,word).get(0).split(",");
+                if(arr[0].contains("1.")){
+                    arr1=arr[0].split("1.");
+                    return arr1[1];
+
+                }
                 return arr[0];
+            }
+            if(translate(StartLanguage,translatedLanguage,word).get(0).contains("1.")){
+                arr1=translate(StartLanguage,translatedLanguage,word).get(0).split("1.");
+                return arr1[1];
             }
             else{
                 return translate(StartLanguage,translatedLanguage,word).get(0);
+
             }
 
         }
