@@ -132,7 +132,7 @@ public class scanningFile {
         }
 
     }
-    /*public static void add(String StartLanguage, String translatedLanguage,String word, VBox vBox, Text vocbText){
+    public static void add(String StartLanguage, String translatedLanguage,String word, VBox vBox, Text vocbText){
         if(translate(StartLanguage,translatedLanguage,word).isEmpty() || !isExists){
             isExists=true;
             vocbText = new Text("There is no " + translatedLanguage+" translation for this word.");
@@ -144,14 +144,16 @@ public class scanningFile {
                 vocbText.setFont(Font.font("Times New Roman", FontPosture.REGULAR, 15));
                 vBox.getChildren().add(vocbText);
             }
-            String str=translate(StartLanguage,translatedLanguage,word).get(0);
+            else{
+                String str=translate(StartLanguage,translatedLanguage,word).get(0);
                 vocbText = new Text(str);
                 vocbText.setFont(Font.font("Times New Roman", FontPosture.REGULAR, 15));
                 vBox.getChildren().add(vocbText);
+            }
 
         }
 
-    }*/
+    }
     public static boolean isNumeric(String str) { // find the string has a number
         try {
             Double.parseDouble(str);
