@@ -1,5 +1,11 @@
 package com.team1.ce216project;
+import javafx.geometry.Insets;
+import javafx.scene.control.TextArea;
+import javafx.scene.layout.Background;
+import javafx.scene.layout.BackgroundFill;
+import javafx.scene.layout.CornerRadii;
 import javafx.scene.layout.VBox;
+import javafx.scene.paint.Color;
 import javafx.scene.text.Font;
 import javafx.scene.text.FontPosture;
 import javafx.scene.text.Text;
@@ -101,35 +107,43 @@ public class scanningFile {
         }
         return arrayList;
     }
-    public static void addExtendedTransation(String StartLanguage, String translatedLanguage,String word, VBox vBox, Text vocbText){
+    public static void addExtendedTransation(String StartLanguage, String translatedLanguage,String word, VBox vBox, TextArea vocbText){
         System.out.println(translate(StartLanguage,translatedLanguage,word).size());
         if(translate(StartLanguage,translatedLanguage,word).size()==1){
             if(translate(StartLanguage,translatedLanguage,word).get(0).contains(",")){
-            String[]arr= translate(StartLanguage,translatedLanguage,word).get(0).split(",");
+                String[]arr= translate(StartLanguage,translatedLanguage,word).get(0).split(",");
                 for (int i = 0; i < arr.length; i++) {
-                    vocbText = new Text(arr[i]);
+                    vocbText = new TextArea(arr[i]);
+
                     vocbText.setFont(Font.font("Times New Roman", FontPosture.REGULAR, 15));
                     vBox.getChildren().add(vocbText);
                 }
 
             }else{
                 isExists=true;
-                vocbText = new Text("There is no more than one translation for this word "+ "in " + translatedLanguage);
+                vocbText = new TextArea("There is no more than one translation for this word "+ "in " + translatedLanguage);
                 vBox.getChildren().add(vocbText);
             }
         }
         else if(translate(StartLanguage,translatedLanguage,word).size()>1){
             for (int i = 0; i < translate(StartLanguage, translatedLanguage, word).size(); i++) {
-                vocbText = new Text(translate(StartLanguage, translatedLanguage, word).get(i));
+                vocbText = new TextArea(translate(StartLanguage, translatedLanguage, word).get(i));
                 vocbText.setFont(Font.font("Times New Roman", FontPosture.REGULAR, 15));
                 vBox.getChildren().add(vocbText);
             }
         }
         else{
             isExists=true;
-            vocbText = new Text("There is no " + translatedLanguage+" translation for this word.");
+            vocbText = new TextArea("There is no " + translatedLanguage+" translation for this word.");
             vBox.getChildren().add(vocbText);
         }
+        vocbText.setWrapText(true);
+        vocbText.setEditable(false);
+        vocbText.setPrefWidth(500);
+        vocbText.setMaxWidth(1200);
+        vocbText.setMaxHeight(1000);
+        vocbText.setPrefHeight(400);
+        vocbText.setBackground(new Background(new BackgroundFill(Color.GAINSBORO, CornerRadii.EMPTY, new Insets(0))));
 
     }
     public static void add(String StartLanguage, String translatedLanguage,String word, VBox vBox, Text vocbText){

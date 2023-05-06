@@ -3,8 +3,10 @@ package com.team1.ce216project;
 
 import javafx.geometry.Pos;
 import javafx.scene.Scene;
+import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.*;
+import javafx.scene.paint.Color;
 import javafx.scene.text.Font;
 import javafx.scene.text.FontPosture;
 import javafx.scene.text.Text;
@@ -41,7 +43,8 @@ public class VocabScreen {
         hBox1.setMaxHeight(200);
         hBox1.setMaxWidth(500);
         hBox1.setAlignment(Pos.TOP_LEFT);
-        Text vocb = new Text();
+        TextArea vocb = new TextArea();
+        vocb.setBackground(new Background(new BackgroundFill(Color.GAINSBORO, CornerRadii.EMPTY, new Insets(0))));
 
 
         VBox vBox2= new  VBox();
