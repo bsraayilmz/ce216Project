@@ -56,10 +56,9 @@ public class TranslationFinder  {
             }
             rows.clear();
             for (Language language : Language.values()) {
-                String[] synonyms = getSynonyms(new Language[]{sourceLanguage, language}, word);
-                if (synonyms.length > 0) {
+                String synonyms = getSynonyms(new Language[]{sourceLanguage, language}, word);
                     rows.add(new SynonymRow(language.getName(), String.join(", ", synonyms)));
-                }
+
             }
         });
 
@@ -76,10 +75,9 @@ public class TranslationFinder  {
 
 
         for (Language language : Language.values()) {
-            String[] synonyms = getSynonyms(Language.values(), "example");
-            if (synonyms.length > 0) { // Check if synonyms exist for the language
+            String synonyms = getSynonyms(Language.values(), "example");
                 rows.add(new SynonymRow(language.getName(), String.join(", ", synonyms)));
-            }
+
         }
 
         // Initialize the UI elements for the table
@@ -155,9 +153,9 @@ public class TranslationFinder  {
         primaryStage.show();
     }
 
-    private static String[] getSynonyms(Language[] language, String word) {
+    private static String getSynonyms(Language[] language, String word) {
         // Use an API to retrieve the synonyms for the given word and language
-        return new String[] { "example", "synonym", "test" };
+        return scanningFile.add(language[0].getName(),language[1].getName(),word);
     }
 
 
@@ -180,8 +178,8 @@ public class TranslationFinder  {
     }
 
     public enum Language {
-        ENGLISH("English"), FRENCH("French"), GERMAN("German"), TURKISH("Turkish"),
-        ITALIAN("Italian"), SWEDISH("Swedish"), GREEK("Modern Greek");
+        ENGLISH("eng"), FRENCH("fra"), GERMAN("deu"), TURKISH("tur"),
+        ITALIAN("ita"), SWEDISH("swe"), GREEK("ell");
 
         private final String name;
 

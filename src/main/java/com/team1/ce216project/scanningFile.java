@@ -38,13 +38,19 @@ public class scanningFile {
         String str ="";
         ArrayList<String>arrayList=new ArrayList<>();
         if(!new File(DATA_PATH+startLanguage+"-"+translatedLange+".dict").exists()){
-
             if(readFile(DATA_PATH+startLanguage+"-eng.dict",word).isEmpty()){
                 isExists=false;
                 return arrayList;
             }
             String[] arr = readFile(DATA_PATH+startLanguage+"-eng.dict",word).get(0).split("1.");
-            str=arr[0].trim();
+            System.out.println(arr[1]);
+            if(arr[1].contains(",")){
+                arr =arr[1].split(",");
+                str=arr[0].trim();
+            }
+            else{
+                str=arr[1].trim();
+            }
             arrayList=readFile(DATA_PATH+"eng-"+translatedLange+".dict",str);
             return arrayList;
         }
@@ -146,23 +152,19 @@ public class scanningFile {
         vocbText.setBackground(new Background(new BackgroundFill(Color.GAINSBORO, CornerRadii.EMPTY, new Insets(0))));
 
     }
-    public static void add(String StartLanguage, String translatedLanguage,String word, VBox vBox, Text vocbText){
-        if(translate(StartLanguage,translatedLanguage,word).isEmpty() || !isExists){
+    public static String add(String StartLanguage, String translatedLanguage,String word){
+        if(translate(StartLanguage,translatedLanguage,word).isEmpty()){
             isExists=true;
-            vocbText = new Text("There is no " + translatedLanguage+" translation for this word.");
-            vBox.getChildren().add(vocbText);
+            return "There is no " + translatedLanguage+" translation for this word.";
+
         }else {
+
             if(translate(StartLanguage,translatedLanguage,word).get(0).contains(",")){
                 String[] arr = translate(StartLanguage,translatedLanguage,word).get(0).split(",");
-                vocbText = new Text(arr[0]);
-                vocbText.setFont(Font.font("Times New Roman", FontPosture.REGULAR, 15));
-                vBox.getChildren().add(vocbText);
+                return arr[0];
             }
             else{
-                String str=translate(StartLanguage,translatedLanguage,word).get(0);
-                vocbText = new Text(str);
-                vocbText.setFont(Font.font("Times New Roman", FontPosture.REGULAR, 15));
-                vBox.getChildren().add(vocbText);
+                return translate(StartLanguage,translatedLanguage,word).get(0);
             }
 
         }
