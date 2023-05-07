@@ -8,7 +8,8 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/team1/ce216project/EditScreen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/team1/ce216project/EditScreen.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/team1/ce216project/scanningFile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/team1/ce216project/scanningFile.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/team1/ce216project/data/tur-eng.dict" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/team1/ce216project/data/Select Language-Select Language.dict" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/team1/ce216project/data/Select Language-Select Language.dict" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/team1/ce216project/data/eng-tur.dict" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/team1/ce216project/data/eng-tur.dict" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,10 +60,10 @@
     </file-type-list>
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/src/main/java/com/team1/ce216project/ConvertToFiles.java" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/src/main/resources/com/team1/ce216project/data/eng-fra.dict" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/src/main/resources/com/team1/ce216project/data/eng-tur.dict" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/src/main/java/com/team1/ce216project/Main.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/main/resources/com/team1/ce216project/data/eng-tur.dict" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/main/java/com/team1/ce216project/ConvertToFiles.java" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -172,6 +173,7 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Changed eng-deu.dict file to fix new method which can read and display the word translation and connected the screens." />
@@ -182,22 +184,17 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/team1/ce216project/scanningFile.java</url>
-          <line>78</line>
+          <line>79</line>
           <option name="timeStamp" value="1" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/team1/ce216project/EditScreen.java</url>
-          <line>88</line>
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/team1/ce216project/scanningFile.java</url>
-          <line>221</line>
-          <option name="timeStamp" value="4" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/team1/ce216project/scanningFile.java</url>
           <line>222</line>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/team1/ce216project/scanningFile.java</url>
+          <line>223</line>
           <option name="timeStamp" value="5" />
         </line-breakpoint>
       </breakpoints>

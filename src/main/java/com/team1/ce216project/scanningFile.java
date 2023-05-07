@@ -1,5 +1,6 @@
 package com.team1.ce216project;
 import javafx.geometry.Insets;
+import javafx.scene.control.Alert;
 import javafx.scene.control.TextArea;
 import javafx.scene.layout.Background;
 import javafx.scene.layout.BackgroundFill;
@@ -242,6 +243,10 @@ public class scanningFile {
                             inputBuffer.append(nextline);
                             inputBuffer.append('\n');
                             isComplete=true;
+                            Alert alert = new Alert(Alert.AlertType.INFORMATION);
+                            alert.setTitle("Edited Process");
+                            alert.setContentText("The word to be edited has been successfully edited.");
+                            alert.showAndWait();
                         }
                     }
                         inputBuffer.append(line);

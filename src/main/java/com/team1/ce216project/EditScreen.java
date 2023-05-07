@@ -83,14 +83,27 @@ public class EditScreen {
         editWord.setBorder(new Border(new BorderStroke(Color.BLACK, BorderStrokeStyle.SOLID, CornerRadii.EMPTY, BorderWidths.DEFAULT)));
         editWord.setTextFill(Color.BLACK);
         editWord.setBackground(new Background(new BackgroundFill(Color.SILVER, CornerRadii.EMPTY, new Insets(0))));
-        editWord.setOnAction(e->{
-            try {
+        editWord.setOnAction(e-> {
+                    if (enterWordSpace.getText().equals("") || choosingLanguage1.getValue().equals(" ") || choosingLanguage2.getValue().equals(" ") || enterMeaningSpace.getText().equals("")) {
+                        Alert alert = new Alert(Alert.AlertType.WARNING);
+                        alert.setTitle("Warning");
+                        alert.setHeaderText("Warning");
+                        alert.setContentText("Please enter a word and its meaning.");
+                        alert.showAndWait();
+                    } else {
+                        try {
+                            scanningFile.editTranslation(choosingLanguage1(), choosingLanguage2(), enterWordSpace.getText(), enterMeaningSpace.getText());
 
-                scanningFile.editTranslation(choosingLanguage1(),choosingLanguage2(),enterWordSpace.getText(),enterMeaningSpace.getText());
-            } catch (FileNotFoundException ex) {
-                ex.printStackTrace();
-            }
-        });
+                        } catch (FileNotFoundException ex) {
+                            ex.printStackTrace();
+                        }
+                        enterWordSpace.setText("");
+                        enterMeaningSpace.setText("");
+                        choosingLanguage1.setValue("Select Language");
+                        choosingLanguage2.setValue("Select Language");
+                    }
+                });
+
 
         //to use in the flags method from the dictOff.flagsClass- horizontally
         HBox hBoxForFlags = new HBox();
