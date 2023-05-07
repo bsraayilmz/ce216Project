@@ -111,7 +111,6 @@ public class SynonymScreen {
         HBox backBox = new HBox(backButton.quesBack());
         backBox.setAlignment(Pos.BOTTOM_LEFT);
         backButton.returnButton.setOnAction(e -> {
-            stage.close();
             try {
                 ActionScreen.displayActionScreen(stage);
             } catch (InstantiationException | IllegalAccessException ex) {
