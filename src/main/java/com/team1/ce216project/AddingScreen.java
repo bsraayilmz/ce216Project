@@ -138,7 +138,6 @@ public class AddingScreen {
                                 System.out.println("The word is added.");
                                 break;
                             }
-                            System.out.println("The word file not found");
                         }
                     } catch (IOException ex) {
                         System.err.format("IOException: %s%n", ex);
