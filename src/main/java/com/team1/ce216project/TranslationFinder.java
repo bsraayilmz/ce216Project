@@ -145,7 +145,6 @@ public class TranslationFinder  {
     }
 
     private static String getSynonyms(Language[] language, String word) {
-        // Use an API to retrieve the synonyms for the given word and language
         return scanningFile.add(language[0].getName(),language[1].getName(),word);
     }
 
