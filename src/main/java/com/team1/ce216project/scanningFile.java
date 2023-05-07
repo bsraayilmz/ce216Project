@@ -22,21 +22,6 @@ public class scanningFile {
     public static final String IMAGES_PATH = "src/main/resources/com/team1/ce216project/images/";
     static boolean isExists=true;
 
-    /*public static ArrayList<String> translate(String StartLanguage, String translatedLanguage,String word){
-        if (!StartLanguage.equalsIgnoreCase("eng")&& !translatedLanguage.equalsIgnoreCase("eng")) {
-            String[] arr2 = readFile(DATA_PATH+StartLanguage+"-eng.dict",word).get(0).split(",");
-            String[] arr = arr2[0].split("1.");
-            System.out.println(arr[1]);
-            return readFile(DATA_PATH+"eng-"+translatedLanguage+".dict",arr[1]);
-        }else if(translatedLanguage.equalsIgnoreCase("deu") && StartLanguage.equalsIgnoreCase("eng")){
-            return readEngDeuFile(DATA_PATH+"eng-deu.dict",word);
-        }
-        else if(StartLanguage.equalsIgnoreCase("eng")){
-            return readFile(DATA_PATH+"eng-"+translatedLanguage+".dict",word);
-        }else{
-            return readFile(DATA_PATH+StartLanguage+"-eng.dict",word);
-        }
-    }*/
     public static ArrayList<String> translate(String startLanguage, String translatedLange, String word){
         String str ="";
         ArrayList<String>arrayList=new ArrayList<>();
@@ -238,7 +223,11 @@ public class scanningFile {
                             inputBuffer.append('\n');
                             nextline = file.readLine();
                             System.out.println(nextline);
-                            nextline ="1. " + meaning;
+                            if(startLanguage.equals("deu")&& tLanguage.equals("eng")||startLanguage.equals("eng") && tLanguage.equals("deu")){
+                                nextline =meaning+" <";
+                            }else{
+                                nextline ="1. " + meaning;
+                            }
                             System.out.println(nextline);
                             inputBuffer.append(nextline);
                             inputBuffer.append('\n');
@@ -248,11 +237,19 @@ public class scanningFile {
                             alert.setContentText("The word to be edited has been successfully edited.");
                             alert.showAndWait();
                         }
+                        else{
+                            inputBuffer.append(line);
+                            inputBuffer.append('\n');
+                        }
                     }
+                    else{
                         inputBuffer.append(line);
                         inputBuffer.append('\n');
+                    }
 
                 }
+
+
                 file.close();
 
                 // write the new string with the replaced line OVER the same file
