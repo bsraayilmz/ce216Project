@@ -6,11 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="a9e0f112-0536-41c3-88c7-cb96deb3e3d8" name="Changes" comment="Changed eng-deu.dict file to fix new method which can read and display the word translation and connected the screens.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/team1/ce216project/ConvertToFiles.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/team1/ce216project/ConvertToFiles.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/team1/ce216project/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/team1/ce216project/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/team1/ce216project/TranslationFinder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/team1/ce216project/TranslationFinder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/team1/ce216project/EditScreen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/team1/ce216project/EditScreen.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/team1/ce216project/scanningFile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/team1/ce216project/scanningFile.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/team1/ce216project/data/deu-eng.dict" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/team1/ce216project/data/deu-eng.dict" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/team1/ce216project/data/tur-eng.dict" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -184,8 +182,23 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/team1/ce216project/scanningFile.java</url>
-          <line>76</line>
+          <line>78</line>
           <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/team1/ce216project/EditScreen.java</url>
+          <line>88</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/team1/ce216project/scanningFile.java</url>
+          <line>221</line>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/team1/ce216project/scanningFile.java</url>
+          <line>222</line>
+          <option name="timeStamp" value="5" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

@@ -16,6 +16,7 @@ import javafx.scene.text.FontWeight;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
+import java.io.FileNotFoundException;
 
 
 public class EditScreen {
@@ -82,6 +83,14 @@ public class EditScreen {
         editWord.setBorder(new Border(new BorderStroke(Color.BLACK, BorderStrokeStyle.SOLID, CornerRadii.EMPTY, BorderWidths.DEFAULT)));
         editWord.setTextFill(Color.BLACK);
         editWord.setBackground(new Background(new BackgroundFill(Color.SILVER, CornerRadii.EMPTY, new Insets(0))));
+        editWord.setOnAction(e->{
+            try {
+
+                scanningFile.editTranslation(choosingLanguage1(),choosingLanguage2(),enterWordSpace.getText(),enterMeaningSpace.getText());
+            } catch (FileNotFoundException ex) {
+                ex.printStackTrace();
+            }
+        });
 
         //to use in the flags method from the dictOff.flagsClass- horizontally
         HBox hBoxForFlags = new HBox();

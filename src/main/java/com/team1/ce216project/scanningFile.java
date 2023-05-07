@@ -13,6 +13,8 @@ import javafx.scene.text.Text;
 import java.io.*;
 import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
+import java.util.Locale;
+import java.util.Scanner;
 
 public class scanningFile {
     public static final String DATA_PATH = "src/main/resources/com/team1/ce216project/data/";
@@ -213,6 +215,50 @@ public class scanningFile {
 
         }
 
+    }
+    public static void editTranslation(String startLanguage,String tLanguage,String word,String meaning) throws FileNotFoundException {
+        // add trim method to get rid of spaces at the end and beginning of words
+        String fileName = DATA_PATH+startLanguage+"-"+tLanguage+".dict";
+        word=word.trim();
+        boolean isComplete=false;
+        try {
+            // input the (modified) file content to the StringBuffer "input"
+            BufferedReader file;
+            file = new BufferedReader(new InputStreamReader(new FileInputStream(fileName), StandardCharsets.UTF_8));
+            StringBuilder inputBuffer = new StringBuilder();
+            String line;
+            String nextline = null;
+                while ((line = file.readLine()) != null  ) {
+                    if (!isComplete) {
+                        String[]arr=line.split(" /");
+                        arr[0]=arr[0].trim();
+                        if (arr[0].equalsIgnoreCase(word)) {
+                            inputBuffer.append(line);
+                            inputBuffer.append('\n');
+                            nextline = file.readLine();
+                            System.out.println(nextline);
+                            nextline ="1. " + meaning;
+                            System.out.println(nextline);
+                            inputBuffer.append(nextline);
+                            inputBuffer.append('\n');
+                            isComplete=true;
+                        }
+                    }
+                        inputBuffer.append(line);
+                        inputBuffer.append('\n');
+
+                }
+                file.close();
+
+                // write the new string with the replaced line OVER the same file
+                FileOutputStream fileOut = new FileOutputStream(fileName);
+                OutputStreamWriter writer = new OutputStreamWriter(fileOut, StandardCharsets.UTF_8);
+                writer.write(inputBuffer.toString());
+                writer.close();
+
+            }catch(Exception e){
+            e.printStackTrace();
+        }
     }
     public static boolean isNumeric(String str) { // find the string has a number
         try {
